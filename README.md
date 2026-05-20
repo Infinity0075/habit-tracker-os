@@ -1,4 +1,3 @@
-<img width="474" height="988" alt="Screenshot 2026-05-20 at 10 47 51" src="https://github.com/user-attachments/assets/a976ea3c-0e6b-4bd1-a1df-27babd0ffbab" />
 # DisciplineCore 🚀
 
 DisciplineCore is a modern Android productivity and self-discipline app designed to help users build consistency, track habits, and improve daily performance.
@@ -35,7 +34,11 @@ The app focuses not only on habit tracking but also on personal growth, accounta
 
 <img width="416" height="910" alt="Screenshot 2026-05-20 at 10 30 58" src="https://github.com/user-attachments/assets/7901edcd-dce1-48ab-b50b-804a298e0e79" />
 
+
+
 <img width="478" height="1016" alt="Screenshot 2026-05-20 at 10 48 16" src="https://github.com/user-attachments/assets/96bb11fd-27b0-4c34-b5be-3b244dac77be" />
+
+
 
 <img width="460" height="969" alt="Screenshot 2026-05-20 at 10 48 32" src="https://github.com/user-attachments/assets/3d581b8c-5535-4a51-a525-8e1efdad25a8" />
 
