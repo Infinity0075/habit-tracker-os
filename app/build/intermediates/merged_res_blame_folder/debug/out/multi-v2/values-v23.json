@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.anant.disciplinecore.app-mergeDebugResources-43:/values-v23/values-v23.xml",
+            "outputFile": "com.anant.disciplinecore.app-mergeDebugResources-44:/values-v23/values-v23.xml",
             "map": [
                 {
                     "source": "/Users/apple/.gradle/caches/8.14.5/transforms/cf7d75669d0426348b5ac4b15a918dec/transformed/appcompat-1.6.1/res/values-v23/values-v23.xml",
@@ -52,7 +52,7 @@
                     }
                 },
                 {
-                    "source": "/Users/apple/.gradle/caches/8.14.5/transforms/243f48d100afdca357f6ab8a77401f63/transformed/material-1.11.0/res/values-v23/values-v23.xml",
+                    "source": "/Users/apple/.gradle/caches/8.14.5/transforms/11d85ce5368849e4bfaee4efd61444b2/transformed/material-1.12.0/res/values-v23/values-v23.xml",
                     "from": {
                         "startLines": "2,5,9,13,16,19,22,25,28,32",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4",

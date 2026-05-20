@@ -4,16 +4,14 @@ package com.anant.disciplinecore.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
-import android.widget.ProgressBar;
-import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
-import androidx.recyclerview.widget.RecyclerView;
+import androidx.fragment.app.FragmentContainerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.anant.disciplinecore.R;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
 import java.lang.NullPointerException;
 import java.lang.Override;
@@ -24,46 +22,21 @@ public final class ActivityMainBinding implements ViewBinding {
   private final CoordinatorLayout rootView;
 
   @NonNull
-  public final LinearLayout emptyState;
+  public final BottomNavigationView bottomNav;
 
   @NonNull
   public final ExtendedFloatingActionButton fab;
 
   @NonNull
-  public final ProgressBar progressBar;
+  public final FragmentContainerView fragmentContainer;
 
-  @NonNull
-  public final RecyclerView rvHabits;
-
-  @NonNull
-  public final TextView tvDate;
-
-  @NonNull
-  public final TextView tvGreeting;
-
-  @NonNull
-  public final TextView tvPct;
-
-  @NonNull
-  public final TextView tvScore;
-
-  @NonNull
-  public final TextView tvScoreLabel;
-
-  private ActivityMainBinding(@NonNull CoordinatorLayout rootView, @NonNull LinearLayout emptyState,
-      @NonNull ExtendedFloatingActionButton fab, @NonNull ProgressBar progressBar,
-      @NonNull RecyclerView rvHabits, @NonNull TextView tvDate, @NonNull TextView tvGreeting,
-      @NonNull TextView tvPct, @NonNull TextView tvScore, @NonNull TextView tvScoreLabel) {
+  private ActivityMainBinding(@NonNull CoordinatorLayout rootView,
+      @NonNull BottomNavigationView bottomNav, @NonNull ExtendedFloatingActionButton fab,
+      @NonNull FragmentContainerView fragmentContainer) {
     this.rootView = rootView;
-    this.emptyState = emptyState;
+    this.bottomNav = bottomNav;
     this.fab = fab;
-    this.progressBar = progressBar;
-    this.rvHabits = rvHabits;
-    this.tvDate = tvDate;
-    this.tvGreeting = tvGreeting;
-    this.tvPct = tvPct;
-    this.tvScore = tvScore;
-    this.tvScoreLabel = tvScoreLabel;
+    this.fragmentContainer = fragmentContainer;
   }
 
   @Override
@@ -93,9 +66,9 @@ public final class ActivityMainBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.emptyState;
-      LinearLayout emptyState = ViewBindings.findChildViewById(rootView, id);
-      if (emptyState == null) {
+      id = R.id.bottomNav;
+      BottomNavigationView bottomNav = ViewBindings.findChildViewById(rootView, id);
+      if (bottomNav == null) {
         break missingId;
       }
 
@@ -105,50 +78,14 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.progressBar;
-      ProgressBar progressBar = ViewBindings.findChildViewById(rootView, id);
-      if (progressBar == null) {
+      id = R.id.fragmentContainer;
+      FragmentContainerView fragmentContainer = ViewBindings.findChildViewById(rootView, id);
+      if (fragmentContainer == null) {
         break missingId;
       }
 
-      id = R.id.rvHabits;
-      RecyclerView rvHabits = ViewBindings.findChildViewById(rootView, id);
-      if (rvHabits == null) {
-        break missingId;
-      }
-
-      id = R.id.tvDate;
-      TextView tvDate = ViewBindings.findChildViewById(rootView, id);
-      if (tvDate == null) {
-        break missingId;
-      }
-
-      id = R.id.tvGreeting;
-      TextView tvGreeting = ViewBindings.findChildViewById(rootView, id);
-      if (tvGreeting == null) {
-        break missingId;
-      }
-
-      id = R.id.tvPct;
-      TextView tvPct = ViewBindings.findChildViewById(rootView, id);
-      if (tvPct == null) {
-        break missingId;
-      }
-
-      id = R.id.tvScore;
-      TextView tvScore = ViewBindings.findChildViewById(rootView, id);
-      if (tvScore == null) {
-        break missingId;
-      }
-
-      id = R.id.tvScoreLabel;
-      TextView tvScoreLabel = ViewBindings.findChildViewById(rootView, id);
-      if (tvScoreLabel == null) {
-        break missingId;
-      }
-
-      return new ActivityMainBinding((CoordinatorLayout) rootView, emptyState, fab, progressBar,
-          rvHabits, tvDate, tvGreeting, tvPct, tvScore, tvScoreLabel);
+      return new ActivityMainBinding((CoordinatorLayout) rootView, bottomNav, fab,
+          fragmentContainer);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

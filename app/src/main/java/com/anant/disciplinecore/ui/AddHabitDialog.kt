@@ -8,9 +8,10 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.GridLayout
 import android.widget.TextView
-import androidx.core.content.ContextCompat
+import androidx.fragment.app.activityViewModels
 import com.anant.disciplinecore.data.Habit
 import com.anant.disciplinecore.databinding.DialogAddHabitBinding
+import com.anant.disciplinecore.viewmodel.HabitViewModel
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 
 class AddHabitDialog : BottomSheetDialogFragment() {
@@ -18,7 +19,7 @@ class AddHabitDialog : BottomSheetDialogFragment() {
     private var _binding: DialogAddHabitBinding? = null
     private val binding get() = _binding!!
 
-    var onAdd: ((Habit) -> Unit)? = null
+    private val viewModel: HabitViewModel by activityViewModels()
 
     private val emojiOptions = listOf(
         "⚡", "💪", "📚", "🧘", "🏃", "💧", "🥗", "😴",
@@ -32,29 +33,46 @@ class AddHabitDialog : BottomSheetDialogFragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = DialogAddHabitBinding.inflate(inflater, container, false)
+
+        _binding = DialogAddHabitBinding.inflate(
+            inflater,
+            container,
+            false
+        )
+
         return binding.root
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+    override fun onViewCreated(
+        view: View,
+        savedInstanceState: Bundle?
+    ) {
+
         super.onViewCreated(view, savedInstanceState)
 
         setupEmojiGrid()
 
         binding.btnAdd.setOnClickListener {
-            val name = binding.etHabitName.text.toString().trim()
+
+            val name =
+                binding.etHabitName.text
+                    .toString()
+                    .trim()
 
             if (name.isEmpty()) {
-                binding.etHabitName.error = "Enter habit name"
+
+                binding.etHabitName.error =
+                    "Enter habit name"
+
                 return@setOnClickListener
             }
 
-            onAdd?.invoke(
-                Habit(
-                    name = name,
-                    emoji = selectedEmoji
-                )
+            val habit = Habit(
+                name = name,
+                emoji = selectedEmoji
             )
+
+            viewModel.insert(habit)
 
             dismiss()
         }
@@ -73,31 +91,49 @@ class AddHabitDialog : BottomSheetDialogFragment() {
             val tv = TextView(requireContext()).apply {
 
                 text = emoji
+
                 textSize = 24f
+
                 gravity = Gravity.CENTER
 
                 setPadding(20, 20, 20, 20)
 
-                background = if (emoji == selectedEmoji) {
-                    GradientDrawable().apply {
-                        setColor(0x33F59E0B.toInt())
-                        cornerRadius = 16f
+                background =
+                    if (emoji == selectedEmoji) {
+
+                        GradientDrawable().apply {
+
+                            setColor(0x33F59E0B.toInt())
+
+                            cornerRadius = 16f
+                        }
+
+                    } else {
+                        null
                     }
-                } else {
-                    null
-                }
 
                 setOnClickListener {
+
                     selectedEmoji = emoji
+
                     setupEmojiGrid()
                 }
             }
 
-            val params = GridLayout.LayoutParams().apply {
-                width = 0
-                height = GridLayout.LayoutParams.WRAP_CONTENT
-                columnSpec = GridLayout.spec(GridLayout.UNDEFINED, 1f)
-            }
+            val params =
+                GridLayout.LayoutParams().apply {
+
+                    width = 0
+
+                    height =
+                        GridLayout.LayoutParams.WRAP_CONTENT
+
+                    columnSpec =
+                        GridLayout.spec(
+                            GridLayout.UNDEFINED,
+                            1f
+                        )
+                }
 
             binding.emojiGrid.addView(tv, params)
         }

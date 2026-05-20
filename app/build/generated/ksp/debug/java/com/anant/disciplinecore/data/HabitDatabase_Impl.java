@@ -28,20 +28,24 @@ import javax.annotation.processing.Generated;
 public final class HabitDatabase_Impl extends HabitDatabase {
   private volatile HabitDao _habitDao;
 
+  private volatile DailyWinDao _dailyWinDao;
+
   @Override
   @NonNull
   protected SupportSQLiteOpenHelper createOpenHelper(@NonNull final DatabaseConfiguration config) {
-    final SupportSQLiteOpenHelper.Callback _openCallback = new RoomOpenHelper(config, new RoomOpenHelper.Delegate(1) {
+    final SupportSQLiteOpenHelper.Callback _openCallback = new RoomOpenHelper(config, new RoomOpenHelper.Delegate(2) {
       @Override
       public void createAllTables(@NonNull final SupportSQLiteDatabase db) {
         db.execSQL("CREATE TABLE IF NOT EXISTS `habits` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `name` TEXT NOT NULL, `emoji` TEXT NOT NULL, `streak` INTEGER NOT NULL, `longestStreak` INTEGER NOT NULL, `totalCompletions` INTEGER NOT NULL, `lastCompletedDate` TEXT NOT NULL, `isCompletedToday` INTEGER NOT NULL, `createdAt` INTEGER NOT NULL)");
+        db.execSQL("CREATE TABLE IF NOT EXISTS `daily_wins` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `text` TEXT NOT NULL, `timestamp` INTEGER NOT NULL)");
         db.execSQL("CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)");
-        db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '9b575d54baf2d7932c0ede1f6a9439c1')");
+        db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '959f81baa9d00d3ceacf90796721d0f4')");
       }
 
       @Override
       public void dropAllTables(@NonNull final SupportSQLiteDatabase db) {
         db.execSQL("DROP TABLE IF EXISTS `habits`");
+        db.execSQL("DROP TABLE IF EXISTS `daily_wins`");
         final List<? extends RoomDatabase.Callback> _callbacks = mCallbacks;
         if (_callbacks != null) {
           for (RoomDatabase.Callback _callback : _callbacks) {
@@ -104,9 +108,22 @@ public final class HabitDatabase_Impl extends HabitDatabase {
                   + " Expected:\n" + _infoHabits + "\n"
                   + " Found:\n" + _existingHabits);
         }
+        final HashMap<String, TableInfo.Column> _columnsDailyWins = new HashMap<String, TableInfo.Column>(3);
+        _columnsDailyWins.put("id", new TableInfo.Column("id", "INTEGER", true, 1, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsDailyWins.put("text", new TableInfo.Column("text", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsDailyWins.put("timestamp", new TableInfo.Column("timestamp", "INTEGER", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        final HashSet<TableInfo.ForeignKey> _foreignKeysDailyWins = new HashSet<TableInfo.ForeignKey>(0);
+        final HashSet<TableInfo.Index> _indicesDailyWins = new HashSet<TableInfo.Index>(0);
+        final TableInfo _infoDailyWins = new TableInfo("daily_wins", _columnsDailyWins, _foreignKeysDailyWins, _indicesDailyWins);
+        final TableInfo _existingDailyWins = TableInfo.read(db, "daily_wins");
+        if (!_infoDailyWins.equals(_existingDailyWins)) {
+          return new RoomOpenHelper.ValidationResult(false, "daily_wins(com.anant.disciplinecore.data.DailyWin).\n"
+                  + " Expected:\n" + _infoDailyWins + "\n"
+                  + " Found:\n" + _existingDailyWins);
+        }
         return new RoomOpenHelper.ValidationResult(true, null);
       }
-    }, "9b575d54baf2d7932c0ede1f6a9439c1", "8f9cbeffa92b4ac084da40930c423a7b");
+    }, "959f81baa9d00d3ceacf90796721d0f4", "3e5e1e78380d5e72f4184f14fa16b498");
     final SupportSQLiteOpenHelper.Configuration _sqliteConfig = SupportSQLiteOpenHelper.Configuration.builder(config.context).name(config.name).callback(_openCallback).build();
     final SupportSQLiteOpenHelper _helper = config.sqliteOpenHelperFactory.create(_sqliteConfig);
     return _helper;
@@ -117,7 +134,7 @@ public final class HabitDatabase_Impl extends HabitDatabase {
   protected InvalidationTracker createInvalidationTracker() {
     final HashMap<String, String> _shadowTablesMap = new HashMap<String, String>(0);
     final HashMap<String, Set<String>> _viewTables = new HashMap<String, Set<String>>(0);
-    return new InvalidationTracker(this, _shadowTablesMap, _viewTables, "habits");
+    return new InvalidationTracker(this, _shadowTablesMap, _viewTables, "habits","daily_wins");
   }
 
   @Override
@@ -127,6 +144,7 @@ public final class HabitDatabase_Impl extends HabitDatabase {
     try {
       super.beginTransaction();
       _db.execSQL("DELETE FROM `habits`");
+      _db.execSQL("DELETE FROM `daily_wins`");
       super.setTransactionSuccessful();
     } finally {
       super.endTransaction();
@@ -142,6 +160,7 @@ public final class HabitDatabase_Impl extends HabitDatabase {
   protected Map<Class<?>, List<Class<?>>> getRequiredTypeConverters() {
     final HashMap<Class<?>, List<Class<?>>> _typeConvertersMap = new HashMap<Class<?>, List<Class<?>>>();
     _typeConvertersMap.put(HabitDao.class, HabitDao_Impl.getRequiredConverters());
+    _typeConvertersMap.put(DailyWinDao.class, DailyWinDao_Impl.getRequiredConverters());
     return _typeConvertersMap;
   }
 
@@ -170,6 +189,20 @@ public final class HabitDatabase_Impl extends HabitDatabase {
           _habitDao = new HabitDao_Impl(this);
         }
         return _habitDao;
+      }
+    }
+  }
+
+  @Override
+  public DailyWinDao dailyWinDao() {
+    if (_dailyWinDao != null) {
+      return _dailyWinDao;
+    } else {
+      synchronized(this) {
+        if(_dailyWinDao == null) {
+          _dailyWinDao = new DailyWinDao_Impl(this);
+        }
+        return _dailyWinDao;
       }
     }
   }

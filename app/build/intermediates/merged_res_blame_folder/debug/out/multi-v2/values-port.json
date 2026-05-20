@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.anant.disciplinecore.app-mergeDebugResources-43:/values-port/values-port.xml",
+            "outputFile": "com.anant.disciplinecore.app-mergeDebugResources-44:/values-port/values-port.xml",
             "map": [
                 {
                     "source": "/Users/apple/.gradle/caches/8.14.5/transforms/cf7d75669d0426348b5ac4b15a918dec/transformed/appcompat-1.6.1/res/values-port/values-port.xml",

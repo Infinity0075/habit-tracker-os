@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.anant.disciplinecore.app-mergeDebugResources-43:/values-h320dp-port-v13/values-h320dp-port-v13.xml",
+            "outputFile": "com.anant.disciplinecore.app-mergeDebugResources-44:/values-h320dp-port-v13/values-h320dp-port-v13.xml",
             "map": [
                 {
-                    "source": "/Users/apple/.gradle/caches/8.14.5/transforms/243f48d100afdca357f6ab8a77401f63/transformed/material-1.11.0/res/values-h320dp-port-v13/values-h320dp-port-v13.xml",
+                    "source": "/Users/apple/.gradle/caches/8.14.5/transforms/11d85ce5368849e4bfaee4efd61444b2/transformed/material-1.12.0/res/values-h320dp-port-v13/values-h320dp-port-v13.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

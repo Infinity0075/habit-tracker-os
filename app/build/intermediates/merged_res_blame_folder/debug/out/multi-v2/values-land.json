@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.anant.disciplinecore.app-mergeDebugResources-43:/values-land/values-land.xml",
+            "outputFile": "com.anant.disciplinecore.app-mergeDebugResources-44:/values-land/values-land.xml",
             "map": [
                 {
-                    "source": "/Users/apple/.gradle/caches/8.14.5/transforms/243f48d100afdca357f6ab8a77401f63/transformed/material-1.11.0/res/values-land/values-land.xml",
+                    "source": "/Users/apple/.gradle/caches/8.14.5/transforms/11d85ce5368849e4bfaee4efd61444b2/transformed/material-1.12.0/res/values-land/values-land.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,26,35,40",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",

@@ -5,23 +5,40 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 
-@Database(entities = [Habit::class], version = 1, exportSchema = false)
+@Database(
+    entities = [
+        Habit::class,
+        DailyWin::class
+    ],
+    version = 2,
+    exportSchema = false
+)
+
 abstract class HabitDatabase : RoomDatabase() {
 
     abstract fun habitDao(): HabitDao
 
+    abstract fun dailyWinDao(): DailyWinDao
+
     companion object {
+
         @Volatile
         private var INSTANCE: HabitDatabase? = null
 
         fun getDatabase(context: Context): HabitDatabase {
+
             return INSTANCE ?: synchronized(this) {
+
                 val instance = Room.databaseBuilder(
                     context.applicationContext,
                     HabitDatabase::class.java,
                     "discipline_core_db"
-                ).build()
+                )
+                    .fallbackToDestructiveMigration()
+                    .build()
+
                 INSTANCE = instance
+
                 instance
             }
         }

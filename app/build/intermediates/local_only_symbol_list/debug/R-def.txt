@@ -1,5 +1,6 @@
 R_DEF: Internal format may change without notice
 local
+anim fade_in
 array com_google_android_gms_fonts_certs
 array com_google_android_gms_fonts_certs_dev
 array com_google_android_gms_fonts_certs_prod
@@ -22,6 +23,7 @@ color text_primary
 color text_secondary
 color white
 font playfair_display_bold
+id bottomNav
 id btnAdd
 id btnCancel
 id cbDone
@@ -29,20 +31,40 @@ id emojiGrid
 id emptyState
 id etHabitName
 id fab
+id fragmentContainer
+id nav_focus
+id nav_home
+id nav_journal
+id nav_settings
+id nav_stats
 id progressBar
 id rvHabits
+id tvBestStreak
+id tvCompletedHabits
 id tvDate
+id tvDisciplineScore
 id tvEmoji
 id tvGreeting
 id tvHabitName
+id tvLogo
 id tvPct
 id tvScore
 id tvScoreLabel
 id tvStreak
 id tvTotal
+id tvTotalHabits
+id tvWinText
 layout activity_main
+layout activity_splash
 layout dialog_add_habit
+layout fragment_focus
+layout fragment_home
+layout fragment_reflection
+layout fragment_settings
+layout fragment_stats
 layout item_habit
+layout item_win
+menu bottom_nav_menu
 mipmap ic_launcher
 mipmap ic_launcher_round
 string add_habit
