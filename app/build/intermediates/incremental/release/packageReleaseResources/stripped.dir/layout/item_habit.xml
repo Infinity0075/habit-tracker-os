@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    app:cardBackgroundColor="#1A1A1F"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="0dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="16dp">
+
+        <!-- Emoji -->
+        <TextView
+            android:id="@+id/tvEmoji"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="⚡"
+            android:textSize="22sp"
+            tools:text="💪" />
+
+        <!-- Name + Stats -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="12dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvHabitName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Morning run"
+                android:textColor="#F5F5F0"
+                android:textSize="15sp"
+                android:fontFamily="sans-serif-medium"
+                tools:text="Morning run" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="3dp">
+
+                <TextView
+                    android:id="@+id/tvStreak"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🔥 5"
+                    android:textColor="#F59E0B"
+                    android:textSize="12sp"
+                    tools:text="🔥 5" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="6dp"
+                    android:text="·"
+                    android:textColor="#3A3A4A"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tvTotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="12x done"
+                    android:textColor="#4B4B5A"
+                    android:textSize="12sp"
+                    tools:text="12x done" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Checkbox -->
+        <CheckBox
+            android:id="@+id/cbDone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="#F59E0B"
+            android:scaleX="1.2"
+            android:scaleY="1.2" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

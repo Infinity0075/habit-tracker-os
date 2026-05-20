@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<incidents format="6" by="lint 8.1.4" type="conditional_incidents">
+
+    <incident
+        id="FontValidation"
+        severity="warning"
+        message="For `minSdkVersion`=26 only `app:` attributes should be used">
+        <fix-attribute
+            description="Delete fontProviderAuthority"
+            namespace="http://schemas.android.com/apk/res/android"
+            attribute="fontProviderAuthority"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/font/playfair_display_bold.xml"
+            line="4"
+            column="5"
+            startOffset="171"
+            endLine="4"
+            endColumn="65"
+            endOffset="231"/>
+        <map>
+            <entry
+                name="unexpected-ns"
+                boolean="true"/>
+        </map>
+    </incident>
+
+    <incident
+        id="FontValidation"
+        severity="warning"
+        message="For `minSdkVersion`=26 only `android:` attributes should be used">
+        <fix-attribute
+            description="Delete fontProviderAuthority"
+            namespace="http://schemas.android.com/apk/res-auto"
+            attribute="fontProviderAuthority"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/font/playfair_display_bold.xml"
+            line="8"
+            column="5"
+            startOffset="416"
+            endLine="8"
+            endColumn="61"
+            endOffset="472"/>
+        <map>
+            <entry
+                name="unexpected-ns"
+                boolean="false"/>
+        </map>
+    </incident>
+
+    <incident
+        id="ObsoleteSdkInt"
+        severity="warning"
+        message="Unnecessary; SDK_INT is always >= 23">
+        <fix-replace
+            description="Delete tools:targetApi"
+            replacement="">
+            <range
+                file="${:app*debug*sourceProvider*0*resDir*0}/values/themes.xml"
+                startOffset="843"
+                endOffset="862"/>
+        </fix-replace>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/values/themes.xml"
+            line="14"
+            column="51"
+            startOffset="843"
+            endLine="14"
+            endColumn="70"
+            endOffset="862"/>
+        <map>
+            <condition minGE="ffffffffffc00000"/>
+        </map>
+    </incident>
+
+</incidents>

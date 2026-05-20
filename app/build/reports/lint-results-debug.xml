@@ -1,0 +1,1598 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<issues format="6" by="lint 8.1.4">
+
+    <issue
+        id="FontValidation"
+        severity="Warning"
+        message="For `minSdkVersion`=26 only `app:` attributes should be used"
+        category="Correctness"
+        priority="8"
+        summary="Validation of font files"
+        explanation="Look for problems in various font files."
+        url="https://developer.android.com/guide/topics/text/downloadable-fonts.html"
+        urls="https://developer.android.com/guide/topics/text/downloadable-fonts.html"
+        errorLine1="    android:fontProviderAuthority=&quot;com.google.android.gms.fonts&quot;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/apple/Downloads/DisciplineCore/app/src/main/res/font/playfair_display_bold.xml"
+            line="4"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        severity="Warning"
+        message="A newer version of androidx.core:core-ktx than 1.12.0 is available: 1.18.0"
+        category="Correctness"
+        priority="4"
+        summary="Obsolete Gradle Dependency"
+        explanation="This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
+        errorLine1="    implementation &apos;androidx.core:core-ktx:1.12.0&apos;"
+        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/apple/Downloads/DisciplineCore/app/build.gradle"
+            line="40"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        severity="Warning"
+        message="A newer version of androidx.appcompat:appcompat than 1.6.1 is available: 1.7.1"
+        category="Correctness"
+        priority="4"
+        summary="Obsolete Gradle Dependency"
+        explanation="This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
+        errorLine1="    implementation &apos;androidx.appcompat:appcompat:1.6.1&apos;"
+        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/apple/Downloads/DisciplineCore/app/build.gradle"
+            line="41"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        severity="Warning"
+        message="A newer version of com.google.android.material:material than 1.11.0 is available: 1.14.0"
+        category="Correctness"
+        priority="4"
+        summary="Obsolete Gradle Dependency"
+        explanation="This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
+        errorLine1="    implementation &apos;com.google.android.material:material:1.11.0&apos;"
+        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/apple/Downloads/DisciplineCore/app/build.gradle"
+            line="42"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        severity="Warning"
+        message="A newer version of androidx.constraintlayout:constraintlayout than 2.1.4 is available: 2.2.1"
+        category="Correctness"
+        priority="4"
+        summary="Obsolete Gradle Dependency"
+        explanation="This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
+        errorLine1="    implementation &apos;androidx.constraintlayout:constraintlayout:2.1.4&apos;"
+        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/apple/Downloads/DisciplineCore/app/build.gradle"
+            line="43"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        severity="Warning"
+        message="A newer version of androidx.recyclerview:recyclerview than 1.3.2 is available: 1.4.0"
+        category="Correctness"
+        priority="4"
+        summary="Obsolete Gradle Dependency"
+        explanation="This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
+        errorLine1="    implementation &apos;androidx.recyclerview:recyclerview:1.3.2&apos;"
+        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/apple/Downloads/DisciplineCore/app/build.gradle"
+            line="44"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        severity="Warning"
+        message="A newer version of androidx.lifecycle:lifecycle-viewmodel-ktx than 2.7.0 is available: 2.10.0"
+        category="Correctness"
+        priority="4"
+        summary="Obsolete Gradle Dependency"
+        explanation="This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
+        errorLine1="    implementation &apos;androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0&apos;"
+        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/apple/Downloads/DisciplineCore/app/build.gradle"
+            line="47"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        severity="Warning"
+        message="A newer version of androidx.lifecycle:lifecycle-livedata-ktx than 2.7.0 is available: 2.10.0"
+        category="Correctness"
+        priority="4"
+        summary="Obsolete Gradle Dependency"
+        explanation="This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
+        errorLine1="    implementation &apos;androidx.lifecycle:lifecycle-livedata-ktx:2.7.0&apos;"
+        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/apple/Downloads/DisciplineCore/app/build.gradle"
+            line="48"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        severity="Warning"
+        message="A newer version of androidx.activity:activity-ktx than 1.8.2 is available: 1.13.0"
+        category="Correctness"
+        priority="4"
+        summary="Obsolete Gradle Dependency"
+        explanation="This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
+        errorLine1="    implementation &apos;androidx.activity:activity-ktx:1.8.2&apos;"
+        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/apple/Downloads/DisciplineCore/app/build.gradle"
+            line="49"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        severity="Warning"
+        message="A newer version of androidx.room:room-runtime than 2.6.1 is available: 2.8.4"
+        category="Correctness"
+        priority="4"
+        summary="Obsolete Gradle Dependency"
+        explanation="This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
+        errorLine1="    implementation &apos;androidx.room:room-runtime:2.6.1&apos;"
+        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/apple/Downloads/DisciplineCore/app/build.gradle"
+            line="52"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        severity="Warning"
+        message="A newer version of androidx.room:room-ktx than 2.6.1 is available: 2.8.4"
+        category="Correctness"
+        priority="4"
+        summary="Obsolete Gradle Dependency"
+        explanation="This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
+        errorLine1="    implementation &apos;androidx.room:room-ktx:2.6.1&apos;"
+        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/apple/Downloads/DisciplineCore/app/build.gradle"
+            line="53"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        severity="Warning"
+        message="A newer version of androidx.room:room-compiler than 2.6.1 is available: 2.8.4"
+        category="Correctness"
+        priority="4"
+        summary="Obsolete Gradle Dependency"
+        explanation="This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
+        errorLine1="    ksp &apos;androidx.room:room-compiler:2.6.1&apos;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/apple/Downloads/DisciplineCore/app/build.gradle"
+            line="54"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        severity="Warning"
+        message="A newer version of androidx.work:work-runtime-ktx than 2.9.0 is available: 2.11.2"
+        category="Correctness"
+        priority="4"
+        summary="Obsolete Gradle Dependency"
+        explanation="This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
+        errorLine1="    implementation &apos;androidx.work:work-runtime-ktx:2.9.0&apos;"
+        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/apple/Downloads/DisciplineCore/app/build.gradle"
+            line="57"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        severity="Warning"
+        message="A newer version of androidx.test.ext:junit than 1.1.5 is available: 1.3.0"
+        category="Correctness"
+        priority="4"
+        summary="Obsolete Gradle Dependency"
+        explanation="This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
+        errorLine1="    androidTestImplementation &apos;androidx.test.ext:junit:1.1.5&apos;"
+        errorLine2="                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/apple/Downloads/DisciplineCore/app/build.gradle"
+            line="63"
+            column="31"/>
+    </issue>
+
+    <issue
+        id="Typos"
+        severity="Warning"
+        message="Did you mean &quot;DQEBBAUAMIGUMQswCQYDVQQGEwJVUzETMBEGA!&quot; instead of &quot;DQEBBAUAMIGUMQswCQYDVQQGEwJVUzETMBEGA1&quot;?"
+        category="Correctness:Messages"
+        priority="7"
+        summary="Spelling error"
+        explanation="This check looks through the string definitions, and if it finds any words that look like likely misspellings, they are flagged."
+        errorLine1="            MIIEqDCCA5CgAwIBAgIJANWFuGx90071MA0GCSqGSIb3DQEBBAUAMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNU2FuIEZyYW5jaXNjbzETMBEGA1UEChMKR29vZ2xlIEluYzEVMBMGA1UECxMMTW9iaWxlIFJvYm90czEcMBoGA1UEAxMTcm9ib3RzLmFuZHJvaWQuY29tMB4XDTE1MDMwNTIyMzA0MloXDTQ1MDIyNjIyMzA0MlowgZQxCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1TYW4gRnJhbmNpc2NvMRMwEQYDVQQKEwpHb29nbGUgSW5jMRUwEwYDVQQLEwxNb2JpbGUgUm9ib3RzMRwwGgYDVQQDExNyb2JvdHMuYW5kcm9pZC5jb20wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC4RGFtWjsoiSNM9OxoHpCRGWIwKwzrfKGCMj0kKTi65UksmfnSLfPGRjn/b/ZtVHSW3sB7Y9PcMwKDYkCL+e24+dN4g+0nlv87IU4cXcHW7TK4/3pHE7gHoP5c0pPZ70GaFWMGcBGpfZ9BW7I2DotFfj1T6cQsN4RGfFELIb0g2JMuXZF1wJhf0q0vQfFOLQAbh1m9JZLzl2f1A2MiA2H/JKE2NiHmBmkpjI3fGqJ+YW9e9gRWp1tZn2L8q3/2hC6Y0e5g3QBp4Y0YMZBzlA0yCyqN/gF5d5mT/jN6k+9U8G2dYl2cRWW3eMR+5LQWN4TCa9x3q/agKg5AgMBAAGjgbEwga4wHQYDVR0OBBYEFK6D2lDwNlaqn0bBdMUOApSiPpIaMB8GA1UdIwQYMBaAFK6D2lDwNlaqn0bBdMUOApSiPpIaMA8GA1UdEwEB/wQFMAMBAf8wHQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMB4GA1UdEQQXMBWCE3JvYm90cy5hbmRyb2lkLmNvbTAOBgNVHQ8BAf8EBAMCAQYwDQYJKoZIhvcNAQEEBQADggEBABE0EkLhXz+epmMvFfPeREMH"
+        errorLine2="                                                        ^">
+        <location
+            file="/Users/apple/Downloads/DisciplineCore/app/src/main/res/values/font_certs.xml"
+            line="9"
+            column="57"/>
+    </issue>
+
+    <issue
+        id="Typos"
+        severity="Warning"
+        message="Did you mean &quot;DotFfj!&quot; instead of &quot;DotFfj1&quot;?"
+        category="Correctness:Messages"
+        priority="7"
+        summary="Spelling error"
+        explanation="This check looks through the string definitions, and if it finds any words that look like likely misspellings, they are flagged."
+        errorLine1="            MIIEqDCCA5CgAwIBAgIJANWFuGx90071MA0GCSqGSIb3DQEBBAUAMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNU2FuIEZyYW5jaXNjbzETMBEGA1UEChMKR29vZ2xlIEluYzEVMBMGA1UECxMMTW9iaWxlIFJvYm90czEcMBoGA1UEAxMTcm9ib3RzLmFuZHJvaWQuY29tMB4XDTE1MDMwNTIyMzA0MloXDTQ1MDIyNjIyMzA0MlowgZQxCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1TYW4gRnJhbmNpc2NvMRMwEQYDVQQKEwpHb29nbGUgSW5jMRUwEwYDVQQLEwxNb2JpbGUgUm9ib3RzMRwwGgYDVQQDExNyb2JvdHMuYW5kcm9pZC5jb20wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC4RGFtWjsoiSNM9OxoHpCRGWIwKwzrfKGCMj0kKTi65UksmfnSLfPGRjn/b/ZtVHSW3sB7Y9PcMwKDYkCL+e24+dN4g+0nlv87IU4cXcHW7TK4/3pHE7gHoP5c0pPZ70GaFWMGcBGpfZ9BW7I2DotFfj1T6cQsN4RGfFELIb0g2JMuXZF1wJhf0q0vQfFOLQAbh1m9JZLzl2f1A2MiA2H/JKE2NiHmBmkpjI3fGqJ+YW9e9gRWp1tZn2L8q3/2hC6Y0e5g3QBp4Y0YMZBzlA0yCyqN/gF5d5mT/jN6k+9U8G2dYl2cRWW3eMR+5LQWN4TCa9x3q/agKg5AgMBAAGjgbEwga4wHQYDVR0OBBYEFK6D2lDwNlaqn0bBdMUOApSiPpIaMB8GA1UdIwQYMBaAFK6D2lDwNlaqn0bBdMUOApSiPpIaMA8GA1UdEwEB/wQFMAMBAf8wHQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMB4GA1UdEQQXMBWCE3JvYm90cy5hbmRyb2lkLmNvbTAOBgNVHQ8BAf8EBAMCAQYwDQYJKoZIhvcNAQEEBQADggEBABE0EkLhXz+epmMvFfPeREMH"
+        errorLine2="                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ^">
+        <location
+            file="/Users/apple/Downloads/DisciplineCore/app/src/main/res/values/font_certs.xml"
+            line="9"
+            column="657"/>
+    </issue>
+
+    <issue
+        id="Typos"
+        severity="Warning"
+        message="Did you mean &quot;GA!&quot; instead of &quot;GA1&quot;?"
+        category="Correctness:Messages"
+        priority="7"
+        summary="Spelling error"
+        explanation="This check looks through the string definitions, and if it finds any words that look like likely misspellings, they are flagged."
+        errorLine1="            MIIEqDCCA5CgAwIBAgIJANWFuGx90071MA0GCSqGSIb3DQEBBAUAMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNU2FuIEZyYW5jaXNjbzETMBEGA1UEChMKR29vZ2xlIEluYzEVMBMGA1UECxMMTW9iaWxlIFJvYm90czEcMBoGA1UEAxMTcm9ib3RzLmFuZHJvaWQuY29tMB4XDTE1MDMwNTIyMzA0MloXDTQ1MDIyNjIyMzA0MlowgZQxCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1TYW4gRnJhbmNpc2NvMRMwEQYDVQQKEwpHb29nbGUgSW5jMRUwEwYDVQQLEwxNb2JpbGUgUm9ib3RzMRwwGgYDVQQDExNyb2JvdHMuYW5kcm9pZC5jb20wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC4RGFtWjsoiSNM9OxoHpCRGWIwKwzrfKGCMj0kKTi65UksmfnSLfPGRjn/b/ZtVHSW3sB7Y9PcMwKDYkCL+e24+dN4g+0nlv87IU4cXcHW7TK4/3pHE7gHoP5c0pPZ70GaFWMGcBGpfZ9BW7I2DotFfj1T6cQsN4RGfFELIb0g2JMuXZF1wJhf0q0vQfFOLQAbh1m9JZLzl2f1A2MiA2H/JKE2NiHmBmkpjI3fGqJ+YW9e9gRWp1tZn2L8q3/2hC6Y0e5g3QBp4Y0YMZBzlA0yCyqN/gF5d5mT/jN6k+9U8G2dYl2cRWW3eMR+5LQWN4TCa9x3q/agKg5AgMBAAGjgbEwga4wHQYDVR0OBBYEFK6D2lDwNlaqn0bBdMUOApSiPpIaMB8GA1UdIwQYMBaAFK6D2lDwNlaqn0bBdMUOApSiPpIaMA8GA1UdEwEB/wQFMAMBAf8wHQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMB4GA1UdEQQXMBWCE3JvYm90cy5hbmRyb2lkLmNvbTAOBgNVHQ8BAf8EBAMCAQYwDQYJKoZIhvcNAQEEBQADggEBABE0EkLhXz+epmMvFfPeREMH"
+        errorLine2="                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      ^">
+        <location
+            file="/Users/apple/Downloads/DisciplineCore/app/src/main/res/values/font_certs.xml"
+            line="9"
+            column="903"/>
+    </issue>
+
+    <issue
+        id="Typos"
+        severity="Warning"
+        message="Did you mean &quot;GA!&quot; instead of &quot;GA1&quot;?"
+        category="Correctness:Messages"
+        priority="7"
+        summary="Spelling error"
+        explanation="This check looks through the string definitions, and if it finds any words that look like likely misspellings, they are flagged."
+        errorLine1="            MIIEqDCCA5CgAwIBAgIJANWFuGx90071MA0GCSqGSIb3DQEBBAUAMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNU2FuIEZyYW5jaXNjbzETMBEGA1UEChMKR29vZ2xlIEluYzEVMBMGA1UECxMMTW9iaWxlIFJvYm90czEcMBoGA1UEAxMTcm9ib3RzLmFuZHJvaWQuY29tMB4XDTE1MDMwNTIyMzA0MloXDTQ1MDIyNjIyMzA0MlowgZQxCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1TYW4gRnJhbmNpc2NvMRMwEQYDVQQKEwpHb29nbGUgSW5jMRUwEwYDVQQLEwxNb2JpbGUgUm9ib3RzMRwwGgYDVQQDExNyb2JvdHMuYW5kcm9pZC5jb20wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC4RGFtWjsoiSNM9OxoHpCRGWIwKwzrfKGCMj0kKTi65UksmfnSLfPGRjn/b/ZtVHSW3sB7Y9PcMwKDYkCL+e24+dN4g+0nlv87IU4cXcHW7TK4/3pHE7gHoP5c0pPZ70GaFWMGcBGpfZ9BW7I2DotFfj1T6cQsN4RGfFELIb0g2JMuXZF1wJhf0q0vQfFOLQAbh1m9JZLzl2f1A2MiA2H/JKE2NiHmBmkpjI3fGqJ+YW9e9gRWp1tZn2L8q3/2hC6Y0e5g3QBp4Y0YMZBzlA0yCyqN/gF5d5mT/jN6k+9U8G2dYl2cRWW3eMR+5LQWN4TCa9x3q/agKg5AgMBAAGjgbEwga4wHQYDVR0OBBYEFK6D2lDwNlaqn0bBdMUOApSiPpIaMB8GA1UdIwQYMBaAFK6D2lDwNlaqn0bBdMUOApSiPpIaMA8GA1UdEwEB/wQFMAMBAf8wHQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMB4GA1UdEQQXMBWCE3JvYm90cy5hbmRyb2lkLmNvbTAOBgNVHQ8BAf8EBAMCAQYwDQYJKoZIhvcNAQEEBQADggEBABE0EkLhXz+epmMvFfPeREMH"
+        errorLine2="                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  ^">
+        <location
+            file="/Users/apple/Downloads/DisciplineCore/app/src/main/res/values/font_certs.xml"
+            line="9"
+            column="947"/>
+    </issue>
+
+    <issue
+        id="Typos"
+        severity="Warning"
+        message="Did you mean &quot;GA!&quot; instead of &quot;GA1&quot;?"
+        category="Correctness:Messages"
+        priority="7"
+        summary="Spelling error"
+        explanation="This check looks through the string definitions, and if it finds any words that look like likely misspellings, they are flagged."
+        errorLine1="            MIIEqDCCA5CgAwIBAgIJANWFuGx90071MA0GCSqGSIb3DQEBBAUAMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNU2FuIEZyYW5jaXNjbzETMBEGA1UEChMKR29vZ2xlIEluYzEVMBMGA1UECxMMTW9iaWxlIFJvYm90czEcMBoGA1UEAxMTcm9ib3RzLmFuZHJvaWQuY29tMB4XDTE1MDMwNTIyMzA0MloXDTQ1MDIyNjIyMzA0MlowgZQxCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1TYW4gRnJhbmNpc2NvMRMwEQYDVQQKEwpHb29nbGUgSW5jMRUwEwYDVQQLEwxNb2JpbGUgUm9ib3RzMRwwGgYDVQQDExNyb2JvdHMuYW5kcm9pZC5jb20wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC4RGFtWjsoiSNM9OxoHpCRGWIwKwzrfKGCMj0kKTi65UksmfnSLfPGRjn/b/ZtVHSW3sB7Y9PcMwKDYkCL+e24+dN4g+0nlv87IU4cXcHW7TK4/3pHE7gHoP5c0pPZ70GaFWMGcBGpfZ9BW7I2DotFfj1T6cQsN4RGfFELIb0g2JMuXZF1wJhf0q0vQfFOLQAbh1m9JZLzl2f1A2MiA2H/JKE2NiHmBmkpjI3fGqJ+YW9e9gRWp1tZn2L8q3/2hC6Y0e5g3QBp4Y0YMZBzlA0yCyqN/gF5d5mT/jN6k+9U8G2dYl2cRWW3eMR+5LQWN4TCa9x3q/agKg5AgMBAAGjgbEwga4wHQYDVR0OBBYEFK6D2lDwNlaqn0bBdMUOApSiPpIaMB8GA1UdIwQYMBaAFK6D2lDwNlaqn0bBdMUOApSiPpIaMA8GA1UdEwEB/wQFMAMBAf8wHQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMB4GA1UdEQQXMBWCE3JvYm90cy5hbmRyb2lkLmNvbTAOBgNVHQ8BAf8EBAMCAQYwDQYJKoZIhvcNAQEEBQADggEBABE0EkLhXz+epmMvFfPeREMH"
+        errorLine2="                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  ^">
+        <location
+            file="/Users/apple/Downloads/DisciplineCore/app/src/main/res/values/font_certs.xml"
+            line="9"
+            column="1011"/>
+    </issue>
+
+    <issue
+        id="Typos"
+        severity="Warning"
+        message="Did you mean &quot;MloXDTQ!&quot; instead of &quot;MloXDTQ1&quot;?"
+        category="Correctness:Messages"
+        priority="7"
+        summary="Spelling error"
+        explanation="This check looks through the string definitions, and if it finds any words that look like likely misspellings, they are flagged."
+        errorLine1="            MIIEqDCCA5CgAwIBAgIJANWFuGx90071MA0GCSqGSIb3DQEBBAUAMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNU2FuIEZyYW5jaXNjbzETMBEGA1UEChMKR29vZ2xlIEluYzEVMBMGA1UECxMMTW9iaWxlIFJvYm90czEcMBoGA1UEAxMTcm9ib3RzLmFuZHJvaWQuY29tMB4XDTE1MDMwNTIyMzA0MloXDTQ1MDIyNjIyMzA0MlowgZQxCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1TYW4gRnJhbmNpc2NvMRMwEQYDVQQKEwpHb29nbGUgSW5jMRUwEwYDVQQLEwxNb2JpbGUgUm9ib3RzMRwwGgYDVQQDExNyb2JvdHMuYW5kcm9pZC5jb20wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC4RGFtWjsoiSNM9OxoHpCRGWIwKwzrfKGCMj0kKTi65UksmfnSLfPGRjn/b/ZtVHSW3sB7Y9PcMwKDYkCL+e24+dN4g+0nlv87IU4cXcHW7TK4/3pHE7gHoP5c0pPZ70GaFWMGcBGpfZ9BW7I2DotFfj1T6cQsN4RGfFELIb0g2JMuXZF1wJhf0q0vQfFOLQAbh1m9JZLzl2f1A2MiA2H/JKE2NiHmBmkpjI3fGqJ+YW9e9gRWp1tZn2L8q3/2hC6Y0e5g3QBp4Y0YMZBzlA0yCyqN/gF5d5mT/jN6k+9U8G2dYl2cRWW3eMR+5LQWN4TCa9x3q/agKg5AgMBAAGjgbEwga4wHQYDVR0OBBYEFK6D2lDwNlaqn0bBdMUOApSiPpIaMB8GA1UdIwQYMBaAFK6D2lDwNlaqn0bBdMUOApSiPpIaMA8GA1UdEwEB/wQFMAMBAf8wHQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMB4GA1UdEQQXMBWCE3JvYm90cy5hbmRyb2lkLmNvbTAOBgNVHQ8BAf8EBAMCAQYwDQYJKoZIhvcNAQEEBQADggEBABE0EkLhXz+epmMvFfPeREMH"
+        errorLine2="                                                                                                                                                                                                                                                                        ^">
+        <location
+            file="/Users/apple/Downloads/DisciplineCore/app/src/main/res/values/font_certs.xml"
+            line="9"
+            column="265"/>
+    </issue>
+
+    <issue
+        id="Typos"
+        severity="Warning"
+        message="Did you mean &quot;XDTE!&quot; instead of &quot;XDTE1&quot;?"
+        category="Correctness:Messages"
+        priority="7"
+        summary="Spelling error"
+        explanation="This check looks through the string definitions, and if it finds any words that look like likely misspellings, they are flagged."
+        errorLine1="            MIIEqDCCA5CgAwIBAgIJANWFuGx90071MA0GCSqGSIb3DQEBBAUAMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNU2FuIEZyYW5jaXNjbzETMBEGA1UEChMKR29vZ2xlIEluYzEVMBMGA1UECxMMTW9iaWxlIFJvYm90czEcMBoGA1UEAxMTcm9ib3RzLmFuZHJvaWQuY29tMB4XDTE1MDMwNTIyMzA0MloXDTQ1MDIyNjIyMzA0MlowgZQxCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1TYW4gRnJhbmNpc2NvMRMwEQYDVQQKEwpHb29nbGUgSW5jMRUwEwYDVQQLEwxNb2JpbGUgUm9ib3RzMRwwGgYDVQQDExNyb2JvdHMuYW5kcm9pZC5jb20wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC4RGFtWjsoiSNM9OxoHpCRGWIwKwzrfKGCMj0kKTi65UksmfnSLfPGRjn/b/ZtVHSW3sB7Y9PcMwKDYkCL+e24+dN4g+0nlv87IU4cXcHW7TK4/3pHE7gHoP5c0pPZ70GaFWMGcBGpfZ9BW7I2DotFfj1T6cQsN4RGfFELIb0g2JMuXZF1wJhf0q0vQfFOLQAbh1m9JZLzl2f1A2MiA2H/JKE2NiHmBmkpjI3fGqJ+YW9e9gRWp1tZn2L8q3/2hC6Y0e5g3QBp4Y0YMZBzlA0yCyqN/gF5d5mT/jN6k+9U8G2dYl2cRWW3eMR+5LQWN4TCa9x3q/agKg5AgMBAAGjgbEwga4wHQYDVR0OBBYEFK6D2lDwNlaqn0bBdMUOApSiPpIaMB8GA1UdIwQYMBaAFK6D2lDwNlaqn0bBdMUOApSiPpIaMA8GA1UdEwEB/wQFMAMBAf8wHQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMB4GA1UdEQQXMBWCE3JvYm90cy5hbmRyb2lkLmNvbTAOBgNVHQ8BAf8EBAMCAQYwDQYJKoZIhvcNAQEEBQADggEBABE0EkLhXz+epmMvFfPeREMH"
+        errorLine2="                                                                                                                                                                                                                                                       ^">
+        <location
+            file="/Users/apple/Downloads/DisciplineCore/app/src/main/res/values/font_certs.xml"
+            line="9"
+            column="248"/>
+    </issue>
+
+    <issue
+        id="Typos"
+        severity="Warning"
+        message="Did you mean &quot;czEcMBoGA!&quot; instead of &quot;czEcMBoGA1&quot;?"
+        category="Correctness:Messages"
+        priority="7"
+        summary="Spelling error"
+        explanation="This check looks through the string definitions, and if it finds any words that look like likely misspellings, they are flagged."
+        errorLine1="            MIIEqDCCA5CgAwIBAgIJANWFuGx90071MA0GCSqGSIb3DQEBBAUAMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNU2FuIEZyYW5jaXNjbzETMBEGA1UEChMKR29vZ2xlIEluYzEVMBMGA1UECxMMTW9iaWxlIFJvYm90czEcMBoGA1UEAxMTcm9ib3RzLmFuZHJvaWQuY29tMB4XDTE1MDMwNTIyMzA0MloXDTQ1MDIyNjIyMzA0MlowgZQxCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1TYW4gRnJhbmNpc2NvMRMwEQYDVQQKEwpHb29nbGUgSW5jMRUwEwYDVQQLEwxNb2JpbGUgUm9ib3RzMRwwGgYDVQQDExNyb2JvdHMuYW5kcm9pZC5jb20wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC4RGFtWjsoiSNM9OxoHpCRGWIwKwzrfKGCMj0kKTi65UksmfnSLfPGRjn/b/ZtVHSW3sB7Y9PcMwKDYkCL+e24+dN4g+0nlv87IU4cXcHW7TK4/3pHE7gHoP5c0pPZ70GaFWMGcBGpfZ9BW7I2DotFfj1T6cQsN4RGfFELIb0g2JMuXZF1wJhf0q0vQfFOLQAbh1m9JZLzl2f1A2MiA2H/JKE2NiHmBmkpjI3fGqJ+YW9e9gRWp1tZn2L8q3/2hC6Y0e5g3QBp4Y0YMZBzlA0yCyqN/gF5d5mT/jN6k+9U8G2dYl2cRWW3eMR+5LQWN4TCa9x3q/agKg5AgMBAAGjgbEwga4wHQYDVR0OBBYEFK6D2lDwNlaqn0bBdMUOApSiPpIaMB8GA1UdIwQYMBaAFK6D2lDwNlaqn0bBdMUOApSiPpIaMA8GA1UdEwEB/wQFMAMBAf8wHQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMB4GA1UdEQQXMBWCE3JvYm90cy5hbmRyb2lkLmNvbTAOBgNVHQ8BAf8EBAMCAQYwDQYJKoZIhvcNAQEEBQADggEBABE0EkLhXz+epmMvFfPeREMH"
+        errorLine2="                                                                                                                                                                                                            ^">
+        <location
+            file="/Users/apple/Downloads/DisciplineCore/app/src/main/res/values/font_certs.xml"
+            line="9"
+            column="205"/>
+    </issue>
+
+    <issue
+        id="Typos"
+        severity="Warning"
+        message="Did you mean &quot;jaXNjbzETMBEGA!&quot; instead of &quot;jaXNjbzETMBEGA1&quot;?"
+        category="Correctness:Messages"
+        priority="7"
+        summary="Spelling error"
+        explanation="This check looks through the string definitions, and if it finds any words that look like likely misspellings, they are flagged."
+        errorLine1="            MIIEqDCCA5CgAwIBAgIJANWFuGx90071MA0GCSqGSIb3DQEBBAUAMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNU2FuIEZyYW5jaXNjbzETMBEGA1UEChMKR29vZ2xlIEluYzEVMBMGA1UECxMMTW9iaWxlIFJvYm90czEcMBoGA1UEAxMTcm9ib3RzLmFuZHJvaWQuY29tMB4XDTE1MDMwNTIyMzA0MloXDTQ1MDIyNjIyMzA0MlowgZQxCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1TYW4gRnJhbmNpc2NvMRMwEQYDVQQKEwpHb29nbGUgSW5jMRUwEwYDVQQLEwxNb2JpbGUgUm9ib3RzMRwwGgYDVQQDExNyb2JvdHMuYW5kcm9pZC5jb20wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC4RGFtWjsoiSNM9OxoHpCRGWIwKwzrfKGCMj0kKTi65UksmfnSLfPGRjn/b/ZtVHSW3sB7Y9PcMwKDYkCL+e24+dN4g+0nlv87IU4cXcHW7TK4/3pHE7gHoP5c0pPZ70GaFWMGcBGpfZ9BW7I2DotFfj1T6cQsN4RGfFELIb0g2JMuXZF1wJhf0q0vQfFOLQAbh1m9JZLzl2f1A2MiA2H/JKE2NiHmBmkpjI3fGqJ+YW9e9gRWp1tZn2L8q3/2hC6Y0e5g3QBp4Y0YMZBzlA0yCyqN/gF5d5mT/jN6k+9U8G2dYl2cRWW3eMR+5LQWN4TCa9x3q/agKg5AgMBAAGjgbEwga4wHQYDVR0OBBYEFK6D2lDwNlaqn0bBdMUOApSiPpIaMB8GA1UdIwQYMBaAFK6D2lDwNlaqn0bBdMUOApSiPpIaMA8GA1UdEwEB/wQFMAMBAf8wHQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMB4GA1UdEQQXMBWCE3JvYm90cy5hbmRyb2lkLmNvbTAOBgNVHQ8BAf8EBAMCAQYwDQYJKoZIhvcNAQEEBQADggEBABE0EkLhXz+epmMvFfPeREMH"
+        errorLine2="                                                                                                                                           ^">
+        <location
+            file="/Users/apple/Downloads/DisciplineCore/app/src/main/res/values/font_certs.xml"
+            line="9"
+            column="140"/>
+    </issue>
+
+    <issue
+        id="Typos"
+        severity="Warning"
+        message="Did you mean &quot;pYTEWMBQGA!&quot; instead of &quot;pYTEWMBQGA1&quot;?"
+        category="Correctness:Messages"
+        priority="7"
+        summary="Spelling error"
+        explanation="This check looks through the string definitions, and if it finds any words that look like likely misspellings, they are flagged."
+        errorLine1="            MIIEqDCCA5CgAwIBAgIJANWFuGx90071MA0GCSqGSIb3DQEBBAUAMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNU2FuIEZyYW5jaXNjbzETMBEGA1UEChMKR29vZ2xlIEluYzEVMBMGA1UECxMMTW9iaWxlIFJvYm90czEcMBoGA1UEAxMTcm9ib3RzLmFuZHJvaWQuY29tMB4XDTE1MDMwNTIyMzA0MloXDTQ1MDIyNjIyMzA0MlowgZQxCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1TYW4gRnJhbmNpc2NvMRMwEQYDVQQKEwpHb29nbGUgSW5jMRUwEwYDVQQLEwxNb2JpbGUgUm9ib3RzMRwwGgYDVQQDExNyb2JvdHMuYW5kcm9pZC5jb20wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC4RGFtWjsoiSNM9OxoHpCRGWIwKwzrfKGCMj0kKTi65UksmfnSLfPGRjn/b/ZtVHSW3sB7Y9PcMwKDYkCL+e24+dN4g+0nlv87IU4cXcHW7TK4/3pHE7gHoP5c0pPZ70GaFWMGcBGpfZ9BW7I2DotFfj1T6cQsN4RGfFELIb0g2JMuXZF1wJhf0q0vQfFOLQAbh1m9JZLzl2f1A2MiA2H/JKE2NiHmBmkpjI3fGqJ+YW9e9gRWp1tZn2L8q3/2hC6Y0e5g3QBp4Y0YMZBzlA0yCyqN/gF5d5mT/jN6k+9U8G2dYl2cRWW3eMR+5LQWN4TCa9x3q/agKg5AgMBAAGjgbEwga4wHQYDVR0OBBYEFK6D2lDwNlaqn0bBdMUOApSiPpIaMB8GA1UdIwQYMBaAFK6D2lDwNlaqn0bBdMUOApSiPpIaMA8GA1UdEwEB/wQFMAMBAf8wHQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMB4GA1UdEQQXMBWCE3JvYm90cy5hbmRyb2lkLmNvbTAOBgNVHQ8BAf8EBAMCAQYwDQYJKoZIhvcNAQEEBQADggEBABE0EkLhXz+epmMvFfPeREMH"
+        errorLine2="                                                                                                               ^">
+        <location
+            file="/Users/apple/Downloads/DisciplineCore/app/src/main/res/values/font_certs.xml"
+            line="9"
+            column="112"/>
+    </issue>
+
+    <issue
+        id="Typos"
+        severity="Warning"
+        message="Did you mean &quot;xlIEluYzEVMBMGA!&quot; instead of &quot;xlIEluYzEVMBMGA1&quot;?"
+        category="Correctness:Messages"
+        priority="7"
+        summary="Spelling error"
+        explanation="This check looks through the string definitions, and if it finds any words that look like likely misspellings, they are flagged."
+        errorLine1="            MIIEqDCCA5CgAwIBAgIJANWFuGx90071MA0GCSqGSIb3DQEBBAUAMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNU2FuIEZyYW5jaXNjbzETMBEGA1UEChMKR29vZ2xlIEluYzEVMBMGA1UECxMMTW9iaWxlIFJvYm90czEcMBoGA1UEAxMTcm9ib3RzLmFuZHJvaWQuY29tMB4XDTE1MDMwNTIyMzA0MloXDTQ1MDIyNjIyMzA0MlowgZQxCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1TYW4gRnJhbmNpc2NvMRMwEQYDVQQKEwpHb29nbGUgSW5jMRUwEwYDVQQLEwxNb2JpbGUgUm9ib3RzMRwwGgYDVQQDExNyb2JvdHMuYW5kcm9pZC5jb20wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC4RGFtWjsoiSNM9OxoHpCRGWIwKwzrfKGCMj0kKTi65UksmfnSLfPGRjn/b/ZtVHSW3sB7Y9PcMwKDYkCL+e24+dN4g+0nlv87IU4cXcHW7TK4/3pHE7gHoP5c0pPZ70GaFWMGcBGpfZ9BW7I2DotFfj1T6cQsN4RGfFELIb0g2JMuXZF1wJhf0q0vQfFOLQAbh1m9JZLzl2f1A2MiA2H/JKE2NiHmBmkpjI3fGqJ+YW9e9gRWp1tZn2L8q3/2hC6Y0e5g3QBp4Y0YMZBzlA0yCyqN/gF5d5mT/jN6k+9U8G2dYl2cRWW3eMR+5LQWN4TCa9x3q/agKg5AgMBAAGjgbEwga4wHQYDVR0OBBYEFK6D2lDwNlaqn0bBdMUOApSiPpIaMB8GA1UdIwQYMBaAFK6D2lDwNlaqn0bBdMUOApSiPpIaMA8GA1UdEwEB/wQFMAMBAf8wHQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMB4GA1UdEQQXMBWCE3JvYm90cy5hbmRyb2lkLmNvbTAOBgNVHQ8BAf8EBAMCAQYwDQYJKoZIhvcNAQEEBQADggEBABE0EkLhXz+epmMvFfPeREMH"
+        errorLine2="                                                                                                                                                                      ^">
+        <location
+            file="/Users/apple/Downloads/DisciplineCore/app/src/main/res/values/font_certs.xml"
+            line="9"
+            column="167"/>
+    </issue>
+
+    <issue
+        id="Typos"
+        severity="Warning"
+        message="Did you mean &quot;ybmlhMRYwFAYDVQQHEw!&quot; instead of &quot;ybmlhMRYwFAYDVQQHEw1&quot;?"
+        category="Correctness:Messages"
+        priority="7"
+        summary="Spelling error"
+        explanation="This check looks through the string definitions, and if it finds any words that look like likely misspellings, they are flagged."
+        errorLine1="            MIIEqDCCA5CgAwIBAgIJANWFuGx90071MA0GCSqGSIb3DQEBBAUAMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNU2FuIEZyYW5jaXNjbzETMBEGA1UEChMKR29vZ2xlIEluYzEVMBMGA1UECxMMTW9iaWxlIFJvYm90czEcMBoGA1UEAxMTcm9ib3RzLmFuZHJvaWQuY29tMB4XDTE1MDMwNTIyMzA0MloXDTQ1MDIyNjIyMzA0MlowgZQxCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1TYW4gRnJhbmNpc2NvMRMwEQYDVQQKEwpHb29nbGUgSW5jMRUwEwYDVQQLEwxNb2JpbGUgUm9ib3RzMRwwGgYDVQQDExNyb2JvdHMuYW5kcm9pZC5jb20wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC4RGFtWjsoiSNM9OxoHpCRGWIwKwzrfKGCMj0kKTi65UksmfnSLfPGRjn/b/ZtVHSW3sB7Y9PcMwKDYkCL+e24+dN4g+0nlv87IU4cXcHW7TK4/3pHE7gHoP5c0pPZ70GaFWMGcBGpfZ9BW7I2DotFfj1T6cQsN4RGfFELIb0g2JMuXZF1wJhf0q0vQfFOLQAbh1m9JZLzl2f1A2MiA2H/JKE2NiHmBmkpjI3fGqJ+YW9e9gRWp1tZn2L8q3/2hC6Y0e5g3QBp4Y0YMZBzlA0yCyqN/gF5d5mT/jN6k+9U8G2dYl2cRWW3eMR+5LQWN4TCa9x3q/agKg5AgMBAAGjgbEwga4wHQYDVR0OBBYEFK6D2lDwNlaqn0bBdMUOApSiPpIaMB8GA1UdIwQYMBaAFK6D2lDwNlaqn0bBdMUOApSiPpIaMA8GA1UdEwEB/wQFMAMBAf8wHQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMB4GA1UdEQQXMBWCE3JvYm90cy5hbmRyb2lkLmNvbTAOBgNVHQ8BAf8EBAMCAQYwDQYJKoZIhvcNAQEEBQADggEBABE0EkLhXz+epmMvFfPeREMH"
+        errorLine2="                                                                                                                                                                                                                                                                                                                                           ^">
+        <location
+            file="/Users/apple/Downloads/DisciplineCore/app/src/main/res/values/font_certs.xml"
+            line="9"
+            column="332"/>
+    </issue>
+
+    <issue
+        id="Typos"
+        severity="Warning"
+        message="Did you mean &quot;GA!&quot; instead of &quot;GA1&quot;?"
+        category="Correctness:Messages"
+        priority="7"
+        summary="Spelling error"
+        explanation="This check looks through the string definitions, and if it finds any words that look like likely misspellings, they are flagged."
+        errorLine1="            MIIEQzCCAyugAwIBAgIJAMLgh0ZkSjCnMA0GCSqGSIb3DQEBBAUAMHQxCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtHb29nbGUgSW5jLjEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDAeFw0wODA4MjEyMzEzMzRaFw0zNjAxMDcyMzEzMzRaMHQxCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtHb29nbGUgSW5jLjEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDCCASAwDQYJKoZIhvcNAQEBBQADggENADCCAQgCggEBAKtWLgDYO6IIrgqWbxJOKdoR8qtW0uXGrRmkEzkfgrsBBFl2uBh+1BISMKSdNHKCjnrY18UoA7E9V1v4THOJpuS6T5MdPDTbRerqzXKR4FKAG8BV4oRoF1MWn4wfD+MQflnMKBN5OxuPnCbRCHMEEJv72P+GYz2pDt8iQzHPGrxKDjsJAUvEJ8JFMhGwUaA9qY+ZSXx3Lz2lrQe9XDVpU6wYuE5Kzqx8n/u0J/iH4Kx6J/VFH1iBFtT+L5eDeJY5qKEQ=="
+        errorLine2="                                                                                                                                                                                   ^">
+        <location
+            file="/Users/apple/Downloads/DisciplineCore/app/src/main/res/values/font_certs.xml"
+            line="14"
+            column="180"/>
+    </issue>
+
+    <issue
+        id="Typos"
+        severity="Warning"
+        message="Did you mean &quot;GA!&quot; instead of &quot;GA1&quot;?"
+        category="Correctness:Messages"
+        priority="7"
+        summary="Spelling error"
+        explanation="This check looks through the string definitions, and if it finds any words that look like likely misspellings, they are flagged."
+        errorLine1="            MIIEQzCCAyugAwIBAgIJAMLgh0ZkSjCnMA0GCSqGSIb3DQEBBAUAMHQxCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtHb29nbGUgSW5jLjEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDAeFw0wODA4MjEyMzEzMzRaFw0zNjAxMDcyMzEzMzRaMHQxCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtHb29nbGUgSW5jLjEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDCCASAwDQYJKoZIhvcNAQEBBQADggENADCCAQgCggEBAKtWLgDYO6IIrgqWbxJOKdoR8qtW0uXGrRmkEzkfgrsBBFl2uBh+1BISMKSdNHKCjnrY18UoA7E9V1v4THOJpuS6T5MdPDTbRerqzXKR4FKAG8BV4oRoF1MWn4wfD+MQflnMKBN5OxuPnCbRCHMEEJv72P+GYz2pDt8iQzHPGrxKDjsJAUvEJ8JFMhGwUaA9qY+ZSXx3Lz2lrQe9XDVpU6wYuE5Kzqx8n/u0J/iH4Kx6J/VFH1iBFtT+L5eDeJY5qKEQ=="
+        errorLine2="                                                                                                                                                                                                           ^">
+        <location
+            file="/Users/apple/Downloads/DisciplineCore/app/src/main/res/values/font_certs.xml"
+            line="14"
+            column="204"/>
+    </issue>
+
+    <issue
+        id="Typos"
+        severity="Warning"
+        message="Did you mean &quot;GA!&quot; instead of &quot;GA1&quot;?"
+        category="Correctness:Messages"
+        priority="7"
+        summary="Spelling error"
+        explanation="This check looks through the string definitions, and if it finds any words that look like likely misspellings, they are flagged."
+        errorLine1="            MIIEQzCCAyugAwIBAgIJAMLgh0ZkSjCnMA0GCSqGSIb3DQEBBAUAMHQxCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtHb29nbGUgSW5jLjEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDAeFw0wODA4MjEyMzEzMzRaFw0zNjAxMDcyMzEzMzRaMHQxCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtHb29nbGUgSW5jLjEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDCCASAwDQYJKoZIhvcNAQEBBQADggENADCCAQgCggEBAKtWLgDYO6IIrgqWbxJOKdoR8qtW0uXGrRmkEzkfgrsBBFl2uBh+1BISMKSdNHKCjnrY18UoA7E9V1v4THOJpuS6T5MdPDTbRerqzXKR4FKAG8BV4oRoF1MWn4wfD+MQflnMKBN5OxuPnCbRCHMEEJv72P+GYz2pDt8iQzHPGrxKDjsJAUvEJ8JFMhGwUaA9qY+ZSXx3Lz2lrQe9XDVpU6wYuE5Kzqx8n/u0J/iH4Kx6J/VFH1iBFtT+L5eDeJY5qKEQ=="
+        errorLine2="                                                                                                                                                                                                                                                                                                                                                                                           ^">
+        <location
+            file="/Users/apple/Downloads/DisciplineCore/app/src/main/res/values/font_certs.xml"
+            line="14"
+            column="380"/>
+    </issue>
+
+    <issue
+        id="Typos"
+        severity="Warning"
+        message="Did you mean &quot;GA!&quot; instead of &quot;GA1&quot;?"
+        category="Correctness:Messages"
+        priority="7"
+        summary="Spelling error"
+        explanation="This check looks through the string definitions, and if it finds any words that look like likely misspellings, they are flagged."
+        errorLine1="            MIIEQzCCAyugAwIBAgIJAMLgh0ZkSjCnMA0GCSqGSIb3DQEBBAUAMHQxCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtHb29nbGUgSW5jLjEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDAeFw0wODA4MjEyMzEzMzRaFw0zNjAxMDcyMzEzMzRaMHQxCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtHb29nbGUgSW5jLjEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDCCASAwDQYJKoZIhvcNAQEBBQADggENADCCAQgCggEBAKtWLgDYO6IIrgqWbxJOKdoR8qtW0uXGrRmkEzkfgrsBBFl2uBh+1BISMKSdNHKCjnrY18UoA7E9V1v4THOJpuS6T5MdPDTbRerqzXKR4FKAG8BV4oRoF1MWn4wfD+MQflnMKBN5OxuPnCbRCHMEEJv72P+GYz2pDt8iQzHPGrxKDjsJAUvEJ8JFMhGwUaA9qY+ZSXx3Lz2lrQe9XDVpU6wYuE5Kzqx8n/u0J/iH4Kx6J/VFH1iBFtT+L5eDeJY5qKEQ=="
+        errorLine2="                                                                                                                                                                                                                                                                                                                                                                                                                   ^">
+        <location
+            file="/Users/apple/Downloads/DisciplineCore/app/src/main/res/values/font_certs.xml"
+            line="14"
+            column="404"/>
+    </issue>
+
+    <issue
+        id="Typos"
+        severity="Warning"
+        message="Did you mean &quot;oRoF!&quot; instead of &quot;oRoF1&quot;?"
+        category="Correctness:Messages"
+        priority="7"
+        summary="Spelling error"
+        explanation="This check looks through the string definitions, and if it finds any words that look like likely misspellings, they are flagged."
+        errorLine1="            MIIEQzCCAyugAwIBAgIJAMLgh0ZkSjCnMA0GCSqGSIb3DQEBBAUAMHQxCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtHb29nbGUgSW5jLjEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDAeFw0wODA4MjEyMzEzMzRaFw0zNjAxMDcyMzEzMzRaMHQxCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtHb29nbGUgSW5jLjEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDCCASAwDQYJKoZIhvcNAQEBBQADggENADCCAQgCggEBAKtWLgDYO6IIrgqWbxJOKdoR8qtW0uXGrRmkEzkfgrsBBFl2uBh+1BISMKSdNHKCjnrY18UoA7E9V1v4THOJpuS6T5MdPDTbRerqzXKR4FKAG8BV4oRoF1MWn4wfD+MQflnMKBN5OxuPnCbRCHMEEJv72P+GYz2pDt8iQzHPGrxKDjsJAUvEJ8JFMhGwUaA9qY+ZSXx3Lz2lrQe9XDVpU6wYuE5Kzqx8n/u0J/iH4Kx6J/VFH1iBFtT+L5eDeJY5qKEQ=="
+        errorLine2="                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 ^">
+        <location
+            file="/Users/apple/Downloads/DisciplineCore/app/src/main/res/values/font_certs.xml"
+            line="14"
+            column="578"/>
+    </issue>
+
+    <issue
+        id="Typos"
+        severity="Warning"
+        message="Did you mean &quot;ybmlhMRYwFAYDVQQHEw!&quot; instead of &quot;ybmlhMRYwFAYDVQQHEw1&quot;?"
+        category="Correctness:Messages"
+        priority="7"
+        summary="Spelling error"
+        explanation="This check looks through the string definitions, and if it finds any words that look like likely misspellings, they are flagged."
+        errorLine1="            MIIEQzCCAyugAwIBAgIJAMLgh0ZkSjCnMA0GCSqGSIb3DQEBBAUAMHQxCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtHb29nbGUgSW5jLjEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDAeFw0wODA4MjEyMzEzMzRaFw0zNjAxMDcyMzEzMzRaMHQxCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtHb29nbGUgSW5jLjEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDCCASAwDQYJKoZIhvcNAQEBBQADggENADCCAQgCggEBAKtWLgDYO6IIrgqWbxJOKdoR8qtW0uXGrRmkEzkfgrsBBFl2uBh+1BISMKSdNHKCjnrY18UoA7E9V1v4THOJpuS6T5MdPDTbRerqzXKR4FKAG8BV4oRoF1MWn4wfD+MQflnMKBN5OxuPnCbRCHMEEJv72P+GYz2pDt8iQzHPGrxKDjsJAUvEJ8JFMhGwUaA9qY+ZSXx3Lz2lrQe9XDVpU6wYuE5Kzqx8n/u0J/iH4Kx6J/VFH1iBFtT+L5eDeJY5qKEQ=="
+        errorLine2="                                                                                                           ^">
+        <location
+            file="/Users/apple/Downloads/DisciplineCore/app/src/main/res/values/font_certs.xml"
+            line="14"
+            column="108"/>
+    </issue>
+
+    <issue
+        id="Typos"
+        severity="Warning"
+        message="Did you mean &quot;ybmlhMRYwFAYDVQQHEw!&quot; instead of &quot;ybmlhMRYwFAYDVQQHEw1&quot;?"
+        category="Correctness:Messages"
+        priority="7"
+        summary="Spelling error"
+        explanation="This check looks through the string definitions, and if it finds any words that look like likely misspellings, they are flagged."
+        errorLine1="            MIIEQzCCAyugAwIBAgIJAMLgh0ZkSjCnMA0GCSqGSIb3DQEBBAUAMHQxCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtHb29nbGUgSW5jLjEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDAeFw0wODA4MjEyMzEzMzRaFw0zNjAxMDcyMzEzMzRaMHQxCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtHb29nbGUgSW5jLjEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDCCASAwDQYJKoZIhvcNAQEBBQADggENADCCAQgCggEBAKtWLgDYO6IIrgqWbxJOKdoR8qtW0uXGrRmkEzkfgrsBBFl2uBh+1BISMKSdNHKCjnrY18UoA7E9V1v4THOJpuS6T5MdPDTbRerqzXKR4FKAG8BV4oRoF1MWn4wfD+MQflnMKBN5OxuPnCbRCHMEEJv72P+GYz2pDt8iQzHPGrxKDjsJAUvEJ8JFMhGwUaA9qY+ZSXx3Lz2lrQe9XDVpU6wYuE5Kzqx8n/u0J/iH4Kx6J/VFH1iBFtT+L5eDeJY5qKEQ=="
+        errorLine2="                                                                                                                                                                                                                                                                                                                   ^">
+        <location
+            file="/Users/apple/Downloads/DisciplineCore/app/src/main/res/values/font_certs.xml"
+            line="14"
+            column="308"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        severity="Warning"
+        message="Unnecessary; SDK_INT is always >= 23"
+        category="Performance"
+        priority="6"
+        summary="Obsolete SDK_INT Version Check"
+        explanation="This check flags version checks that are not necessary, because the `minSdkVersion` (or surrounding known API level) is already at least as high as the version checked for.&#xA;&#xA;Similarly, it also looks for resources in `-vNN` folders, such as `values-v14` where the version qualifier is less than or equal to the `minSdkVersion`, where the contents should be merged into the best folder."
+        errorLine1="        &lt;item name=&quot;android:windowLightStatusBar&quot; tools:targetApi=&quot;m&quot;>false&lt;/item>"
+        errorLine2="                                                  ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/apple/Downloads/DisciplineCore/app/src/main/res/values/themes.xml"
+            line="14"
+            column="51"/>
+    </issue>
+
+    <issue
+        id="Overdraw"
+        severity="Warning"
+        message="Possible overdraw: Root element paints background `#0F0F11` with a theme that also paints a background (inferred theme is `@style/Theme.DisciplineCore`)"
+        category="Performance"
+        priority="3"
+        summary="Overdraw: Painting regions more than once"
+        explanation="If you set a background drawable on a root view, then you should use a custom theme where the theme background is null. Otherwise, the theme background will be painted first, only to have your custom background completely cover it; this is called &quot;overdraw&quot;.&#xA;&#xA;NOTE: This detector relies on figuring out which layouts are associated with which activities based on scanning the Java code, and it&apos;s currently doing that using an inexact pattern matching algorithm. Therefore, it can incorrectly conclude which activity the layout is associated with and then wrongly complain that a background-theme is hidden.&#xA;&#xA;If you want your custom background on multiple pages, then you should consider making a custom theme with your custom background and just using that theme instead of a root element background.&#xA;&#xA;Of course it&apos;s possible that your custom drawable is translucent and you want it to be mixed with the background. However, you will get better performance if you pre-mix the background with your drawable and use that resulting image or color as a custom theme background instead."
+        errorLine1="    android:background=&quot;#0F0F11&quot;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/apple/Downloads/DisciplineCore/app/src/main/res/layout/activity_main.xml"
+            line="8"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="Overdraw"
+        severity="Warning"
+        message="Possible overdraw: Root element paints background `#1A1A1F` with a theme that also paints a background (inferred theme is `@style/Theme.DisciplineCore`)"
+        category="Performance"
+        priority="3"
+        summary="Overdraw: Painting regions more than once"
+        explanation="If you set a background drawable on a root view, then you should use a custom theme where the theme background is null. Otherwise, the theme background will be painted first, only to have your custom background completely cover it; this is called &quot;overdraw&quot;.&#xA;&#xA;NOTE: This detector relies on figuring out which layouts are associated with which activities based on scanning the Java code, and it&apos;s currently doing that using an inexact pattern matching algorithm. Therefore, it can incorrectly conclude which activity the layout is associated with and then wrongly complain that a background-theme is hidden.&#xA;&#xA;If you want your custom background on multiple pages, then you should consider making a custom theme with your custom background and just using that theme instead of a root element background.&#xA;&#xA;Of course it&apos;s possible that your custom drawable is translucent and you want it to be mixed with the background. However, you will get better performance if you pre-mix the background with your drawable and use that resulting image or color as a custom theme background instead."
+        errorLine1="    android:background=&quot;#1A1A1F&quot;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/apple/Downloads/DisciplineCore/app/src/main/res/layout/dialog_add_habit.xml"
+            line="8"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.color.bg_input` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds.&#xA;&#xA;&#xA;The unused resource check can ignore tests. If you want to include resources that are only referenced from tests, consider packaging them in a test source set instead.&#xA;&#xA;You can include test sources in the unused resource check by setting the system property lint.unused-resources.include-tests =true, and to exclude them (usually for performance reasons), use lint.unused-resources.exclude-tests =true.&#xA;,"
+        errorLine1="    &lt;color name=&quot;bg_input&quot;>#23232E&lt;/color>"
+        errorLine2="           ~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/apple/Downloads/DisciplineCore/app/src/main/res/values/colors.xml"
+            line="5"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.color.text_dim` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds.&#xA;&#xA;&#xA;The unused resource check can ignore tests. If you want to include resources that are only referenced from tests, consider packaging them in a test source set instead.&#xA;&#xA;You can include test sources in the unused resource check by setting the system property lint.unused-resources.include-tests =true, and to exclude them (usually for performance reasons), use lint.unused-resources.exclude-tests =true.&#xA;,"
+        errorLine1="    &lt;color name=&quot;text_dim&quot;>#4B4B5A&lt;/color>"
+        errorLine2="           ~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/apple/Downloads/DisciplineCore/app/src/main/res/values/colors.xml"
+            line="9"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.color.divider` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds.&#xA;&#xA;&#xA;The unused resource check can ignore tests. If you want to include resources that are only referenced from tests, consider packaging them in a test source set instead.&#xA;&#xA;You can include test sources in the unused resource check by setting the system property lint.unused-resources.include-tests =true, and to exclude them (usually for performance reasons), use lint.unused-resources.exclude-tests =true.&#xA;,"
+        errorLine1="    &lt;color name=&quot;divider&quot;>#2A2A35&lt;/color>"
+        errorLine2="           ~~~~~~~~~~~~~~">
+        <location
+            file="/Users/apple/Downloads/DisciplineCore/app/src/main/res/values/colors.xml"
+            line="10"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.color.green` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds.&#xA;&#xA;&#xA;The unused resource check can ignore tests. If you want to include resources that are only referenced from tests, consider packaging them in a test source set instead.&#xA;&#xA;You can include test sources in the unused resource check by setting the system property lint.unused-resources.include-tests =true, and to exclude them (usually for performance reasons), use lint.unused-resources.exclude-tests =true.&#xA;,"
+        errorLine1="    &lt;color name=&quot;green&quot;>#22C55E&lt;/color>"
+        errorLine2="           ~~~~~~~~~~~~">
+        <location
+            file="/Users/apple/Downloads/DisciplineCore/app/src/main/res/values/colors.xml"
+            line="11"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.color.red` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds.&#xA;&#xA;&#xA;The unused resource check can ignore tests. If you want to include resources that are only referenced from tests, consider packaging them in a test source set instead.&#xA;&#xA;You can include test sources in the unused resource check by setting the system property lint.unused-resources.include-tests =true, and to exclude them (usually for performance reasons), use lint.unused-resources.exclude-tests =true.&#xA;,"
+        errorLine1="    &lt;color name=&quot;red&quot;>#EF4444&lt;/color>"
+        errorLine2="           ~~~~~~~~~~">
+        <location
+            file="/Users/apple/Downloads/DisciplineCore/app/src/main/res/values/colors.xml"
+            line="12"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.color.purple_200` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds.&#xA;&#xA;&#xA;The unused resource check can ignore tests. If you want to include resources that are only referenced from tests, consider packaging them in a test source set instead.&#xA;&#xA;You can include test sources in the unused resource check by setting the system property lint.unused-resources.include-tests =true, and to exclude them (usually for performance reasons), use lint.unused-resources.exclude-tests =true.&#xA;,"
+        errorLine1="    &lt;color name=&quot;purple_200&quot;>#FFBB86FC&lt;/color>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/apple/Downloads/DisciplineCore/app/src/main/res/values/colors.xml"
+            line="15"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.color.purple_500` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds.&#xA;&#xA;&#xA;The unused resource check can ignore tests. If you want to include resources that are only referenced from tests, consider packaging them in a test source set instead.&#xA;&#xA;You can include test sources in the unused resource check by setting the system property lint.unused-resources.include-tests =true, and to exclude them (usually for performance reasons), use lint.unused-resources.exclude-tests =true.&#xA;,"
+        errorLine1="    &lt;color name=&quot;purple_500&quot;>#FF6200EE&lt;/color>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/apple/Downloads/DisciplineCore/app/src/main/res/values/colors.xml"
+            line="16"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.color.purple_700` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds.&#xA;&#xA;&#xA;The unused resource check can ignore tests. If you want to include resources that are only referenced from tests, consider packaging them in a test source set instead.&#xA;&#xA;You can include test sources in the unused resource check by setting the system property lint.unused-resources.include-tests =true, and to exclude them (usually for performance reasons), use lint.unused-resources.exclude-tests =true.&#xA;,"
+        errorLine1="    &lt;color name=&quot;purple_700&quot;>#FF3700B3&lt;/color>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/apple/Downloads/DisciplineCore/app/src/main/res/values/colors.xml"
+            line="17"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.color.teal_200` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds.&#xA;&#xA;&#xA;The unused resource check can ignore tests. If you want to include resources that are only referenced from tests, consider packaging them in a test source set instead.&#xA;&#xA;You can include test sources in the unused resource check by setting the system property lint.unused-resources.include-tests =true, and to exclude them (usually for performance reasons), use lint.unused-resources.exclude-tests =true.&#xA;,"
+        errorLine1="    &lt;color name=&quot;teal_200&quot;>#FF03DAC5&lt;/color>"
+        errorLine2="           ~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/apple/Downloads/DisciplineCore/app/src/main/res/values/colors.xml"
+            line="18"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.color.teal_700` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds.&#xA;&#xA;&#xA;The unused resource check can ignore tests. If you want to include resources that are only referenced from tests, consider packaging them in a test source set instead.&#xA;&#xA;You can include test sources in the unused resource check by setting the system property lint.unused-resources.include-tests =true, and to exclude them (usually for performance reasons), use lint.unused-resources.exclude-tests =true.&#xA;,"
+        errorLine1="    &lt;color name=&quot;teal_700&quot;>#FF018786&lt;/color>"
+        errorLine2="           ~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/apple/Downloads/DisciplineCore/app/src/main/res/values/colors.xml"
+            line="19"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.color.black` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds.&#xA;&#xA;&#xA;The unused resource check can ignore tests. If you want to include resources that are only referenced from tests, consider packaging them in a test source set instead.&#xA;&#xA;You can include test sources in the unused resource check by setting the system property lint.unused-resources.include-tests =true, and to exclude them (usually for performance reasons), use lint.unused-resources.exclude-tests =true.&#xA;,"
+        errorLine1="    &lt;color name=&quot;black&quot;>#FF000000&lt;/color>"
+        errorLine2="           ~~~~~~~~~~~~">
+        <location
+            file="/Users/apple/Downloads/DisciplineCore/app/src/main/res/values/colors.xml"
+            line="20"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.color.white` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds.&#xA;&#xA;&#xA;The unused resource check can ignore tests. If you want to include resources that are only referenced from tests, consider packaging them in a test source set instead.&#xA;&#xA;You can include test sources in the unused resource check by setting the system property lint.unused-resources.include-tests =true, and to exclude them (usually for performance reasons), use lint.unused-resources.exclude-tests =true.&#xA;,"
+        errorLine1="    &lt;color name=&quot;white&quot;>#FFFFFFFF&lt;/color>"
+        errorLine2="           ~~~~~~~~~~~~">
+        <location
+            file="/Users/apple/Downloads/DisciplineCore/app/src/main/res/values/colors.xml"
+            line="21"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.array.preloaded_fonts` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds.&#xA;&#xA;&#xA;The unused resource check can ignore tests. If you want to include resources that are only referenced from tests, consider packaging them in a test source set instead.&#xA;&#xA;You can include test sources in the unused resource check by setting the system property lint.unused-resources.include-tests =true, and to exclude them (usually for performance reasons), use lint.unused-resources.exclude-tests =true.&#xA;,"
+        errorLine1="    &lt;array name=&quot;preloaded_fonts&quot; translatable=&quot;false&quot;>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/apple/Downloads/DisciplineCore/app/src/main/res/values/preloaded_fonts.xml"
+            line="3"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.add_habit` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds.&#xA;&#xA;&#xA;The unused resource check can ignore tests. If you want to include resources that are only referenced from tests, consider packaging them in a test source set instead.&#xA;&#xA;You can include test sources in the unused resource check by setting the system property lint.unused-resources.include-tests =true, and to exclude them (usually for performance reasons), use lint.unused-resources.exclude-tests =true.&#xA;,"
+        errorLine1="    &lt;string name=&quot;add_habit&quot;>Add Habit&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/apple/Downloads/DisciplineCore/app/src/main/res/values/strings.xml"
+            line="4"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.no_habits` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds.&#xA;&#xA;&#xA;The unused resource check can ignore tests. If you want to include resources that are only referenced from tests, consider packaging them in a test source set instead.&#xA;&#xA;You can include test sources in the unused resource check by setting the system property lint.unused-resources.include-tests =true, and to exclude them (usually for performance reasons), use lint.unused-resources.exclude-tests =true.&#xA;,"
+        errorLine1="    &lt;string name=&quot;no_habits&quot;>No habits yet&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/apple/Downloads/DisciplineCore/app/src/main/res/values/strings.xml"
+            line="5"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.tap_to_add` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds.&#xA;&#xA;&#xA;The unused resource check can ignore tests. If you want to include resources that are only referenced from tests, consider packaging them in a test source set instead.&#xA;&#xA;You can include test sources in the unused resource check by setting the system property lint.unused-resources.include-tests =true, and to exclude them (usually for performance reasons), use lint.unused-resources.exclude-tests =true.&#xA;,"
+        errorLine1="    &lt;string name=&quot;tap_to_add&quot;>Tap + to add your first habit&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/apple/Downloads/DisciplineCore/app/src/main/res/values/strings.xml"
+            line="6"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.today_discipline` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds.&#xA;&#xA;&#xA;The unused resource check can ignore tests. If you want to include resources that are only referenced from tests, consider packaging them in a test source set instead.&#xA;&#xA;You can include test sources in the unused resource check by setting the system property lint.unused-resources.include-tests =true, and to exclude them (usually for performance reasons), use lint.unused-resources.exclude-tests =true.&#xA;,"
+        errorLine1="    &lt;string name=&quot;today_discipline&quot;>TODAY\&apos;S DISCIPLINE&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/apple/Downloads/DisciplineCore/app/src/main/res/values/strings.xml"
+            line="7"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.delete_habit` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds.&#xA;&#xA;&#xA;The unused resource check can ignore tests. If you want to include resources that are only referenced from tests, consider packaging them in a test source set instead.&#xA;&#xA;You can include test sources in the unused resource check by setting the system property lint.unused-resources.include-tests =true, and to exclude them (usually for performance reasons), use lint.unused-resources.exclude-tests =true.&#xA;,"
+        errorLine1="    &lt;string name=&quot;delete_habit&quot;>Delete Habit&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/apple/Downloads/DisciplineCore/app/src/main/res/values/strings.xml"
+            line="8"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.style.Theme_DisciplineCore_BottomSheetDialog` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds.&#xA;&#xA;&#xA;The unused resource check can ignore tests. If you want to include resources that are only referenced from tests, consider packaging them in a test source set instead.&#xA;&#xA;You can include test sources in the unused resource check by setting the system property lint.unused-resources.include-tests =true, and to exclude them (usually for performance reasons), use lint.unused-resources.exclude-tests =true.&#xA;,"
+        errorLine1="    &lt;style name=&quot;Theme.DisciplineCore.BottomSheetDialog&quot; parent=&quot;Theme.MaterialComponents.BottomSheetDialog&quot;>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/apple/Downloads/DisciplineCore/app/src/main/res/values/themes.xml"
+            line="25"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.style.ModalBottomSheet` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds.&#xA;&#xA;&#xA;The unused resource check can ignore tests. If you want to include resources that are only referenced from tests, consider packaging them in a test source set instead.&#xA;&#xA;You can include test sources in the unused resource check by setting the system property lint.unused-resources.include-tests =true, and to exclude them (usually for performance reasons), use lint.unused-resources.exclude-tests =true.&#xA;,"
+        errorLine1="    &lt;style name=&quot;ModalBottomSheet&quot; parent=&quot;Widget.MaterialComponents.BottomSheet.Modal&quot;>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/apple/Downloads/DisciplineCore/app/src/main/res/values/themes.xml"
+            line="29"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="IconLauncherShape"
+        severity="Warning"
+        message="Launcher icons should not fill every pixel of their square region; see the design guide for details"
+        category="Usability:Icons"
+        priority="6"
+        summary="The launcher icon shape should use a distinct silhouette"
+        explanation="According to the Android Design Guide (https://material.io/design/iconography/) your launcher icons should &quot;use a distinct silhouette&quot;, a &quot;three-dimensional, front view, with a slight perspective as if viewed from above, so that users perceive some depth.&quot;&#xA;&#xA;The unique silhouette implies that your launcher icon should not be a filled square.">
+        <location
+            file="/Users/apple/Downloads/DisciplineCore/app/src/main/res/mipmap-hdpi/ic_launcher.png"/>
+    </issue>
+
+    <issue
+        id="IconLauncherShape"
+        severity="Warning"
+        message="Launcher icons should not fill every pixel of their square region; see the design guide for details"
+        category="Usability:Icons"
+        priority="6"
+        summary="The launcher icon shape should use a distinct silhouette"
+        explanation="According to the Android Design Guide (https://material.io/design/iconography/) your launcher icons should &quot;use a distinct silhouette&quot;, a &quot;three-dimensional, front view, with a slight perspective as if viewed from above, so that users perceive some depth.&quot;&#xA;&#xA;The unique silhouette implies that your launcher icon should not be a filled square.">
+        <location
+            file="/Users/apple/Downloads/DisciplineCore/app/src/main/res/mipmap-mdpi/ic_launcher.png"/>
+    </issue>
+
+    <issue
+        id="IconLauncherShape"
+        severity="Warning"
+        message="Launcher icons should not fill every pixel of their square region; see the design guide for details"
+        category="Usability:Icons"
+        priority="6"
+        summary="The launcher icon shape should use a distinct silhouette"
+        explanation="According to the Android Design Guide (https://material.io/design/iconography/) your launcher icons should &quot;use a distinct silhouette&quot;, a &quot;three-dimensional, front view, with a slight perspective as if viewed from above, so that users perceive some depth.&quot;&#xA;&#xA;The unique silhouette implies that your launcher icon should not be a filled square.">
+        <location
+            file="/Users/apple/Downloads/DisciplineCore/app/src/main/res/mipmap-xhdpi/ic_launcher.png"/>
+    </issue>
+
+    <issue
+        id="IconLauncherShape"
+        severity="Warning"
+        message="Launcher icons should not fill every pixel of their square region; see the design guide for details"
+        category="Usability:Icons"
+        priority="6"
+        summary="The launcher icon shape should use a distinct silhouette"
+        explanation="According to the Android Design Guide (https://material.io/design/iconography/) your launcher icons should &quot;use a distinct silhouette&quot;, a &quot;three-dimensional, front view, with a slight perspective as if viewed from above, so that users perceive some depth.&quot;&#xA;&#xA;The unique silhouette implies that your launcher icon should not be a filled square.">
+        <location
+            file="/Users/apple/Downloads/DisciplineCore/app/src/main/res/mipmap-xxhdpi/ic_launcher.png"/>
+    </issue>
+
+    <issue
+        id="IconLauncherShape"
+        severity="Warning"
+        message="Launcher icons should not fill every pixel of their square region; see the design guide for details"
+        category="Usability:Icons"
+        priority="6"
+        summary="The launcher icon shape should use a distinct silhouette"
+        explanation="According to the Android Design Guide (https://material.io/design/iconography/) your launcher icons should &quot;use a distinct silhouette&quot;, a &quot;three-dimensional, front view, with a slight perspective as if viewed from above, so that users perceive some depth.&quot;&#xA;&#xA;The unique silhouette implies that your launcher icon should not be a filled square.">
+        <location
+            file="/Users/apple/Downloads/DisciplineCore/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"/>
+    </issue>
+
+    <issue
+        id="IconLauncherShape"
+        severity="Warning"
+        message="Launcher icon used as round icon did not have a circular shape"
+        category="Usability:Icons"
+        priority="6"
+        summary="The launcher icon shape should use a distinct silhouette"
+        explanation="According to the Android Design Guide (https://material.io/design/iconography/) your launcher icons should &quot;use a distinct silhouette&quot;, a &quot;three-dimensional, front view, with a slight perspective as if viewed from above, so that users perceive some depth.&quot;&#xA;&#xA;The unique silhouette implies that your launcher icon should not be a filled square.">
+        <location
+            file="/Users/apple/Downloads/DisciplineCore/app/src/main/res/mipmap-hdpi/ic_launcher_round.png"/>
+    </issue>
+
+    <issue
+        id="IconLauncherShape"
+        severity="Warning"
+        message="Launcher icon used as round icon did not have a circular shape"
+        category="Usability:Icons"
+        priority="6"
+        summary="The launcher icon shape should use a distinct silhouette"
+        explanation="According to the Android Design Guide (https://material.io/design/iconography/) your launcher icons should &quot;use a distinct silhouette&quot;, a &quot;three-dimensional, front view, with a slight perspective as if viewed from above, so that users perceive some depth.&quot;&#xA;&#xA;The unique silhouette implies that your launcher icon should not be a filled square.">
+        <location
+            file="/Users/apple/Downloads/DisciplineCore/app/src/main/res/mipmap-mdpi/ic_launcher_round.png"/>
+    </issue>
+
+    <issue
+        id="IconLauncherShape"
+        severity="Warning"
+        message="Launcher icon used as round icon did not have a circular shape"
+        category="Usability:Icons"
+        priority="6"
+        summary="The launcher icon shape should use a distinct silhouette"
+        explanation="According to the Android Design Guide (https://material.io/design/iconography/) your launcher icons should &quot;use a distinct silhouette&quot;, a &quot;three-dimensional, front view, with a slight perspective as if viewed from above, so that users perceive some depth.&quot;&#xA;&#xA;The unique silhouette implies that your launcher icon should not be a filled square.">
+        <location
+            file="/Users/apple/Downloads/DisciplineCore/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png"/>
+    </issue>
+
+    <issue
+        id="IconLauncherShape"
+        severity="Warning"
+        message="Launcher icon used as round icon did not have a circular shape"
+        category="Usability:Icons"
+        priority="6"
+        summary="The launcher icon shape should use a distinct silhouette"
+        explanation="According to the Android Design Guide (https://material.io/design/iconography/) your launcher icons should &quot;use a distinct silhouette&quot;, a &quot;three-dimensional, front view, with a slight perspective as if viewed from above, so that users perceive some depth.&quot;&#xA;&#xA;The unique silhouette implies that your launcher icon should not be a filled square.">
+        <location
+            file="/Users/apple/Downloads/DisciplineCore/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png"/>
+    </issue>
+
+    <issue
+        id="IconLauncherShape"
+        severity="Warning"
+        message="Launcher icon used as round icon did not have a circular shape"
+        category="Usability:Icons"
+        priority="6"
+        summary="The launcher icon shape should use a distinct silhouette"
+        explanation="According to the Android Design Guide (https://material.io/design/iconography/) your launcher icons should &quot;use a distinct silhouette&quot;, a &quot;three-dimensional, front view, with a slight perspective as if viewed from above, so that users perceive some depth.&quot;&#xA;&#xA;The unique silhouette implies that your launcher icon should not be a filled square.">
+        <location
+            file="/Users/apple/Downloads/DisciplineCore/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        severity="Warning"
+        message="The following unrelated icon files have identical contents: ic_launcher.png, ic_launcher_round.png"
+        category="Usability:Icons"
+        priority="3"
+        summary="Duplicated icons under different names"
+        explanation="If an icon is repeated under different names, you can consolidate and just use one of the icons and delete the others to make your application smaller. However, duplicated icons usually are not intentional and can sometimes point to icons that were accidentally overwritten or accidentally not updated.">
+        <location
+            file="/Users/apple/Downloads/DisciplineCore/app/src/main/res/mipmap-hdpi/ic_launcher_round.png"/>
+        <location
+            file="/Users/apple/Downloads/DisciplineCore/app/src/main/res/mipmap-hdpi/ic_launcher.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        severity="Warning"
+        message="The following unrelated icon files have identical contents: ic_launcher.png, ic_launcher_round.png"
+        category="Usability:Icons"
+        priority="3"
+        summary="Duplicated icons under different names"
+        explanation="If an icon is repeated under different names, you can consolidate and just use one of the icons and delete the others to make your application smaller. However, duplicated icons usually are not intentional and can sometimes point to icons that were accidentally overwritten or accidentally not updated.">
+        <location
+            file="/Users/apple/Downloads/DisciplineCore/app/src/main/res/mipmap-mdpi/ic_launcher_round.png"/>
+        <location
+            file="/Users/apple/Downloads/DisciplineCore/app/src/main/res/mipmap-mdpi/ic_launcher.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        severity="Warning"
+        message="The following unrelated icon files have identical contents: ic_launcher.png, ic_launcher_round.png"
+        category="Usability:Icons"
+        priority="3"
+        summary="Duplicated icons under different names"
+        explanation="If an icon is repeated under different names, you can consolidate and just use one of the icons and delete the others to make your application smaller. However, duplicated icons usually are not intentional and can sometimes point to icons that were accidentally overwritten or accidentally not updated.">
+        <location
+            file="/Users/apple/Downloads/DisciplineCore/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png"/>
+        <location
+            file="/Users/apple/Downloads/DisciplineCore/app/src/main/res/mipmap-xhdpi/ic_launcher.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        severity="Warning"
+        message="The following unrelated icon files have identical contents: ic_launcher.png, ic_launcher_round.png"
+        category="Usability:Icons"
+        priority="3"
+        summary="Duplicated icons under different names"
+        explanation="If an icon is repeated under different names, you can consolidate and just use one of the icons and delete the others to make your application smaller. However, duplicated icons usually are not intentional and can sometimes point to icons that were accidentally overwritten or accidentally not updated.">
+        <location
+            file="/Users/apple/Downloads/DisciplineCore/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png"/>
+        <location
+            file="/Users/apple/Downloads/DisciplineCore/app/src/main/res/mipmap-xxhdpi/ic_launcher.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        severity="Warning"
+        message="The following unrelated icon files have identical contents: ic_launcher.png, ic_launcher_round.png"
+        category="Usability:Icons"
+        priority="3"
+        summary="Duplicated icons under different names"
+        explanation="If an icon is repeated under different names, you can consolidate and just use one of the icons and delete the others to make your application smaller. However, duplicated icons usually are not intentional and can sometimes point to icons that were accidentally overwritten or accidentally not updated.">
+        <location
+            file="/Users/apple/Downloads/DisciplineCore/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png"/>
+        <location
+            file="/Users/apple/Downloads/DisciplineCore/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"/>
+    </issue>
+
+    <issue
+        id="ButtonStyle"
+        severity="Warning"
+        message="Buttons in button bars should be borderless; use `style=&quot;?android:attr/buttonBarButtonStyle&quot;` (and `?android:attr/buttonBarStyle` on the parent)"
+        category="Usability"
+        priority="5"
+        summary="Button should be borderless"
+        explanation="Button bars typically use a borderless style for the buttons. Set the `style=&quot;?android:attr/buttonBarButtonStyle&quot;` attribute on each of the buttons, and set `style=&quot;?android:attr/buttonBarStyle&quot;` on the parent layout"
+        url="https://material.io/components/dialogs/"
+        urls="https://material.io/components/dialogs/"
+        errorLine1="        &lt;Button"
+        errorLine2="         ~~~~~~">
+        <location
+            file="/Users/apple/Downloads/DisciplineCore/app/src/main/res/layout/dialog_add_habit.xml"
+            line="97"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="SmallSp"
+        severity="Warning"
+        message="Avoid using sizes smaller than `11sp`: `10sp`"
+        category="Usability"
+        priority="4"
+        summary="Text size is too small"
+        explanation="Avoid using sizes smaller than 11sp."
+        errorLine1="                                android:textSize=&quot;10sp&quot;"
+        errorLine2="                                ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/apple/Downloads/DisciplineCore/app/src/main/res/layout/activity_main.xml"
+            line="85"
+            column="33"/>
+    </issue>
+
+    <issue
+        id="SmallSp"
+        severity="Warning"
+        message="Avoid using sizes smaller than `11sp`: `10sp`"
+        category="Usability"
+        priority="4"
+        summary="Text size is too small"
+        explanation="Avoid using sizes smaller than 11sp."
+        errorLine1="                android:textSize=&quot;10sp&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/apple/Downloads/DisciplineCore/app/src/main/res/layout/activity_main.xml"
+            line="146"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="SmallSp"
+        severity="Warning"
+        message="Avoid using sizes smaller than `11sp`: `10sp`"
+        category="Usability"
+        priority="4"
+        summary="Text size is too small"
+        explanation="Avoid using sizes smaller than 11sp."
+        errorLine1="        android:textSize=&quot;10sp&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/apple/Downloads/DisciplineCore/app/src/main/res/layout/dialog_add_habit.xml"
+            line="37"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="SmallSp"
+        severity="Warning"
+        message="Avoid using sizes smaller than `11sp`: `10sp`"
+        category="Usability"
+        priority="4"
+        summary="Text size is too small"
+        explanation="Avoid using sizes smaller than 11sp."
+        errorLine1="        android:textSize=&quot;10sp&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/apple/Downloads/DisciplineCore/app/src/main/res/layout/dialog_add_habit.xml"
+            line="56"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        severity="Warning"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders."
+        category="Internationalization"
+        priority="6"
+        summary="TextView Internationalization"
+        explanation="When calling `TextView#setText`&#xA;* Never call `Number#toString()` to format numbers; it will not handle fraction separators and locale-specific digits properly. Consider using `String#format` with proper format specifications (`%d` or `%f`) instead.&#xA;* Do not pass a string literal (e.g. &quot;Hello&quot;) to display text. Hardcoded text can not be properly translated to other languages. Consider using Android resource strings instead.&#xA;* Do not build messages by concatenating text chunks. Such messages can not be properly translated."
+        url="https://developer.android.com/guide/topics/resources/localization.html"
+        urls="https://developer.android.com/guide/topics/resources/localization.html"
+        errorLine1="                tvTotal.text = &quot;${habit.totalCompletions}x done&quot;"
+        errorLine2="                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/apple/Downloads/DisciplineCore/app/src/main/java/com/anant/disciplinecore/ui/HabitAdapter.kt"
+            line="24"
+            column="32"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        severity="Warning"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        category="Internationalization"
+        priority="6"
+        summary="TextView Internationalization"
+        explanation="When calling `TextView#setText`&#xA;* Never call `Number#toString()` to format numbers; it will not handle fraction separators and locale-specific digits properly. Consider using `String#format` with proper format specifications (`%d` or `%f`) instead.&#xA;* Do not pass a string literal (e.g. &quot;Hello&quot;) to display text. Hardcoded text can not be properly translated to other languages. Consider using Android resource strings instead.&#xA;* Do not build messages by concatenating text chunks. Such messages can not be properly translated."
+        url="https://developer.android.com/guide/topics/resources/localization.html"
+        urls="https://developer.android.com/guide/topics/resources/localization.html"
+        errorLine1="                tvTotal.text = &quot;${habit.totalCompletions}x done&quot;"
+        errorLine2="                                                         ~~~~~~">
+        <location
+            file="/Users/apple/Downloads/DisciplineCore/app/src/main/java/com/anant/disciplinecore/ui/HabitAdapter.kt"
+            line="24"
+            column="58"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        severity="Warning"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders."
+        category="Internationalization"
+        priority="6"
+        summary="TextView Internationalization"
+        explanation="When calling `TextView#setText`&#xA;* Never call `Number#toString()` to format numbers; it will not handle fraction separators and locale-specific digits properly. Consider using `String#format` with proper format specifications (`%d` or `%f`) instead.&#xA;* Do not pass a string literal (e.g. &quot;Hello&quot;) to display text. Hardcoded text can not be properly translated to other languages. Consider using Android resource strings instead.&#xA;* Do not build messages by concatenating text chunks. Such messages can not be properly translated."
+        url="https://developer.android.com/guide/topics/resources/localization.html"
+        urls="https://developer.android.com/guide/topics/resources/localization.html"
+        errorLine1="        binding.tvScore.text = &quot;$done / $total&quot;"
+        errorLine2="                               ~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/apple/Downloads/DisciplineCore/app/src/main/java/com/anant/disciplinecore/ui/MainActivity.kt"
+            line="71"
+            column="32"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        severity="Warning"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders."
+        category="Internationalization"
+        priority="6"
+        summary="TextView Internationalization"
+        explanation="When calling `TextView#setText`&#xA;* Never call `Number#toString()` to format numbers; it will not handle fraction separators and locale-specific digits properly. Consider using `String#format` with proper format specifications (`%d` or `%f`) instead.&#xA;* Do not pass a string literal (e.g. &quot;Hello&quot;) to display text. Hardcoded text can not be properly translated to other languages. Consider using Android resource strings instead.&#xA;* Do not build messages by concatenating text chunks. Such messages can not be properly translated."
+        url="https://developer.android.com/guide/topics/resources/localization.html"
+        urls="https://developer.android.com/guide/topics/resources/localization.html"
+        errorLine1="        binding.tvPct.text = &quot;$pct%&quot;"
+        errorLine2="                             ~~~~~~~">
+        <location
+            file="/Users/apple/Downloads/DisciplineCore/app/src/main/java/com/anant/disciplinecore/ui/MainActivity.kt"
+            line="81"
+            column="30"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;Good Morning ☀️&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="                    android:text=&quot;Good Morning ☀️&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/apple/Downloads/DisciplineCore/app/src/main/res/layout/activity_main.xml"
+            line="34"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;Monday, 19 May&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="                    android:text=&quot;Monday, 19 May&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/apple/Downloads/DisciplineCore/app/src/main/res/layout/activity_main.xml"
+            line="45"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;TODAY&apos;S DISCIPLINE&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="                                android:text=&quot;TODAY&apos;S DISCIPLINE&quot;"
+        errorLine2="                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/apple/Downloads/DisciplineCore/app/src/main/res/layout/activity_main.xml"
+            line="83"
+            column="33"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;0 / 0&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="                                android:text=&quot;0 / 0&quot;"
+        errorLine2="                                ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/apple/Downloads/DisciplineCore/app/src/main/res/layout/activity_main.xml"
+            line="93"
+            column="33"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;0%&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="                            android:text=&quot;0%&quot;"
+        errorLine2="                            ~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/apple/Downloads/DisciplineCore/app/src/main/res/layout/activity_main.xml"
+            line="105"
+            column="29"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;No habits yet. Add one!&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="                        android:text=&quot;No habits yet. Add one!&quot;"
+        errorLine2="                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/apple/Downloads/DisciplineCore/app/src/main/res/layout/activity_main.xml"
+            line="129"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;YOUR HABITS&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="                android:text=&quot;YOUR HABITS&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/apple/Downloads/DisciplineCore/app/src/main/res/layout/activity_main.xml"
+            line="144"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;🎯&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="                    android:text=&quot;🎯&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/apple/Downloads/DisciplineCore/app/src/main/res/layout/activity_main.xml"
+            line="172"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;No habits yet&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="                    android:text=&quot;No habits yet&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/apple/Downloads/DisciplineCore/app/src/main/res/layout/activity_main.xml"
+            line="179"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;Tap + to add your first habit&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="                    android:text=&quot;Tap + to add your first habit&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/apple/Downloads/DisciplineCore/app/src/main/res/layout/activity_main.xml"
+            line="188"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;Add Habit&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        android:text=&quot;Add Habit&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/apple/Downloads/DisciplineCore/app/src/main/res/layout/activity_main.xml"
+            line="205"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;New Habit&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        android:text=&quot;New Habit&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/apple/Downloads/DisciplineCore/app/src/main/res/layout/dialog_add_habit.xml"
+            line="25"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;PICK AN ICON&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        android:text=&quot;PICK AN ICON&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/apple/Downloads/DisciplineCore/app/src/main/res/layout/dialog_add_habit.xml"
+            line="35"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;HABIT NAME&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        android:text=&quot;HABIT NAME&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/apple/Downloads/DisciplineCore/app/src/main/res/layout/dialog_add_habit.xml"
+            line="54"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;e.g. Morning workout&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        android:hint=&quot;e.g. Morning workout&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/apple/Downloads/DisciplineCore/app/src/main/res/layout/dialog_add_habit.xml"
+            line="67"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;Cancel&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="            android:text=&quot;Cancel&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/apple/Downloads/DisciplineCore/app/src/main/res/layout/dialog_add_habit.xml"
+            line="92"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;Add Habit&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="            android:text=&quot;Add Habit&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/apple/Downloads/DisciplineCore/app/src/main/res/layout/dialog_add_habit.xml"
+            line="103"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;⚡&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="            android:text=&quot;⚡&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/apple/Downloads/DisciplineCore/app/src/main/res/layout/item_habit.xml"
+            line="26"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;Morning run&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="                android:text=&quot;Morning run&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/apple/Downloads/DisciplineCore/app/src/main/res/layout/item_habit.xml"
+            line="42"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;🔥 5&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="                    android:text=&quot;🔥 5&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/apple/Downloads/DisciplineCore/app/src/main/res/layout/item_habit.xml"
+            line="58"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;·&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="                    android:text=&quot;·&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/apple/Downloads/DisciplineCore/app/src/main/res/layout/item_habit.xml"
+            line="67"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;12x done&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="                    android:text=&quot;12x done&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/apple/Downloads/DisciplineCore/app/src/main/res/layout/item_habit.xml"
+            line="75"
+            column="21"/>
+    </issue>
+
+</issues>

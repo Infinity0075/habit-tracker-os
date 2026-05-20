@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    IMPORTANT: Playfair Display Bold is used in the UI.
+    To add it:
+    1. In Android Studio → res/font → right-click → New → Font Resource File
+    2. Or use Google Fonts: res → New → More… → Font → Search "Playfair Display"
+
+    Quick fallback: if font isn't added, the app falls back to system serif.
+    The references in XML use @font/playfair_display_bold — create this file via
+    Android Studio's built-in font downloader, or replace with android:fontFamily="serif"
+    temporarily.
+-->
+<resources>
+    <!-- Placeholder. Replace with actual downloaded font file. -->
+</resources>

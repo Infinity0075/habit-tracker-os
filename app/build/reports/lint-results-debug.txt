@@ -1,0 +1,402 @@
+/Users/apple/Downloads/DisciplineCore/app/src/main/res/font/playfair_display_bold.xml:4: Warning: For minSdkVersion=26 only app: attributes should be used [FontValidation]
+    android:fontProviderAuthority="com.google.android.gms.fonts"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "FontValidation":
+   Look for problems in various font files.
+
+   https://developer.android.com/guide/topics/text/downloadable-fonts.html
+
+/Users/apple/Downloads/DisciplineCore/app/build.gradle:40: Warning: A newer version of androidx.core:core-ktx than 1.12.0 is available: 1.18.0 [GradleDependency]
+    implementation 'androidx.core:core-ktx:1.12.0'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/apple/Downloads/DisciplineCore/app/build.gradle:41: Warning: A newer version of androidx.appcompat:appcompat than 1.6.1 is available: 1.7.1 [GradleDependency]
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/apple/Downloads/DisciplineCore/app/build.gradle:42: Warning: A newer version of com.google.android.material:material than 1.11.0 is available: 1.14.0 [GradleDependency]
+    implementation 'com.google.android.material:material:1.11.0'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/apple/Downloads/DisciplineCore/app/build.gradle:43: Warning: A newer version of androidx.constraintlayout:constraintlayout than 2.1.4 is available: 2.2.1 [GradleDependency]
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/apple/Downloads/DisciplineCore/app/build.gradle:44: Warning: A newer version of androidx.recyclerview:recyclerview than 1.3.2 is available: 1.4.0 [GradleDependency]
+    implementation 'androidx.recyclerview:recyclerview:1.3.2'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/apple/Downloads/DisciplineCore/app/build.gradle:47: Warning: A newer version of androidx.lifecycle:lifecycle-viewmodel-ktx than 2.7.0 is available: 2.10.0 [GradleDependency]
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/apple/Downloads/DisciplineCore/app/build.gradle:48: Warning: A newer version of androidx.lifecycle:lifecycle-livedata-ktx than 2.7.0 is available: 2.10.0 [GradleDependency]
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.7.0'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/apple/Downloads/DisciplineCore/app/build.gradle:49: Warning: A newer version of androidx.activity:activity-ktx than 1.8.2 is available: 1.13.0 [GradleDependency]
+    implementation 'androidx.activity:activity-ktx:1.8.2'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/apple/Downloads/DisciplineCore/app/build.gradle:52: Warning: A newer version of androidx.room:room-runtime than 2.6.1 is available: 2.8.4 [GradleDependency]
+    implementation 'androidx.room:room-runtime:2.6.1'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/apple/Downloads/DisciplineCore/app/build.gradle:53: Warning: A newer version of androidx.room:room-ktx than 2.6.1 is available: 2.8.4 [GradleDependency]
+    implementation 'androidx.room:room-ktx:2.6.1'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/apple/Downloads/DisciplineCore/app/build.gradle:54: Warning: A newer version of androidx.room:room-compiler than 2.6.1 is available: 2.8.4 [GradleDependency]
+    ksp 'androidx.room:room-compiler:2.6.1'
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/apple/Downloads/DisciplineCore/app/build.gradle:57: Warning: A newer version of androidx.work:work-runtime-ktx than 2.9.0 is available: 2.11.2 [GradleDependency]
+    implementation 'androidx.work:work-runtime-ktx:2.9.0'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/apple/Downloads/DisciplineCore/app/build.gradle:63: Warning: A newer version of androidx.test.ext:junit than 1.1.5 is available: 1.3.0 [GradleDependency]
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "GradleDependency":
+   This detector looks for usages of libraries where the version you are using
+   is not the current stable release. Using older versions is fine, and there
+   are cases where you deliberately want to stick with an older version.
+   However, you may simply not be aware that a more recent version is
+   available, and that is what this lint check helps find.
+
+/Users/apple/Downloads/DisciplineCore/app/src/main/res/values/font_certs.xml:9: Warning: Did you mean "DQEBBAUAMIGUMQswCQYDVQQGEwJVUzETMBEGA!" instead of "DQEBBAUAMIGUMQswCQYDVQQGEwJVUzETMBEGA1"? [Typos]
+            MIIEqDCCA5CgAwIBAgIJANWFuGx90071MA0GCSqGSIb3DQEBBAUAMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNU2FuIEZyYW5jaXNjbzETMBEGA1UEChMKR29vZ2xlIEluYzEVMBMGA1UECxMMTW9iaWxlIFJvYm90czEcMBoGA1UEAxMTcm9ib3RzLmFuZHJvaWQuY29tMB4XDTE1MDMwNTIyMzA0MloXDTQ1MDIyNjIyMzA0MlowgZQxCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1TYW4gRnJhbmNpc2NvMRMwEQYDVQQKEwpHb29nbGUgSW5jMRUwEwYDVQQLEwxNb2JpbGUgUm9ib3RzMRwwGgYDVQQDExNyb2JvdHMuYW5kcm9pZC5jb20wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC4RGFtWjsoiSNM9OxoHpCRGWIwKwzrfKGCMj0kKTi65UksmfnSLfPGRjn/b/ZtVHSW3sB7Y9PcMwKDYkCL+e24+dN4g+0nlv87IU4cXcHW7TK4/3pHE7gHoP5c0pPZ70GaFWMGcBGpfZ9BW7I2DotFfj1T6cQsN4RGfFELIb0g2JMuXZF1wJhf0q0vQfFOLQAbh1m9JZLzl2f1A2MiA2H/JKE2NiHmBmkpjI3fGqJ+YW9e9gRWp1tZn2L8q3/2hC6Y0e5g3QBp4Y0YMZBzlA0yCyqN/gF5d5mT/jN6k+9U8G2dYl2cRWW3eMR+5LQWN4TCa9x3q/agKg5AgMBAAGjgbEwga4wHQYDVR0OBBYEFK6D2lDwNlaqn0bBdMUOApSiPpIaMB8GA1UdIwQYMBaAFK6D2lDwNlaqn0bBdMUOApSiPpIaMA8GA1UdEwEB/wQFMAMBAf8wHQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMB4GA1UdEQQXMBWCE3JvYm90cy5hbmRyb2lkLmNvbTAOBgNVHQ8BAf8EBAMCAQYwDQYJKoZIhvcNAQEEBQADggEBABE0EkLhXz+epmMvFfPeREMH
+                                                        ^
+/Users/apple/Downloads/DisciplineCore/app/src/main/res/values/font_certs.xml:9: Warning: Did you mean "DotFfj!" instead of "DotFfj1"? [Typos]
+            MIIEqDCCA5CgAwIBAgIJANWFuGx90071MA0GCSqGSIb3DQEBBAUAMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNU2FuIEZyYW5jaXNjbzETMBEGA1UEChMKR29vZ2xlIEluYzEVMBMGA1UECxMMTW9iaWxlIFJvYm90czEcMBoGA1UEAxMTcm9ib3RzLmFuZHJvaWQuY29tMB4XDTE1MDMwNTIyMzA0MloXDTQ1MDIyNjIyMzA0MlowgZQxCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1TYW4gRnJhbmNpc2NvMRMwEQYDVQQKEwpHb29nbGUgSW5jMRUwEwYDVQQLEwxNb2JpbGUgUm9ib3RzMRwwGgYDVQQDExNyb2JvdHMuYW5kcm9pZC5jb20wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC4RGFtWjsoiSNM9OxoHpCRGWIwKwzrfKGCMj0kKTi65UksmfnSLfPGRjn/b/ZtVHSW3sB7Y9PcMwKDYkCL+e24+dN4g+0nlv87IU4cXcHW7TK4/3pHE7gHoP5c0pPZ70GaFWMGcBGpfZ9BW7I2DotFfj1T6cQsN4RGfFELIb0g2JMuXZF1wJhf0q0vQfFOLQAbh1m9JZLzl2f1A2MiA2H/JKE2NiHmBmkpjI3fGqJ+YW9e9gRWp1tZn2L8q3/2hC6Y0e5g3QBp4Y0YMZBzlA0yCyqN/gF5d5mT/jN6k+9U8G2dYl2cRWW3eMR+5LQWN4TCa9x3q/agKg5AgMBAAGjgbEwga4wHQYDVR0OBBYEFK6D2lDwNlaqn0bBdMUOApSiPpIaMB8GA1UdIwQYMBaAFK6D2lDwNlaqn0bBdMUOApSiPpIaMA8GA1UdEwEB/wQFMAMBAf8wHQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMB4GA1UdEQQXMBWCE3JvYm90cy5hbmRyb2lkLmNvbTAOBgNVHQ8BAf8EBAMCAQYwDQYJKoZIhvcNAQEEBQADggEBABE0EkLhXz+epmMvFfPeREMH
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ^
+/Users/apple/Downloads/DisciplineCore/app/src/main/res/values/font_certs.xml:9: Warning: Did you mean "GA!" instead of "GA1"? [Typos]
+            MIIEqDCCA5CgAwIBAgIJANWFuGx90071MA0GCSqGSIb3DQEBBAUAMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNU2FuIEZyYW5jaXNjbzETMBEGA1UEChMKR29vZ2xlIEluYzEVMBMGA1UECxMMTW9iaWxlIFJvYm90czEcMBoGA1UEAxMTcm9ib3RzLmFuZHJvaWQuY29tMB4XDTE1MDMwNTIyMzA0MloXDTQ1MDIyNjIyMzA0MlowgZQxCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1TYW4gRnJhbmNpc2NvMRMwEQYDVQQKEwpHb29nbGUgSW5jMRUwEwYDVQQLEwxNb2JpbGUgUm9ib3RzMRwwGgYDVQQDExNyb2JvdHMuYW5kcm9pZC5jb20wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC4RGFtWjsoiSNM9OxoHpCRGWIwKwzrfKGCMj0kKTi65UksmfnSLfPGRjn/b/ZtVHSW3sB7Y9PcMwKDYkCL+e24+dN4g+0nlv87IU4cXcHW7TK4/3pHE7gHoP5c0pPZ70GaFWMGcBGpfZ9BW7I2DotFfj1T6cQsN4RGfFELIb0g2JMuXZF1wJhf0q0vQfFOLQAbh1m9JZLzl2f1A2MiA2H/JKE2NiHmBmkpjI3fGqJ+YW9e9gRWp1tZn2L8q3/2hC6Y0e5g3QBp4Y0YMZBzlA0yCyqN/gF5d5mT/jN6k+9U8G2dYl2cRWW3eMR+5LQWN4TCa9x3q/agKg5AgMBAAGjgbEwga4wHQYDVR0OBBYEFK6D2lDwNlaqn0bBdMUOApSiPpIaMB8GA1UdIwQYMBaAFK6D2lDwNlaqn0bBdMUOApSiPpIaMA8GA1UdEwEB/wQFMAMBAf8wHQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMB4GA1UdEQQXMBWCE3JvYm90cy5hbmRyb2lkLmNvbTAOBgNVHQ8BAf8EBAMCAQYwDQYJKoZIhvcNAQEEBQADggEBABE0EkLhXz+epmMvFfPeREMH
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      ^
+/Users/apple/Downloads/DisciplineCore/app/src/main/res/values/font_certs.xml:9: Warning: Did you mean "GA!" instead of "GA1"? [Typos]
+            MIIEqDCCA5CgAwIBAgIJANWFuGx90071MA0GCSqGSIb3DQEBBAUAMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNU2FuIEZyYW5jaXNjbzETMBEGA1UEChMKR29vZ2xlIEluYzEVMBMGA1UECxMMTW9iaWxlIFJvYm90czEcMBoGA1UEAxMTcm9ib3RzLmFuZHJvaWQuY29tMB4XDTE1MDMwNTIyMzA0MloXDTQ1MDIyNjIyMzA0MlowgZQxCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1TYW4gRnJhbmNpc2NvMRMwEQYDVQQKEwpHb29nbGUgSW5jMRUwEwYDVQQLEwxNb2JpbGUgUm9ib3RzMRwwGgYDVQQDExNyb2JvdHMuYW5kcm9pZC5jb20wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC4RGFtWjsoiSNM9OxoHpCRGWIwKwzrfKGCMj0kKTi65UksmfnSLfPGRjn/b/ZtVHSW3sB7Y9PcMwKDYkCL+e24+dN4g+0nlv87IU4cXcHW7TK4/3pHE7gHoP5c0pPZ70GaFWMGcBGpfZ9BW7I2DotFfj1T6cQsN4RGfFELIb0g2JMuXZF1wJhf0q0vQfFOLQAbh1m9JZLzl2f1A2MiA2H/JKE2NiHmBmkpjI3fGqJ+YW9e9gRWp1tZn2L8q3/2hC6Y0e5g3QBp4Y0YMZBzlA0yCyqN/gF5d5mT/jN6k+9U8G2dYl2cRWW3eMR+5LQWN4TCa9x3q/agKg5AgMBAAGjgbEwga4wHQYDVR0OBBYEFK6D2lDwNlaqn0bBdMUOApSiPpIaMB8GA1UdIwQYMBaAFK6D2lDwNlaqn0bBdMUOApSiPpIaMA8GA1UdEwEB/wQFMAMBAf8wHQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMB4GA1UdEQQXMBWCE3JvYm90cy5hbmRyb2lkLmNvbTAOBgNVHQ8BAf8EBAMCAQYwDQYJKoZIhvcNAQEEBQADggEBABE0EkLhXz+epmMvFfPeREMH
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  ^
+/Users/apple/Downloads/DisciplineCore/app/src/main/res/values/font_certs.xml:9: Warning: Did you mean "GA!" instead of "GA1"? [Typos]
+            MIIEqDCCA5CgAwIBAgIJANWFuGx90071MA0GCSqGSIb3DQEBBAUAMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNU2FuIEZyYW5jaXNjbzETMBEGA1UEChMKR29vZ2xlIEluYzEVMBMGA1UECxMMTW9iaWxlIFJvYm90czEcMBoGA1UEAxMTcm9ib3RzLmFuZHJvaWQuY29tMB4XDTE1MDMwNTIyMzA0MloXDTQ1MDIyNjIyMzA0MlowgZQxCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1TYW4gRnJhbmNpc2NvMRMwEQYDVQQKEwpHb29nbGUgSW5jMRUwEwYDVQQLEwxNb2JpbGUgUm9ib3RzMRwwGgYDVQQDExNyb2JvdHMuYW5kcm9pZC5jb20wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC4RGFtWjsoiSNM9OxoHpCRGWIwKwzrfKGCMj0kKTi65UksmfnSLfPGRjn/b/ZtVHSW3sB7Y9PcMwKDYkCL+e24+dN4g+0nlv87IU4cXcHW7TK4/3pHE7gHoP5c0pPZ70GaFWMGcBGpfZ9BW7I2DotFfj1T6cQsN4RGfFELIb0g2JMuXZF1wJhf0q0vQfFOLQAbh1m9JZLzl2f1A2MiA2H/JKE2NiHmBmkpjI3fGqJ+YW9e9gRWp1tZn2L8q3/2hC6Y0e5g3QBp4Y0YMZBzlA0yCyqN/gF5d5mT/jN6k+9U8G2dYl2cRWW3eMR+5LQWN4TCa9x3q/agKg5AgMBAAGjgbEwga4wHQYDVR0OBBYEFK6D2lDwNlaqn0bBdMUOApSiPpIaMB8GA1UdIwQYMBaAFK6D2lDwNlaqn0bBdMUOApSiPpIaMA8GA1UdEwEB/wQFMAMBAf8wHQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMB4GA1UdEQQXMBWCE3JvYm90cy5hbmRyb2lkLmNvbTAOBgNVHQ8BAf8EBAMCAQYwDQYJKoZIhvcNAQEEBQADggEBABE0EkLhXz+epmMvFfPeREMH
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  ^
+/Users/apple/Downloads/DisciplineCore/app/src/main/res/values/font_certs.xml:9: Warning: Did you mean "MloXDTQ!" instead of "MloXDTQ1"? [Typos]
+            MIIEqDCCA5CgAwIBAgIJANWFuGx90071MA0GCSqGSIb3DQEBBAUAMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNU2FuIEZyYW5jaXNjbzETMBEGA1UEChMKR29vZ2xlIEluYzEVMBMGA1UECxMMTW9iaWxlIFJvYm90czEcMBoGA1UEAxMTcm9ib3RzLmFuZHJvaWQuY29tMB4XDTE1MDMwNTIyMzA0MloXDTQ1MDIyNjIyMzA0MlowgZQxCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1TYW4gRnJhbmNpc2NvMRMwEQYDVQQKEwpHb29nbGUgSW5jMRUwEwYDVQQLEwxNb2JpbGUgUm9ib3RzMRwwGgYDVQQDExNyb2JvdHMuYW5kcm9pZC5jb20wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC4RGFtWjsoiSNM9OxoHpCRGWIwKwzrfKGCMj0kKTi65UksmfnSLfPGRjn/b/ZtVHSW3sB7Y9PcMwKDYkCL+e24+dN4g+0nlv87IU4cXcHW7TK4/3pHE7gHoP5c0pPZ70GaFWMGcBGpfZ9BW7I2DotFfj1T6cQsN4RGfFELIb0g2JMuXZF1wJhf0q0vQfFOLQAbh1m9JZLzl2f1A2MiA2H/JKE2NiHmBmkpjI3fGqJ+YW9e9gRWp1tZn2L8q3/2hC6Y0e5g3QBp4Y0YMZBzlA0yCyqN/gF5d5mT/jN6k+9U8G2dYl2cRWW3eMR+5LQWN4TCa9x3q/agKg5AgMBAAGjgbEwga4wHQYDVR0OBBYEFK6D2lDwNlaqn0bBdMUOApSiPpIaMB8GA1UdIwQYMBaAFK6D2lDwNlaqn0bBdMUOApSiPpIaMA8GA1UdEwEB/wQFMAMBAf8wHQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMB4GA1UdEQQXMBWCE3JvYm90cy5hbmRyb2lkLmNvbTAOBgNVHQ8BAf8EBAMCAQYwDQYJKoZIhvcNAQEEBQADggEBABE0EkLhXz+epmMvFfPeREMH
+                                                                                                                                                                                                                                                                        ^
+/Users/apple/Downloads/DisciplineCore/app/src/main/res/values/font_certs.xml:9: Warning: Did you mean "XDTE!" instead of "XDTE1"? [Typos]
+            MIIEqDCCA5CgAwIBAgIJANWFuGx90071MA0GCSqGSIb3DQEBBAUAMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNU2FuIEZyYW5jaXNjbzETMBEGA1UEChMKR29vZ2xlIEluYzEVMBMGA1UECxMMTW9iaWxlIFJvYm90czEcMBoGA1UEAxMTcm9ib3RzLmFuZHJvaWQuY29tMB4XDTE1MDMwNTIyMzA0MloXDTQ1MDIyNjIyMzA0MlowgZQxCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1TYW4gRnJhbmNpc2NvMRMwEQYDVQQKEwpHb29nbGUgSW5jMRUwEwYDVQQLEwxNb2JpbGUgUm9ib3RzMRwwGgYDVQQDExNyb2JvdHMuYW5kcm9pZC5jb20wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC4RGFtWjsoiSNM9OxoHpCRGWIwKwzrfKGCMj0kKTi65UksmfnSLfPGRjn/b/ZtVHSW3sB7Y9PcMwKDYkCL+e24+dN4g+0nlv87IU4cXcHW7TK4/3pHE7gHoP5c0pPZ70GaFWMGcBGpfZ9BW7I2DotFfj1T6cQsN4RGfFELIb0g2JMuXZF1wJhf0q0vQfFOLQAbh1m9JZLzl2f1A2MiA2H/JKE2NiHmBmkpjI3fGqJ+YW9e9gRWp1tZn2L8q3/2hC6Y0e5g3QBp4Y0YMZBzlA0yCyqN/gF5d5mT/jN6k+9U8G2dYl2cRWW3eMR+5LQWN4TCa9x3q/agKg5AgMBAAGjgbEwga4wHQYDVR0OBBYEFK6D2lDwNlaqn0bBdMUOApSiPpIaMB8GA1UdIwQYMBaAFK6D2lDwNlaqn0bBdMUOApSiPpIaMA8GA1UdEwEB/wQFMAMBAf8wHQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMB4GA1UdEQQXMBWCE3JvYm90cy5hbmRyb2lkLmNvbTAOBgNVHQ8BAf8EBAMCAQYwDQYJKoZIhvcNAQEEBQADggEBABE0EkLhXz+epmMvFfPeREMH
+                                                                                                                                                                                                                                                       ^
+/Users/apple/Downloads/DisciplineCore/app/src/main/res/values/font_certs.xml:9: Warning: Did you mean "czEcMBoGA!" instead of "czEcMBoGA1"? [Typos]
+            MIIEqDCCA5CgAwIBAgIJANWFuGx90071MA0GCSqGSIb3DQEBBAUAMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNU2FuIEZyYW5jaXNjbzETMBEGA1UEChMKR29vZ2xlIEluYzEVMBMGA1UECxMMTW9iaWxlIFJvYm90czEcMBoGA1UEAxMTcm9ib3RzLmFuZHJvaWQuY29tMB4XDTE1MDMwNTIyMzA0MloXDTQ1MDIyNjIyMzA0MlowgZQxCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1TYW4gRnJhbmNpc2NvMRMwEQYDVQQKEwpHb29nbGUgSW5jMRUwEwYDVQQLEwxNb2JpbGUgUm9ib3RzMRwwGgYDVQQDExNyb2JvdHMuYW5kcm9pZC5jb20wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC4RGFtWjsoiSNM9OxoHpCRGWIwKwzrfKGCMj0kKTi65UksmfnSLfPGRjn/b/ZtVHSW3sB7Y9PcMwKDYkCL+e24+dN4g+0nlv87IU4cXcHW7TK4/3pHE7gHoP5c0pPZ70GaFWMGcBGpfZ9BW7I2DotFfj1T6cQsN4RGfFELIb0g2JMuXZF1wJhf0q0vQfFOLQAbh1m9JZLzl2f1A2MiA2H/JKE2NiHmBmkpjI3fGqJ+YW9e9gRWp1tZn2L8q3/2hC6Y0e5g3QBp4Y0YMZBzlA0yCyqN/gF5d5mT/jN6k+9U8G2dYl2cRWW3eMR+5LQWN4TCa9x3q/agKg5AgMBAAGjgbEwga4wHQYDVR0OBBYEFK6D2lDwNlaqn0bBdMUOApSiPpIaMB8GA1UdIwQYMBaAFK6D2lDwNlaqn0bBdMUOApSiPpIaMA8GA1UdEwEB/wQFMAMBAf8wHQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMB4GA1UdEQQXMBWCE3JvYm90cy5hbmRyb2lkLmNvbTAOBgNVHQ8BAf8EBAMCAQYwDQYJKoZIhvcNAQEEBQADggEBABE0EkLhXz+epmMvFfPeREMH
+                                                                                                                                                                                                            ^
+/Users/apple/Downloads/DisciplineCore/app/src/main/res/values/font_certs.xml:9: Warning: Did you mean "jaXNjbzETMBEGA!" instead of "jaXNjbzETMBEGA1"? [Typos]
+            MIIEqDCCA5CgAwIBAgIJANWFuGx90071MA0GCSqGSIb3DQEBBAUAMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNU2FuIEZyYW5jaXNjbzETMBEGA1UEChMKR29vZ2xlIEluYzEVMBMGA1UECxMMTW9iaWxlIFJvYm90czEcMBoGA1UEAxMTcm9ib3RzLmFuZHJvaWQuY29tMB4XDTE1MDMwNTIyMzA0MloXDTQ1MDIyNjIyMzA0MlowgZQxCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1TYW4gRnJhbmNpc2NvMRMwEQYDVQQKEwpHb29nbGUgSW5jMRUwEwYDVQQLEwxNb2JpbGUgUm9ib3RzMRwwGgYDVQQDExNyb2JvdHMuYW5kcm9pZC5jb20wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC4RGFtWjsoiSNM9OxoHpCRGWIwKwzrfKGCMj0kKTi65UksmfnSLfPGRjn/b/ZtVHSW3sB7Y9PcMwKDYkCL+e24+dN4g+0nlv87IU4cXcHW7TK4/3pHE7gHoP5c0pPZ70GaFWMGcBGpfZ9BW7I2DotFfj1T6cQsN4RGfFELIb0g2JMuXZF1wJhf0q0vQfFOLQAbh1m9JZLzl2f1A2MiA2H/JKE2NiHmBmkpjI3fGqJ+YW9e9gRWp1tZn2L8q3/2hC6Y0e5g3QBp4Y0YMZBzlA0yCyqN/gF5d5mT/jN6k+9U8G2dYl2cRWW3eMR+5LQWN4TCa9x3q/agKg5AgMBAAGjgbEwga4wHQYDVR0OBBYEFK6D2lDwNlaqn0bBdMUOApSiPpIaMB8GA1UdIwQYMBaAFK6D2lDwNlaqn0bBdMUOApSiPpIaMA8GA1UdEwEB/wQFMAMBAf8wHQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMB4GA1UdEQQXMBWCE3JvYm90cy5hbmRyb2lkLmNvbTAOBgNVHQ8BAf8EBAMCAQYwDQYJKoZIhvcNAQEEBQADggEBABE0EkLhXz+epmMvFfPeREMH
+                                                                                                                                           ^
+/Users/apple/Downloads/DisciplineCore/app/src/main/res/values/font_certs.xml:9: Warning: Did you mean "pYTEWMBQGA!" instead of "pYTEWMBQGA1"? [Typos]
+            MIIEqDCCA5CgAwIBAgIJANWFuGx90071MA0GCSqGSIb3DQEBBAUAMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNU2FuIEZyYW5jaXNjbzETMBEGA1UEChMKR29vZ2xlIEluYzEVMBMGA1UECxMMTW9iaWxlIFJvYm90czEcMBoGA1UEAxMTcm9ib3RzLmFuZHJvaWQuY29tMB4XDTE1MDMwNTIyMzA0MloXDTQ1MDIyNjIyMzA0MlowgZQxCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1TYW4gRnJhbmNpc2NvMRMwEQYDVQQKEwpHb29nbGUgSW5jMRUwEwYDVQQLEwxNb2JpbGUgUm9ib3RzMRwwGgYDVQQDExNyb2JvdHMuYW5kcm9pZC5jb20wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC4RGFtWjsoiSNM9OxoHpCRGWIwKwzrfKGCMj0kKTi65UksmfnSLfPGRjn/b/ZtVHSW3sB7Y9PcMwKDYkCL+e24+dN4g+0nlv87IU4cXcHW7TK4/3pHE7gHoP5c0pPZ70GaFWMGcBGpfZ9BW7I2DotFfj1T6cQsN4RGfFELIb0g2JMuXZF1wJhf0q0vQfFOLQAbh1m9JZLzl2f1A2MiA2H/JKE2NiHmBmkpjI3fGqJ+YW9e9gRWp1tZn2L8q3/2hC6Y0e5g3QBp4Y0YMZBzlA0yCyqN/gF5d5mT/jN6k+9U8G2dYl2cRWW3eMR+5LQWN4TCa9x3q/agKg5AgMBAAGjgbEwga4wHQYDVR0OBBYEFK6D2lDwNlaqn0bBdMUOApSiPpIaMB8GA1UdIwQYMBaAFK6D2lDwNlaqn0bBdMUOApSiPpIaMA8GA1UdEwEB/wQFMAMBAf8wHQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMB4GA1UdEQQXMBWCE3JvYm90cy5hbmRyb2lkLmNvbTAOBgNVHQ8BAf8EBAMCAQYwDQYJKoZIhvcNAQEEBQADggEBABE0EkLhXz+epmMvFfPeREMH
+                                                                                                               ^
+/Users/apple/Downloads/DisciplineCore/app/src/main/res/values/font_certs.xml:9: Warning: Did you mean "xlIEluYzEVMBMGA!" instead of "xlIEluYzEVMBMGA1"? [Typos]
+            MIIEqDCCA5CgAwIBAgIJANWFuGx90071MA0GCSqGSIb3DQEBBAUAMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNU2FuIEZyYW5jaXNjbzETMBEGA1UEChMKR29vZ2xlIEluYzEVMBMGA1UECxMMTW9iaWxlIFJvYm90czEcMBoGA1UEAxMTcm9ib3RzLmFuZHJvaWQuY29tMB4XDTE1MDMwNTIyMzA0MloXDTQ1MDIyNjIyMzA0MlowgZQxCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1TYW4gRnJhbmNpc2NvMRMwEQYDVQQKEwpHb29nbGUgSW5jMRUwEwYDVQQLEwxNb2JpbGUgUm9ib3RzMRwwGgYDVQQDExNyb2JvdHMuYW5kcm9pZC5jb20wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC4RGFtWjsoiSNM9OxoHpCRGWIwKwzrfKGCMj0kKTi65UksmfnSLfPGRjn/b/ZtVHSW3sB7Y9PcMwKDYkCL+e24+dN4g+0nlv87IU4cXcHW7TK4/3pHE7gHoP5c0pPZ70GaFWMGcBGpfZ9BW7I2DotFfj1T6cQsN4RGfFELIb0g2JMuXZF1wJhf0q0vQfFOLQAbh1m9JZLzl2f1A2MiA2H/JKE2NiHmBmkpjI3fGqJ+YW9e9gRWp1tZn2L8q3/2hC6Y0e5g3QBp4Y0YMZBzlA0yCyqN/gF5d5mT/jN6k+9U8G2dYl2cRWW3eMR+5LQWN4TCa9x3q/agKg5AgMBAAGjgbEwga4wHQYDVR0OBBYEFK6D2lDwNlaqn0bBdMUOApSiPpIaMB8GA1UdIwQYMBaAFK6D2lDwNlaqn0bBdMUOApSiPpIaMA8GA1UdEwEB/wQFMAMBAf8wHQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMB4GA1UdEQQXMBWCE3JvYm90cy5hbmRyb2lkLmNvbTAOBgNVHQ8BAf8EBAMCAQYwDQYJKoZIhvcNAQEEBQADggEBABE0EkLhXz+epmMvFfPeREMH
+                                                                                                                                                                      ^
+/Users/apple/Downloads/DisciplineCore/app/src/main/res/values/font_certs.xml:9: Warning: Did you mean "ybmlhMRYwFAYDVQQHEw!" instead of "ybmlhMRYwFAYDVQQHEw1"? [Typos]
+            MIIEqDCCA5CgAwIBAgIJANWFuGx90071MA0GCSqGSIb3DQEBBAUAMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNU2FuIEZyYW5jaXNjbzETMBEGA1UEChMKR29vZ2xlIEluYzEVMBMGA1UECxMMTW9iaWxlIFJvYm90czEcMBoGA1UEAxMTcm9ib3RzLmFuZHJvaWQuY29tMB4XDTE1MDMwNTIyMzA0MloXDTQ1MDIyNjIyMzA0MlowgZQxCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1TYW4gRnJhbmNpc2NvMRMwEQYDVQQKEwpHb29nbGUgSW5jMRUwEwYDVQQLEwxNb2JpbGUgUm9ib3RzMRwwGgYDVQQDExNyb2JvdHMuYW5kcm9pZC5jb20wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC4RGFtWjsoiSNM9OxoHpCRGWIwKwzrfKGCMj0kKTi65UksmfnSLfPGRjn/b/ZtVHSW3sB7Y9PcMwKDYkCL+e24+dN4g+0nlv87IU4cXcHW7TK4/3pHE7gHoP5c0pPZ70GaFWMGcBGpfZ9BW7I2DotFfj1T6cQsN4RGfFELIb0g2JMuXZF1wJhf0q0vQfFOLQAbh1m9JZLzl2f1A2MiA2H/JKE2NiHmBmkpjI3fGqJ+YW9e9gRWp1tZn2L8q3/2hC6Y0e5g3QBp4Y0YMZBzlA0yCyqN/gF5d5mT/jN6k+9U8G2dYl2cRWW3eMR+5LQWN4TCa9x3q/agKg5AgMBAAGjgbEwga4wHQYDVR0OBBYEFK6D2lDwNlaqn0bBdMUOApSiPpIaMB8GA1UdIwQYMBaAFK6D2lDwNlaqn0bBdMUOApSiPpIaMA8GA1UdEwEB/wQFMAMBAf8wHQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMB4GA1UdEQQXMBWCE3JvYm90cy5hbmRyb2lkLmNvbTAOBgNVHQ8BAf8EBAMCAQYwDQYJKoZIhvcNAQEEBQADggEBABE0EkLhXz+epmMvFfPeREMH
+                                                                                                                                                                                                                                                                                                                                           ^
+/Users/apple/Downloads/DisciplineCore/app/src/main/res/values/font_certs.xml:14: Warning: Did you mean "GA!" instead of "GA1"? [Typos]
+            MIIEQzCCAyugAwIBAgIJAMLgh0ZkSjCnMA0GCSqGSIb3DQEBBAUAMHQxCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtHb29nbGUgSW5jLjEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDAeFw0wODA4MjEyMzEzMzRaFw0zNjAxMDcyMzEzMzRaMHQxCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtHb29nbGUgSW5jLjEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDCCASAwDQYJKoZIhvcNAQEBBQADggENADCCAQgCggEBAKtWLgDYO6IIrgqWbxJOKdoR8qtW0uXGrRmkEzkfgrsBBFl2uBh+1BISMKSdNHKCjnrY18UoA7E9V1v4THOJpuS6T5MdPDTbRerqzXKR4FKAG8BV4oRoF1MWn4wfD+MQflnMKBN5OxuPnCbRCHMEEJv72P+GYz2pDt8iQzHPGrxKDjsJAUvEJ8JFMhGwUaA9qY+ZSXx3Lz2lrQe9XDVpU6wYuE5Kzqx8n/u0J/iH4Kx6J/VFH1iBFtT+L5eDeJY5qKEQ==
+                                                                                                                                                                                   ^
+/Users/apple/Downloads/DisciplineCore/app/src/main/res/values/font_certs.xml:14: Warning: Did you mean "GA!" instead of "GA1"? [Typos]
+            MIIEQzCCAyugAwIBAgIJAMLgh0ZkSjCnMA0GCSqGSIb3DQEBBAUAMHQxCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtHb29nbGUgSW5jLjEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDAeFw0wODA4MjEyMzEzMzRaFw0zNjAxMDcyMzEzMzRaMHQxCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtHb29nbGUgSW5jLjEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDCCASAwDQYJKoZIhvcNAQEBBQADggENADCCAQgCggEBAKtWLgDYO6IIrgqWbxJOKdoR8qtW0uXGrRmkEzkfgrsBBFl2uBh+1BISMKSdNHKCjnrY18UoA7E9V1v4THOJpuS6T5MdPDTbRerqzXKR4FKAG8BV4oRoF1MWn4wfD+MQflnMKBN5OxuPnCbRCHMEEJv72P+GYz2pDt8iQzHPGrxKDjsJAUvEJ8JFMhGwUaA9qY+ZSXx3Lz2lrQe9XDVpU6wYuE5Kzqx8n/u0J/iH4Kx6J/VFH1iBFtT+L5eDeJY5qKEQ==
+                                                                                                                                                                                                           ^
+/Users/apple/Downloads/DisciplineCore/app/src/main/res/values/font_certs.xml:14: Warning: Did you mean "GA!" instead of "GA1"? [Typos]
+            MIIEQzCCAyugAwIBAgIJAMLgh0ZkSjCnMA0GCSqGSIb3DQEBBAUAMHQxCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtHb29nbGUgSW5jLjEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDAeFw0wODA4MjEyMzEzMzRaFw0zNjAxMDcyMzEzMzRaMHQxCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtHb29nbGUgSW5jLjEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDCCASAwDQYJKoZIhvcNAQEBBQADggENADCCAQgCggEBAKtWLgDYO6IIrgqWbxJOKdoR8qtW0uXGrRmkEzkfgrsBBFl2uBh+1BISMKSdNHKCjnrY18UoA7E9V1v4THOJpuS6T5MdPDTbRerqzXKR4FKAG8BV4oRoF1MWn4wfD+MQflnMKBN5OxuPnCbRCHMEEJv72P+GYz2pDt8iQzHPGrxKDjsJAUvEJ8JFMhGwUaA9qY+ZSXx3Lz2lrQe9XDVpU6wYuE5Kzqx8n/u0J/iH4Kx6J/VFH1iBFtT+L5eDeJY5qKEQ==
+                                                                                                                                                                                                                                                                                                                                                                                           ^
+/Users/apple/Downloads/DisciplineCore/app/src/main/res/values/font_certs.xml:14: Warning: Did you mean "GA!" instead of "GA1"? [Typos]
+            MIIEQzCCAyugAwIBAgIJAMLgh0ZkSjCnMA0GCSqGSIb3DQEBBAUAMHQxCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtHb29nbGUgSW5jLjEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDAeFw0wODA4MjEyMzEzMzRaFw0zNjAxMDcyMzEzMzRaMHQxCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtHb29nbGUgSW5jLjEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDCCASAwDQYJKoZIhvcNAQEBBQADggENADCCAQgCggEBAKtWLgDYO6IIrgqWbxJOKdoR8qtW0uXGrRmkEzkfgrsBBFl2uBh+1BISMKSdNHKCjnrY18UoA7E9V1v4THOJpuS6T5MdPDTbRerqzXKR4FKAG8BV4oRoF1MWn4wfD+MQflnMKBN5OxuPnCbRCHMEEJv72P+GYz2pDt8iQzHPGrxKDjsJAUvEJ8JFMhGwUaA9qY+ZSXx3Lz2lrQe9XDVpU6wYuE5Kzqx8n/u0J/iH4Kx6J/VFH1iBFtT+L5eDeJY5qKEQ==
+                                                                                                                                                                                                                                                                                                                                                                                                                   ^
+/Users/apple/Downloads/DisciplineCore/app/src/main/res/values/font_certs.xml:14: Warning: Did you mean "oRoF!" instead of "oRoF1"? [Typos]
+            MIIEQzCCAyugAwIBAgIJAMLgh0ZkSjCnMA0GCSqGSIb3DQEBBAUAMHQxCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtHb29nbGUgSW5jLjEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDAeFw0wODA4MjEyMzEzMzRaFw0zNjAxMDcyMzEzMzRaMHQxCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtHb29nbGUgSW5jLjEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDCCASAwDQYJKoZIhvcNAQEBBQADggENADCCAQgCggEBAKtWLgDYO6IIrgqWbxJOKdoR8qtW0uXGrRmkEzkfgrsBBFl2uBh+1BISMKSdNHKCjnrY18UoA7E9V1v4THOJpuS6T5MdPDTbRerqzXKR4FKAG8BV4oRoF1MWn4wfD+MQflnMKBN5OxuPnCbRCHMEEJv72P+GYz2pDt8iQzHPGrxKDjsJAUvEJ8JFMhGwUaA9qY+ZSXx3Lz2lrQe9XDVpU6wYuE5Kzqx8n/u0J/iH4Kx6J/VFH1iBFtT+L5eDeJY5qKEQ==
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 ^
+/Users/apple/Downloads/DisciplineCore/app/src/main/res/values/font_certs.xml:14: Warning: Did you mean "ybmlhMRYwFAYDVQQHEw!" instead of "ybmlhMRYwFAYDVQQHEw1"? [Typos]
+            MIIEQzCCAyugAwIBAgIJAMLgh0ZkSjCnMA0GCSqGSIb3DQEBBAUAMHQxCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtHb29nbGUgSW5jLjEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDAeFw0wODA4MjEyMzEzMzRaFw0zNjAxMDcyMzEzMzRaMHQxCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtHb29nbGUgSW5jLjEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDCCASAwDQYJKoZIhvcNAQEBBQADggENADCCAQgCggEBAKtWLgDYO6IIrgqWbxJOKdoR8qtW0uXGrRmkEzkfgrsBBFl2uBh+1BISMKSdNHKCjnrY18UoA7E9V1v4THOJpuS6T5MdPDTbRerqzXKR4FKAG8BV4oRoF1MWn4wfD+MQflnMKBN5OxuPnCbRCHMEEJv72P+GYz2pDt8iQzHPGrxKDjsJAUvEJ8JFMhGwUaA9qY+ZSXx3Lz2lrQe9XDVpU6wYuE5Kzqx8n/u0J/iH4Kx6J/VFH1iBFtT+L5eDeJY5qKEQ==
+                                                                                                           ^
+/Users/apple/Downloads/DisciplineCore/app/src/main/res/values/font_certs.xml:14: Warning: Did you mean "ybmlhMRYwFAYDVQQHEw!" instead of "ybmlhMRYwFAYDVQQHEw1"? [Typos]
+            MIIEQzCCAyugAwIBAgIJAMLgh0ZkSjCnMA0GCSqGSIb3DQEBBAUAMHQxCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtHb29nbGUgSW5jLjEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDAeFw0wODA4MjEyMzEzMzRaFw0zNjAxMDcyMzEzMzRaMHQxCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtHb29nbGUgSW5jLjEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDCCASAwDQYJKoZIhvcNAQEBBQADggENADCCAQgCggEBAKtWLgDYO6IIrgqWbxJOKdoR8qtW0uXGrRmkEzkfgrsBBFl2uBh+1BISMKSdNHKCjnrY18UoA7E9V1v4THOJpuS6T5MdPDTbRerqzXKR4FKAG8BV4oRoF1MWn4wfD+MQflnMKBN5OxuPnCbRCHMEEJv72P+GYz2pDt8iQzHPGrxKDjsJAUvEJ8JFMhGwUaA9qY+ZSXx3Lz2lrQe9XDVpU6wYuE5Kzqx8n/u0J/iH4Kx6J/VFH1iBFtT+L5eDeJY5qKEQ==
+                                                                                                                                                                                                                                                                                                                   ^
+
+   Explanation for issues of type "Typos":
+   This check looks through the string definitions, and if it finds any words
+   that look like likely misspellings, they are flagged.
+
+/Users/apple/Downloads/DisciplineCore/app/src/main/res/values/themes.xml:14: Warning: Unnecessary; SDK_INT is always >= 23 [ObsoleteSdkInt]
+        <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
+                                                  ~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "ObsoleteSdkInt":
+   This check flags version checks that are not necessary, because the
+   minSdkVersion (or surrounding known API level) is already at least as high
+   as the version checked for.
+
+   Similarly, it also looks for resources in -vNN folders, such as values-v14
+   where the version qualifier is less than or equal to the minSdkVersion,
+   where the contents should be merged into the best folder.
+
+/Users/apple/Downloads/DisciplineCore/app/src/main/res/layout/activity_main.xml:8: Warning: Possible overdraw: Root element paints background #0F0F11 with a theme that also paints a background (inferred theme is @style/Theme.DisciplineCore) [Overdraw]
+    android:background="#0F0F11"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/apple/Downloads/DisciplineCore/app/src/main/res/layout/dialog_add_habit.xml:8: Warning: Possible overdraw: Root element paints background #1A1A1F with a theme that also paints a background (inferred theme is @style/Theme.DisciplineCore) [Overdraw]
+    android:background="#1A1A1F"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "Overdraw":
+   If you set a background drawable on a root view, then you should use a
+   custom theme where the theme background is null. Otherwise, the theme
+   background will be painted first, only to have your custom background
+   completely cover it; this is called "overdraw".
+
+   NOTE: This detector relies on figuring out which layouts are associated
+   with which activities based on scanning the Java code, and it's currently
+   doing that using an inexact pattern matching algorithm. Therefore, it can
+   incorrectly conclude which activity the layout is associated with and then
+   wrongly complain that a background-theme is hidden.
+
+   If you want your custom background on multiple pages, then you should
+   consider making a custom theme with your custom background and just using
+   that theme instead of a root element background.
+
+   Of course it's possible that your custom drawable is translucent and you
+   want it to be mixed with the background. However, you will get better
+   performance if you pre-mix the background with your drawable and use that
+   resulting image or color as a custom theme background instead.
+
+/Users/apple/Downloads/DisciplineCore/app/src/main/res/values/colors.xml:5: Warning: The resource R.color.bg_input appears to be unused [UnusedResources]
+    <color name="bg_input">#23232E</color>
+           ~~~~~~~~~~~~~~~
+/Users/apple/Downloads/DisciplineCore/app/src/main/res/values/colors.xml:9: Warning: The resource R.color.text_dim appears to be unused [UnusedResources]
+    <color name="text_dim">#4B4B5A</color>
+           ~~~~~~~~~~~~~~~
+/Users/apple/Downloads/DisciplineCore/app/src/main/res/values/colors.xml:10: Warning: The resource R.color.divider appears to be unused [UnusedResources]
+    <color name="divider">#2A2A35</color>
+           ~~~~~~~~~~~~~~
+/Users/apple/Downloads/DisciplineCore/app/src/main/res/values/colors.xml:11: Warning: The resource R.color.green appears to be unused [UnusedResources]
+    <color name="green">#22C55E</color>
+           ~~~~~~~~~~~~
+/Users/apple/Downloads/DisciplineCore/app/src/main/res/values/colors.xml:12: Warning: The resource R.color.red appears to be unused [UnusedResources]
+    <color name="red">#EF4444</color>
+           ~~~~~~~~~~
+/Users/apple/Downloads/DisciplineCore/app/src/main/res/values/colors.xml:15: Warning: The resource R.color.purple_200 appears to be unused [UnusedResources]
+    <color name="purple_200">#FFBB86FC</color>
+           ~~~~~~~~~~~~~~~~~
+/Users/apple/Downloads/DisciplineCore/app/src/main/res/values/colors.xml:16: Warning: The resource R.color.purple_500 appears to be unused [UnusedResources]
+    <color name="purple_500">#FF6200EE</color>
+           ~~~~~~~~~~~~~~~~~
+/Users/apple/Downloads/DisciplineCore/app/src/main/res/values/colors.xml:17: Warning: The resource R.color.purple_700 appears to be unused [UnusedResources]
+    <color name="purple_700">#FF3700B3</color>
+           ~~~~~~~~~~~~~~~~~
+/Users/apple/Downloads/DisciplineCore/app/src/main/res/values/colors.xml:18: Warning: The resource R.color.teal_200 appears to be unused [UnusedResources]
+    <color name="teal_200">#FF03DAC5</color>
+           ~~~~~~~~~~~~~~~
+/Users/apple/Downloads/DisciplineCore/app/src/main/res/values/colors.xml:19: Warning: The resource R.color.teal_700 appears to be unused [UnusedResources]
+    <color name="teal_700">#FF018786</color>
+           ~~~~~~~~~~~~~~~
+/Users/apple/Downloads/DisciplineCore/app/src/main/res/values/colors.xml:20: Warning: The resource R.color.black appears to be unused [UnusedResources]
+    <color name="black">#FF000000</color>
+           ~~~~~~~~~~~~
+/Users/apple/Downloads/DisciplineCore/app/src/main/res/values/colors.xml:21: Warning: The resource R.color.white appears to be unused [UnusedResources]
+    <color name="white">#FFFFFFFF</color>
+           ~~~~~~~~~~~~
+/Users/apple/Downloads/DisciplineCore/app/src/main/res/values/preloaded_fonts.xml:3: Warning: The resource R.array.preloaded_fonts appears to be unused [UnusedResources]
+    <array name="preloaded_fonts" translatable="false">
+           ~~~~~~~~~~~~~~~~~~~~~~
+/Users/apple/Downloads/DisciplineCore/app/src/main/res/values/strings.xml:4: Warning: The resource R.string.add_habit appears to be unused [UnusedResources]
+    <string name="add_habit">Add Habit</string>
+            ~~~~~~~~~~~~~~~~
+/Users/apple/Downloads/DisciplineCore/app/src/main/res/values/strings.xml:5: Warning: The resource R.string.no_habits appears to be unused [UnusedResources]
+    <string name="no_habits">No habits yet</string>
+            ~~~~~~~~~~~~~~~~
+/Users/apple/Downloads/DisciplineCore/app/src/main/res/values/strings.xml:6: Warning: The resource R.string.tap_to_add appears to be unused [UnusedResources]
+    <string name="tap_to_add">Tap + to add your first habit</string>
+            ~~~~~~~~~~~~~~~~~
+/Users/apple/Downloads/DisciplineCore/app/src/main/res/values/strings.xml:7: Warning: The resource R.string.today_discipline appears to be unused [UnusedResources]
+    <string name="today_discipline">TODAY\'S DISCIPLINE</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~
+/Users/apple/Downloads/DisciplineCore/app/src/main/res/values/strings.xml:8: Warning: The resource R.string.delete_habit appears to be unused [UnusedResources]
+    <string name="delete_habit">Delete Habit</string>
+            ~~~~~~~~~~~~~~~~~~~
+/Users/apple/Downloads/DisciplineCore/app/src/main/res/values/themes.xml:25: Warning: The resource R.style.Theme_DisciplineCore_BottomSheetDialog appears to be unused [UnusedResources]
+    <style name="Theme.DisciplineCore.BottomSheetDialog" parent="Theme.MaterialComponents.BottomSheetDialog">
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/apple/Downloads/DisciplineCore/app/src/main/res/values/themes.xml:29: Warning: The resource R.style.ModalBottomSheet appears to be unused [UnusedResources]
+    <style name="ModalBottomSheet" parent="Widget.MaterialComponents.BottomSheet.Modal">
+           ~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "UnusedResources":
+   Unused resources make applications larger and slow down builds.
+
+
+   The unused resource check can ignore tests. If you want to include
+   resources that are only referenced from tests, consider packaging them in a
+   test source set instead.
+
+   You can include test sources in the unused resource check by setting the
+   system property lint.unused-resources.include-tests =true, and to exclude
+   them (usually for performance reasons), use
+   lint.unused-resources.exclude-tests =true.
+   ,
+
+/Users/apple/Downloads/DisciplineCore/app/src/main/res/mipmap-hdpi/ic_launcher.png: Warning: Launcher icons should not fill every pixel of their square region; see the design guide for details [IconLauncherShape]
+/Users/apple/Downloads/DisciplineCore/app/src/main/res/mipmap-mdpi/ic_launcher.png: Warning: Launcher icons should not fill every pixel of their square region; see the design guide for details [IconLauncherShape]
+/Users/apple/Downloads/DisciplineCore/app/src/main/res/mipmap-xhdpi/ic_launcher.png: Warning: Launcher icons should not fill every pixel of their square region; see the design guide for details [IconLauncherShape]
+/Users/apple/Downloads/DisciplineCore/app/src/main/res/mipmap-xxhdpi/ic_launcher.png: Warning: Launcher icons should not fill every pixel of their square region; see the design guide for details [IconLauncherShape]
+/Users/apple/Downloads/DisciplineCore/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png: Warning: Launcher icons should not fill every pixel of their square region; see the design guide for details [IconLauncherShape]
+/Users/apple/Downloads/DisciplineCore/app/src/main/res/mipmap-hdpi/ic_launcher_round.png: Warning: Launcher icon used as round icon did not have a circular shape [IconLauncherShape]
+/Users/apple/Downloads/DisciplineCore/app/src/main/res/mipmap-mdpi/ic_launcher_round.png: Warning: Launcher icon used as round icon did not have a circular shape [IconLauncherShape]
+/Users/apple/Downloads/DisciplineCore/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png: Warning: Launcher icon used as round icon did not have a circular shape [IconLauncherShape]
+/Users/apple/Downloads/DisciplineCore/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png: Warning: Launcher icon used as round icon did not have a circular shape [IconLauncherShape]
+/Users/apple/Downloads/DisciplineCore/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png: Warning: Launcher icon used as round icon did not have a circular shape [IconLauncherShape]
+
+   Explanation for issues of type "IconLauncherShape":
+   According to the Android Design Guide
+   (https://material.io/design/iconography/) your launcher icons should "use a
+   distinct silhouette", a "three-dimensional, front view, with a slight
+   perspective as if viewed from above, so that users perceive some depth."
+
+   The unique silhouette implies that your launcher icon should not be a
+   filled square.
+
+/Users/apple/Downloads/DisciplineCore/app/src/main/res/mipmap-hdpi/ic_launcher_round.png: Warning: The following unrelated icon files have identical contents: ic_launcher.png, ic_launcher_round.png [IconDuplicates]
+/Users/apple/Downloads/DisciplineCore/app/src/main/res/mipmap-mdpi/ic_launcher_round.png: Warning: The following unrelated icon files have identical contents: ic_launcher.png, ic_launcher_round.png [IconDuplicates]
+/Users/apple/Downloads/DisciplineCore/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png: Warning: The following unrelated icon files have identical contents: ic_launcher.png, ic_launcher_round.png [IconDuplicates]
+/Users/apple/Downloads/DisciplineCore/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png: Warning: The following unrelated icon files have identical contents: ic_launcher.png, ic_launcher_round.png [IconDuplicates]
+/Users/apple/Downloads/DisciplineCore/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png: Warning: The following unrelated icon files have identical contents: ic_launcher.png, ic_launcher_round.png [IconDuplicates]
+
+   Explanation for issues of type "IconDuplicates":
+   If an icon is repeated under different names, you can consolidate and just
+   use one of the icons and delete the others to make your application
+   smaller. However, duplicated icons usually are not intentional and can
+   sometimes point to icons that were accidentally overwritten or accidentally
+   not updated.
+
+/Users/apple/Downloads/DisciplineCore/app/src/main/res/layout/dialog_add_habit.xml:97: Warning: Buttons in button bars should be borderless; use style="?android:attr/buttonBarButtonStyle" (and ?android:attr/buttonBarStyle on the parent) [ButtonStyle]
+        <Button
+         ~~~~~~
+
+   Explanation for issues of type "ButtonStyle":
+   Button bars typically use a borderless style for the buttons. Set the
+   style="?android:attr/buttonBarButtonStyle" attribute on each of the
+   buttons, and set style="?android:attr/buttonBarStyle" on the parent layout
+
+   https://material.io/components/dialogs/
+
+/Users/apple/Downloads/DisciplineCore/app/src/main/res/layout/activity_main.xml:85: Warning: Avoid using sizes smaller than 11sp: 10sp [SmallSp]
+                                android:textSize="10sp"
+                                ~~~~~~~~~~~~~~~~~~~~~~~
+/Users/apple/Downloads/DisciplineCore/app/src/main/res/layout/activity_main.xml:146: Warning: Avoid using sizes smaller than 11sp: 10sp [SmallSp]
+                android:textSize="10sp"
+                ~~~~~~~~~~~~~~~~~~~~~~~
+/Users/apple/Downloads/DisciplineCore/app/src/main/res/layout/dialog_add_habit.xml:37: Warning: Avoid using sizes smaller than 11sp: 10sp [SmallSp]
+        android:textSize="10sp"
+        ~~~~~~~~~~~~~~~~~~~~~~~
+/Users/apple/Downloads/DisciplineCore/app/src/main/res/layout/dialog_add_habit.xml:56: Warning: Avoid using sizes smaller than 11sp: 10sp [SmallSp]
+        android:textSize="10sp"
+        ~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "SmallSp":
+   Avoid using sizes smaller than 11sp.
+
+/Users/apple/Downloads/DisciplineCore/app/src/main/java/com/anant/disciplinecore/ui/HabitAdapter.kt:24: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+                tvTotal.text = "${habit.totalCompletions}x done"
+                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/apple/Downloads/DisciplineCore/app/src/main/java/com/anant/disciplinecore/ui/HabitAdapter.kt:24: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+                tvTotal.text = "${habit.totalCompletions}x done"
+                                                         ~~~~~~
+/Users/apple/Downloads/DisciplineCore/app/src/main/java/com/anant/disciplinecore/ui/MainActivity.kt:71: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+        binding.tvScore.text = "$done / $total"
+                               ~~~~~~~~~~~~~~~~
+/Users/apple/Downloads/DisciplineCore/app/src/main/java/com/anant/disciplinecore/ui/MainActivity.kt:81: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+        binding.tvPct.text = "$pct%"
+                             ~~~~~~~
+
+   Explanation for issues of type "SetTextI18n":
+   When calling TextView#setText
+   * Never call Number#toString() to format numbers; it will not handle
+   fraction separators and locale-specific digits properly. Consider using
+   String#format with proper format specifications (%d or %f) instead.
+   * Do not pass a string literal (e.g. "Hello") to display text. Hardcoded
+   text can not be properly translated to other languages. Consider using
+   Android resource strings instead.
+   * Do not build messages by concatenating text chunks. Such messages can not
+   be properly translated.
+
+   https://developer.android.com/guide/topics/resources/localization.html
+
+/Users/apple/Downloads/DisciplineCore/app/src/main/res/layout/activity_main.xml:34: Warning: Hardcoded string "Good Morning ☀️", should use @string resource [HardcodedText]
+                    android:text="Good Morning ☀️"
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/apple/Downloads/DisciplineCore/app/src/main/res/layout/activity_main.xml:45: Warning: Hardcoded string "Monday, 19 May", should use @string resource [HardcodedText]
+                    android:text="Monday, 19 May"
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/apple/Downloads/DisciplineCore/app/src/main/res/layout/activity_main.xml:83: Warning: Hardcoded string "TODAY'S DISCIPLINE", should use @string resource [HardcodedText]
+                                android:text="TODAY'S DISCIPLINE"
+                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/apple/Downloads/DisciplineCore/app/src/main/res/layout/activity_main.xml:93: Warning: Hardcoded string "0 / 0", should use @string resource [HardcodedText]
+                                android:text="0 / 0"
+                                ~~~~~~~~~~~~~~~~~~~~
+/Users/apple/Downloads/DisciplineCore/app/src/main/res/layout/activity_main.xml:105: Warning: Hardcoded string "0%", should use @string resource [HardcodedText]
+                            android:text="0%"
+                            ~~~~~~~~~~~~~~~~~
+/Users/apple/Downloads/DisciplineCore/app/src/main/res/layout/activity_main.xml:129: Warning: Hardcoded string "No habits yet. Add one!", should use @string resource [HardcodedText]
+                        android:text="No habits yet. Add one!"
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/apple/Downloads/DisciplineCore/app/src/main/res/layout/activity_main.xml:144: Warning: Hardcoded string "YOUR HABITS", should use @string resource [HardcodedText]
+                android:text="YOUR HABITS"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/apple/Downloads/DisciplineCore/app/src/main/res/layout/activity_main.xml:172: Warning: Hardcoded string "🎯", should use @string resource [HardcodedText]
+                    android:text="🎯"
+                    ~~~~~~~~~~~~~~~~~
+/Users/apple/Downloads/DisciplineCore/app/src/main/res/layout/activity_main.xml:179: Warning: Hardcoded string "No habits yet", should use @string resource [HardcodedText]
+                    android:text="No habits yet"
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/apple/Downloads/DisciplineCore/app/src/main/res/layout/activity_main.xml:188: Warning: Hardcoded string "Tap + to add your first habit", should use @string resource [HardcodedText]
+                    android:text="Tap + to add your first habit"
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/apple/Downloads/DisciplineCore/app/src/main/res/layout/activity_main.xml:205: Warning: Hardcoded string "Add Habit", should use @string resource [HardcodedText]
+        android:text="Add Habit"
+        ~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/apple/Downloads/DisciplineCore/app/src/main/res/layout/dialog_add_habit.xml:25: Warning: Hardcoded string "New Habit", should use @string resource [HardcodedText]
+        android:text="New Habit"
+        ~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/apple/Downloads/DisciplineCore/app/src/main/res/layout/dialog_add_habit.xml:35: Warning: Hardcoded string "PICK AN ICON", should use @string resource [HardcodedText]
+        android:text="PICK AN ICON"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/apple/Downloads/DisciplineCore/app/src/main/res/layout/dialog_add_habit.xml:54: Warning: Hardcoded string "HABIT NAME", should use @string resource [HardcodedText]
+        android:text="HABIT NAME"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/apple/Downloads/DisciplineCore/app/src/main/res/layout/dialog_add_habit.xml:67: Warning: Hardcoded string "e.g. Morning workout", should use @string resource [HardcodedText]
+        android:hint="e.g. Morning workout"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/apple/Downloads/DisciplineCore/app/src/main/res/layout/dialog_add_habit.xml:92: Warning: Hardcoded string "Cancel", should use @string resource [HardcodedText]
+            android:text="Cancel"
+            ~~~~~~~~~~~~~~~~~~~~~
+/Users/apple/Downloads/DisciplineCore/app/src/main/res/layout/dialog_add_habit.xml:103: Warning: Hardcoded string "Add Habit", should use @string resource [HardcodedText]
+            android:text="Add Habit"
+            ~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/apple/Downloads/DisciplineCore/app/src/main/res/layout/item_habit.xml:26: Warning: Hardcoded string "⚡", should use @string resource [HardcodedText]
+            android:text="⚡"
+            ~~~~~~~~~~~~~~~~
+/Users/apple/Downloads/DisciplineCore/app/src/main/res/layout/item_habit.xml:42: Warning: Hardcoded string "Morning run", should use @string resource [HardcodedText]
+                android:text="Morning run"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/apple/Downloads/DisciplineCore/app/src/main/res/layout/item_habit.xml:58: Warning: Hardcoded string "🔥 5", should use @string resource [HardcodedText]
+                    android:text="🔥 5"
+                    ~~~~~~~~~~~~~~~~~~~
+/Users/apple/Downloads/DisciplineCore/app/src/main/res/layout/item_habit.xml:67: Warning: Hardcoded string "·", should use @string resource [HardcodedText]
+                    android:text="·"
+                    ~~~~~~~~~~~~~~~~
+/Users/apple/Downloads/DisciplineCore/app/src/main/res/layout/item_habit.xml:75: Warning: Hardcoded string "12x done", should use @string resource [HardcodedText]
+                    android:text="12x done"
+                    ~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "HardcodedText":
+   Hardcoding text attributes directly in layout files is bad for several
+   reasons:
+
+   * When creating configuration variations (for example for landscape or
+   portrait) you have to repeat the actual text (and keep it up to date when
+   making changes)
+
+   * The application cannot be translated to other languages by just adding
+   new translations for existing string resources.
+
+   There are quickfixes to automatically extract this hardcoded string into a
+   resource lookup.
+
+0 errors, 102 warnings

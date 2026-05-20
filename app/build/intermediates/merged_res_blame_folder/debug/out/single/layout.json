@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "/Users/apple/.gradle/daemon/8.14.5/com.anant.disciplinecore.app-mergeDebugResources-44:/layout/dialog_add_habit.xml",
+        "source": "/Users/apple/.gradle/daemon/8.14.5/com.anant.disciplinecore.app-main-47:/layout/dialog_add_habit.xml"
+    },
+    {
+        "merged": "com.anant.disciplinecore.app-mergeDebugResources-44:/layout/activity_main.xml",
+        "source": "com.anant.disciplinecore.app-main-47:/layout/activity_main.xml"
+    },
+    {
+        "merged": "/Users/apple/.gradle/daemon/8.14.5/com.anant.disciplinecore.app-mergeDebugResources-44:/layout/item_habit.xml",
+        "source": "/Users/apple/.gradle/daemon/8.14.5/com.anant.disciplinecore.app-main-47:/layout/item_habit.xml"
+    },
+    {
+        "merged": "/Users/apple/.gradle/daemon/8.14.5/com.anant.disciplinecore.app-mergeDebugResources-44:/layout/activity_main.xml",
+        "source": "/Users/apple/.gradle/daemon/8.14.5/com.anant.disciplinecore.app-main-47:/layout/activity_main.xml"
+    }
+]
