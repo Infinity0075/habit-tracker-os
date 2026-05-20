@@ -63,8 +63,7 @@ The goal is to help users become more accountable to themselves and build long-t
 
 Built with focus and consistency by Anant Madhav Pathak.
 
-- LinkedIn: [Add your LinkedIn]
-- GitHub: [Add your GitHub]
+- LinkedIn: www.linkedin.com/in/anant-madhav-pathak-035751229
 
 ---
 
