@@ -8,15 +8,17 @@ import androidx.room.RoomDatabase
 @Database(
     entities = [
         Habit::class,
+        HabitLog::class,
         DailyWin::class
     ],
-    version = 2,
+    version = 3,
     exportSchema = false
 )
 
 abstract class HabitDatabase : RoomDatabase() {
 
     abstract fun habitDao(): HabitDao
+    abstract fun habitLogDao(): HabitLogDao
 
     abstract fun dailyWinDao(): DailyWinDao
 

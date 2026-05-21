@@ -4,25 +4,100 @@ package com.anant.disciplinecore.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.ProgressBar;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.ScrollView;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
+import androidx.viewbinding.ViewBindings;
 import com.anant.disciplinecore.R;
+import com.google.android.material.textfield.TextInputEditText;
 import java.lang.NullPointerException;
 import java.lang.Override;
+import java.lang.String;
 
 public final class FragmentFocusBinding implements ViewBinding {
   @NonNull
-  private final LinearLayout rootView;
+  private final ScrollView rootView;
 
-  private FragmentFocusBinding(@NonNull LinearLayout rootView) {
+  @NonNull
+  public final Button btnNewQuote;
+
+  @NonNull
+  public final Button btnReset;
+
+  @NonNull
+  public final Button btnSkip;
+
+  @NonNull
+  public final Button btnStartPause;
+
+  @NonNull
+  public final TextInputEditText etCustomMinutes;
+
+  @NonNull
+  public final LinearLayout layoutCustomTime;
+
+  @NonNull
+  public final RadioButton rbCustom;
+
+  @NonNull
+  public final RadioButton rbPomodoro;
+
+  @NonNull
+  public final RadioGroup rgTimerMode;
+
+  @NonNull
+  public final ProgressBar timerProgress;
+
+  @NonNull
+  public final TextView tvQuote;
+
+  @NonNull
+  public final TextView tvQuoteAuthor;
+
+  @NonNull
+  public final TextView tvSessionCount;
+
+  @NonNull
+  public final TextView tvSessionLabel;
+
+  @NonNull
+  public final TextView tvTimer;
+
+  private FragmentFocusBinding(@NonNull ScrollView rootView, @NonNull Button btnNewQuote,
+      @NonNull Button btnReset, @NonNull Button btnSkip, @NonNull Button btnStartPause,
+      @NonNull TextInputEditText etCustomMinutes, @NonNull LinearLayout layoutCustomTime,
+      @NonNull RadioButton rbCustom, @NonNull RadioButton rbPomodoro,
+      @NonNull RadioGroup rgTimerMode, @NonNull ProgressBar timerProgress,
+      @NonNull TextView tvQuote, @NonNull TextView tvQuoteAuthor, @NonNull TextView tvSessionCount,
+      @NonNull TextView tvSessionLabel, @NonNull TextView tvTimer) {
     this.rootView = rootView;
+    this.btnNewQuote = btnNewQuote;
+    this.btnReset = btnReset;
+    this.btnSkip = btnSkip;
+    this.btnStartPause = btnStartPause;
+    this.etCustomMinutes = etCustomMinutes;
+    this.layoutCustomTime = layoutCustomTime;
+    this.rbCustom = rbCustom;
+    this.rbPomodoro = rbPomodoro;
+    this.rgTimerMode = rgTimerMode;
+    this.timerProgress = timerProgress;
+    this.tvQuote = tvQuote;
+    this.tvQuoteAuthor = tvQuoteAuthor;
+    this.tvSessionCount = tvSessionCount;
+    this.tvSessionLabel = tvSessionLabel;
+    this.tvTimer = tvTimer;
   }
 
   @Override
   @NonNull
-  public LinearLayout getRoot() {
+  public ScrollView getRoot() {
     return rootView;
   }
 
@@ -43,10 +118,105 @@ public final class FragmentFocusBinding implements ViewBinding {
 
   @NonNull
   public static FragmentFocusBinding bind(@NonNull View rootView) {
-    if (rootView == null) {
-      throw new NullPointerException("rootView");
-    }
+    // The body of this method is generated in a way you would not otherwise write.
+    // This is done to optimize the compiled bytecode for size and performance.
+    int id;
+    missingId: {
+      id = R.id.btnNewQuote;
+      Button btnNewQuote = ViewBindings.findChildViewById(rootView, id);
+      if (btnNewQuote == null) {
+        break missingId;
+      }
 
-    return new FragmentFocusBinding((LinearLayout) rootView);
+      id = R.id.btnReset;
+      Button btnReset = ViewBindings.findChildViewById(rootView, id);
+      if (btnReset == null) {
+        break missingId;
+      }
+
+      id = R.id.btnSkip;
+      Button btnSkip = ViewBindings.findChildViewById(rootView, id);
+      if (btnSkip == null) {
+        break missingId;
+      }
+
+      id = R.id.btnStartPause;
+      Button btnStartPause = ViewBindings.findChildViewById(rootView, id);
+      if (btnStartPause == null) {
+        break missingId;
+      }
+
+      id = R.id.etCustomMinutes;
+      TextInputEditText etCustomMinutes = ViewBindings.findChildViewById(rootView, id);
+      if (etCustomMinutes == null) {
+        break missingId;
+      }
+
+      id = R.id.layoutCustomTime;
+      LinearLayout layoutCustomTime = ViewBindings.findChildViewById(rootView, id);
+      if (layoutCustomTime == null) {
+        break missingId;
+      }
+
+      id = R.id.rbCustom;
+      RadioButton rbCustom = ViewBindings.findChildViewById(rootView, id);
+      if (rbCustom == null) {
+        break missingId;
+      }
+
+      id = R.id.rbPomodoro;
+      RadioButton rbPomodoro = ViewBindings.findChildViewById(rootView, id);
+      if (rbPomodoro == null) {
+        break missingId;
+      }
+
+      id = R.id.rgTimerMode;
+      RadioGroup rgTimerMode = ViewBindings.findChildViewById(rootView, id);
+      if (rgTimerMode == null) {
+        break missingId;
+      }
+
+      id = R.id.timerProgress;
+      ProgressBar timerProgress = ViewBindings.findChildViewById(rootView, id);
+      if (timerProgress == null) {
+        break missingId;
+      }
+
+      id = R.id.tvQuote;
+      TextView tvQuote = ViewBindings.findChildViewById(rootView, id);
+      if (tvQuote == null) {
+        break missingId;
+      }
+
+      id = R.id.tvQuoteAuthor;
+      TextView tvQuoteAuthor = ViewBindings.findChildViewById(rootView, id);
+      if (tvQuoteAuthor == null) {
+        break missingId;
+      }
+
+      id = R.id.tvSessionCount;
+      TextView tvSessionCount = ViewBindings.findChildViewById(rootView, id);
+      if (tvSessionCount == null) {
+        break missingId;
+      }
+
+      id = R.id.tvSessionLabel;
+      TextView tvSessionLabel = ViewBindings.findChildViewById(rootView, id);
+      if (tvSessionLabel == null) {
+        break missingId;
+      }
+
+      id = R.id.tvTimer;
+      TextView tvTimer = ViewBindings.findChildViewById(rootView, id);
+      if (tvTimer == null) {
+        break missingId;
+      }
+
+      return new FragmentFocusBinding((ScrollView) rootView, btnNewQuote, btnReset, btnSkip,
+          btnStartPause, etCustomMinutes, layoutCustomTime, rbCustom, rbPomodoro, rgTimerMode,
+          timerProgress, tvQuote, tvQuoteAuthor, tvSessionCount, tvSessionLabel, tvTimer);
+    }
+    String missingId = rootView.getResources().getResourceName(id);
+    throw new NullPointerException("Missing required view with ID: ".concat(missingId));
   }
 }

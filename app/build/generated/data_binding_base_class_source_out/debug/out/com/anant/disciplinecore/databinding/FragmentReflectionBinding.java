@@ -4,25 +4,75 @@ package com.anant.disciplinecore.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.ScrollView;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
+import androidx.viewbinding.ViewBindings;
 import com.anant.disciplinecore.R;
+import com.google.android.material.textfield.TextInputEditText;
 import java.lang.NullPointerException;
 import java.lang.Override;
+import java.lang.String;
 
 public final class FragmentReflectionBinding implements ViewBinding {
   @NonNull
-  private final LinearLayout rootView;
+  private final ScrollView rootView;
 
-  private FragmentReflectionBinding(@NonNull LinearLayout rootView) {
+  @NonNull
+  public final Button btnSaveJournal;
+
+  @NonNull
+  public final TextInputEditText etReflection;
+
+  @NonNull
+  public final TextInputEditText etWin;
+
+  @NonNull
+  public final LinearLayout layoutMood;
+
+  @NonNull
+  public final LinearLayout layoutPastEntries;
+
+  @NonNull
+  public final TextView mood1;
+
+  @NonNull
+  public final TextView mood2;
+
+  @NonNull
+  public final TextView mood3;
+
+  @NonNull
+  public final TextView mood4;
+
+  @NonNull
+  public final TextView mood5;
+
+  private FragmentReflectionBinding(@NonNull ScrollView rootView, @NonNull Button btnSaveJournal,
+      @NonNull TextInputEditText etReflection, @NonNull TextInputEditText etWin,
+      @NonNull LinearLayout layoutMood, @NonNull LinearLayout layoutPastEntries,
+      @NonNull TextView mood1, @NonNull TextView mood2, @NonNull TextView mood3,
+      @NonNull TextView mood4, @NonNull TextView mood5) {
     this.rootView = rootView;
+    this.btnSaveJournal = btnSaveJournal;
+    this.etReflection = etReflection;
+    this.etWin = etWin;
+    this.layoutMood = layoutMood;
+    this.layoutPastEntries = layoutPastEntries;
+    this.mood1 = mood1;
+    this.mood2 = mood2;
+    this.mood3 = mood3;
+    this.mood4 = mood4;
+    this.mood5 = mood5;
   }
 
   @Override
   @NonNull
-  public LinearLayout getRoot() {
+  public ScrollView getRoot() {
     return rootView;
   }
 
@@ -43,10 +93,74 @@ public final class FragmentReflectionBinding implements ViewBinding {
 
   @NonNull
   public static FragmentReflectionBinding bind(@NonNull View rootView) {
-    if (rootView == null) {
-      throw new NullPointerException("rootView");
-    }
+    // The body of this method is generated in a way you would not otherwise write.
+    // This is done to optimize the compiled bytecode for size and performance.
+    int id;
+    missingId: {
+      id = R.id.btnSaveJournal;
+      Button btnSaveJournal = ViewBindings.findChildViewById(rootView, id);
+      if (btnSaveJournal == null) {
+        break missingId;
+      }
 
-    return new FragmentReflectionBinding((LinearLayout) rootView);
+      id = R.id.etReflection;
+      TextInputEditText etReflection = ViewBindings.findChildViewById(rootView, id);
+      if (etReflection == null) {
+        break missingId;
+      }
+
+      id = R.id.etWin;
+      TextInputEditText etWin = ViewBindings.findChildViewById(rootView, id);
+      if (etWin == null) {
+        break missingId;
+      }
+
+      id = R.id.layoutMood;
+      LinearLayout layoutMood = ViewBindings.findChildViewById(rootView, id);
+      if (layoutMood == null) {
+        break missingId;
+      }
+
+      id = R.id.layoutPastEntries;
+      LinearLayout layoutPastEntries = ViewBindings.findChildViewById(rootView, id);
+      if (layoutPastEntries == null) {
+        break missingId;
+      }
+
+      id = R.id.mood1;
+      TextView mood1 = ViewBindings.findChildViewById(rootView, id);
+      if (mood1 == null) {
+        break missingId;
+      }
+
+      id = R.id.mood2;
+      TextView mood2 = ViewBindings.findChildViewById(rootView, id);
+      if (mood2 == null) {
+        break missingId;
+      }
+
+      id = R.id.mood3;
+      TextView mood3 = ViewBindings.findChildViewById(rootView, id);
+      if (mood3 == null) {
+        break missingId;
+      }
+
+      id = R.id.mood4;
+      TextView mood4 = ViewBindings.findChildViewById(rootView, id);
+      if (mood4 == null) {
+        break missingId;
+      }
+
+      id = R.id.mood5;
+      TextView mood5 = ViewBindings.findChildViewById(rootView, id);
+      if (mood5 == null) {
+        break missingId;
+      }
+
+      return new FragmentReflectionBinding((ScrollView) rootView, btnSaveJournal, etReflection,
+          etWin, layoutMood, layoutPastEntries, mood1, mood2, mood3, mood4, mood5);
+    }
+    String missingId = rootView.getResources().getResourceName(id);
+    throw new NullPointerException("Missing required view with ID: ".concat(missingId));
   }
 }

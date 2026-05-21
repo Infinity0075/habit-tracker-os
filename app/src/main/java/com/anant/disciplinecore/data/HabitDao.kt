@@ -27,4 +27,8 @@ interface HabitDao {
 
     @Query("SELECT COUNT(*) FROM habits WHERE isCompletedToday = 1")
     suspend fun getCompletedTodayCount(): Int
+
+    // ── Added for reset all data ──────────────────────────────────
+    @Query("DELETE FROM habits")
+    suspend fun deleteAllHabits()
 }

@@ -9,23 +9,57 @@ import com.anant.disciplinecore.data.HabitDatabase
 import com.anant.disciplinecore.data.HabitRepository
 import kotlinx.coroutines.launch
 
-class HabitViewModel(application: Application) : AndroidViewModel(application) {
+class HabitViewModel(application: Application) :
+    AndroidViewModel(application) {
 
     private val repository: HabitRepository
+
     val allHabits: LiveData<List<Habit>>
 
     init {
-        val dao = HabitDatabase.getDatabase(application).habitDao()
-        repository = HabitRepository(dao)
+
+        val database =
+            HabitDatabase.getDatabase(application)
+
+        val habitDao =
+            database.habitDao()
+
+        val habitLogDao =
+            database.habitLogDao()
+
+        repository = HabitRepository(
+            habitDao,
+            habitLogDao
+        )
+
         allHabits = repository.allHabits
+
         refreshDailyState()
     }
 
-    fun insert(habit: Habit) = viewModelScope.launch { repository.insert(habit) }
+    fun insert(habit: Habit) =
+        viewModelScope.launch {
+            repository.insert(habit)
+        }
 
-    fun delete(habit: Habit) = viewModelScope.launch { repository.delete(habit) }
+    fun delete(habit: Habit) =
+        viewModelScope.launch {
+            repository.delete(habit)
+        }
 
-    fun toggleCompletion(habit: Habit) = viewModelScope.launch { repository.toggleCompletion(habit) }
+    fun toggleCompletion(habit: Habit) =
+        viewModelScope.launch {
+            repository.toggleCompletion(habit)
+        }
 
-    private fun refreshDailyState() = viewModelScope.launch { repository.refreshDailyState() }
+    // ── Added for Settings reset button ──────────────────────────
+    fun deleteAllHabits() =
+        viewModelScope.launch {
+            repository.deleteAllHabits()
+        }
+
+    private fun refreshDailyState() =
+        viewModelScope.launch {
+            repository.refreshDailyState()
+        }
 }

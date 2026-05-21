@@ -42,6 +42,8 @@ public final class HabitDao_Impl implements HabitDao {
 
   private final SharedSQLiteStatement __preparedStmtOfResetStaleCompletions;
 
+  private final SharedSQLiteStatement __preparedStmtOfDeleteAllHabits;
+
   public HabitDao_Impl(@NonNull final RoomDatabase __db) {
     this.__db = __db;
     this.__insertionAdapterOfHabit = new EntityInsertionAdapter<Habit>(__db) {
@@ -107,6 +109,14 @@ public final class HabitDao_Impl implements HabitDao {
       @NonNull
       public String createQuery() {
         final String _query = "UPDATE habits SET isCompletedToday = 0 WHERE lastCompletedDate != ? AND isCompletedToday = 1";
+        return _query;
+      }
+    };
+    this.__preparedStmtOfDeleteAllHabits = new SharedSQLiteStatement(__db) {
+      @Override
+      @NonNull
+      public String createQuery() {
+        final String _query = "DELETE FROM habits";
         return _query;
       }
     };
@@ -187,6 +197,29 @@ public final class HabitDao_Impl implements HabitDao {
           }
         } finally {
           __preparedStmtOfResetStaleCompletions.release(_stmt);
+        }
+      }
+    }, $completion);
+  }
+
+  @Override
+  public Object deleteAllHabits(final Continuation<? super Unit> $completion) {
+    return CoroutinesRoom.execute(__db, true, new Callable<Unit>() {
+      @Override
+      @NonNull
+      public Unit call() throws Exception {
+        final SupportSQLiteStatement _stmt = __preparedStmtOfDeleteAllHabits.acquire();
+        try {
+          __db.beginTransaction();
+          try {
+            _stmt.executeUpdateDelete();
+            __db.setTransactionSuccessful();
+            return Unit.INSTANCE;
+          } finally {
+            __db.endTransaction();
+          }
+        } finally {
+          __preparedStmtOfDeleteAllHabits.release(_stmt);
         }
       }
     }, $completion);

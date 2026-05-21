@@ -4,6 +4,7 @@ package com.anant.disciplinecore.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
@@ -20,6 +21,24 @@ public final class FragmentStatsBinding implements ViewBinding {
   private final ScrollView rootView;
 
   @NonNull
+  public final LinearLayout layoutHeatmap;
+
+  @NonNull
+  public final LinearLayout layoutStreakHistory;
+
+  @NonNull
+  public final LinearLayout layoutWeekDayLabels;
+
+  @NonNull
+  public final LinearLayout layoutWeeklyChart;
+
+  @NonNull
+  public final TextView tvBestHabit;
+
+  @NonNull
+  public final TextView tvBestHabitStreak;
+
+  @NonNull
   public final TextView tvBestStreak;
 
   @NonNull
@@ -31,14 +50,32 @@ public final class FragmentStatsBinding implements ViewBinding {
   @NonNull
   public final TextView tvTotalHabits;
 
-  private FragmentStatsBinding(@NonNull ScrollView rootView, @NonNull TextView tvBestStreak,
+  @NonNull
+  public final TextView tvWorstHabit;
+
+  @NonNull
+  public final TextView tvWorstHabitStreak;
+
+  private FragmentStatsBinding(@NonNull ScrollView rootView, @NonNull LinearLayout layoutHeatmap,
+      @NonNull LinearLayout layoutStreakHistory, @NonNull LinearLayout layoutWeekDayLabels,
+      @NonNull LinearLayout layoutWeeklyChart, @NonNull TextView tvBestHabit,
+      @NonNull TextView tvBestHabitStreak, @NonNull TextView tvBestStreak,
       @NonNull TextView tvCompletedHabits, @NonNull TextView tvDisciplineScore,
-      @NonNull TextView tvTotalHabits) {
+      @NonNull TextView tvTotalHabits, @NonNull TextView tvWorstHabit,
+      @NonNull TextView tvWorstHabitStreak) {
     this.rootView = rootView;
+    this.layoutHeatmap = layoutHeatmap;
+    this.layoutStreakHistory = layoutStreakHistory;
+    this.layoutWeekDayLabels = layoutWeekDayLabels;
+    this.layoutWeeklyChart = layoutWeeklyChart;
+    this.tvBestHabit = tvBestHabit;
+    this.tvBestHabitStreak = tvBestHabitStreak;
     this.tvBestStreak = tvBestStreak;
     this.tvCompletedHabits = tvCompletedHabits;
     this.tvDisciplineScore = tvDisciplineScore;
     this.tvTotalHabits = tvTotalHabits;
+    this.tvWorstHabit = tvWorstHabit;
+    this.tvWorstHabitStreak = tvWorstHabitStreak;
   }
 
   @Override
@@ -68,6 +105,42 @@ public final class FragmentStatsBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.layoutHeatmap;
+      LinearLayout layoutHeatmap = ViewBindings.findChildViewById(rootView, id);
+      if (layoutHeatmap == null) {
+        break missingId;
+      }
+
+      id = R.id.layoutStreakHistory;
+      LinearLayout layoutStreakHistory = ViewBindings.findChildViewById(rootView, id);
+      if (layoutStreakHistory == null) {
+        break missingId;
+      }
+
+      id = R.id.layoutWeekDayLabels;
+      LinearLayout layoutWeekDayLabels = ViewBindings.findChildViewById(rootView, id);
+      if (layoutWeekDayLabels == null) {
+        break missingId;
+      }
+
+      id = R.id.layoutWeeklyChart;
+      LinearLayout layoutWeeklyChart = ViewBindings.findChildViewById(rootView, id);
+      if (layoutWeeklyChart == null) {
+        break missingId;
+      }
+
+      id = R.id.tvBestHabit;
+      TextView tvBestHabit = ViewBindings.findChildViewById(rootView, id);
+      if (tvBestHabit == null) {
+        break missingId;
+      }
+
+      id = R.id.tvBestHabitStreak;
+      TextView tvBestHabitStreak = ViewBindings.findChildViewById(rootView, id);
+      if (tvBestHabitStreak == null) {
+        break missingId;
+      }
+
       id = R.id.tvBestStreak;
       TextView tvBestStreak = ViewBindings.findChildViewById(rootView, id);
       if (tvBestStreak == null) {
@@ -92,8 +165,21 @@ public final class FragmentStatsBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentStatsBinding((ScrollView) rootView, tvBestStreak, tvCompletedHabits,
-          tvDisciplineScore, tvTotalHabits);
+      id = R.id.tvWorstHabit;
+      TextView tvWorstHabit = ViewBindings.findChildViewById(rootView, id);
+      if (tvWorstHabit == null) {
+        break missingId;
+      }
+
+      id = R.id.tvWorstHabitStreak;
+      TextView tvWorstHabitStreak = ViewBindings.findChildViewById(rootView, id);
+      if (tvWorstHabitStreak == null) {
+        break missingId;
+      }
+
+      return new FragmentStatsBinding((ScrollView) rootView, layoutHeatmap, layoutStreakHistory,
+          layoutWeekDayLabels, layoutWeeklyChart, tvBestHabit, tvBestHabitStreak, tvBestStreak,
+          tvCompletedHabits, tvDisciplineScore, tvTotalHabits, tvWorstHabit, tvWorstHabitStreak);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

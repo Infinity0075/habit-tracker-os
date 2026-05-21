@@ -1,9 +1,5 @@
 [
     {
-        "merged": "/Users/apple/.gradle/daemon/8.14.5/com.anant.disciplinecore.app-merged_res-46:/anim_fade_in.xml.flat",
-        "source": "/Users/apple/.gradle/daemon/8.14.5/com.anant.disciplinecore.app-main-48:/anim/fade_in.xml"
-    },
-    {
         "merged": "/Users/apple/.gradle/daemon/8.14.5/com.anant.disciplinecore.app-merged_res-46:/mipmap-xhdpi_ic_launcher.png.flat",
         "source": "/Users/apple/.gradle/daemon/8.14.5/com.anant.disciplinecore.app-main-48:/mipmap-xhdpi/ic_launcher.png"
     },
@@ -20,8 +16,32 @@
         "source": "/Users/apple/.gradle/daemon/8.14.5/com.anant.disciplinecore.app-main-48:/mipmap-hdpi/ic_launcher_round.png"
     },
     {
-        "merged": "com.anant.disciplinecore.app-merged_res-46:/layout_item_win.xml.flat",
-        "source": "com.anant.disciplinecore.app-main-48:/layout/item_win.xml"
+        "merged": "/Users/apple/.gradle/daemon/8.14.5/com.anant.disciplinecore.app-merged_res-46:/layout_fragment_focus.xml.flat",
+        "source": "/Users/apple/.gradle/daemon/8.14.5/com.anant.disciplinecore.app-main-48:/layout/fragment_focus.xml"
+    },
+    {
+        "merged": "/Users/apple/.gradle/daemon/8.14.5/com.anant.disciplinecore.app-merged_res-46:/layout_item_win.xml.flat",
+        "source": "/Users/apple/.gradle/daemon/8.14.5/com.anant.disciplinecore.app-main-48:/layout/item_win.xml"
+    },
+    {
+        "merged": "/Users/apple/.gradle/daemon/8.14.5/com.anant.disciplinecore.app-merged_res-46:/menu_bottom_nav_menu.xml.flat",
+        "source": "/Users/apple/.gradle/daemon/8.14.5/com.anant.disciplinecore.app-main-48:/menu/bottom_nav_menu.xml"
+    },
+    {
+        "merged": "/Users/apple/.gradle/daemon/8.14.5/com.anant.disciplinecore.app-merged_res-46:/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "/Users/apple/.gradle/daemon/8.14.5/com.anant.disciplinecore.app-main-48:/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/apple/.gradle/daemon/8.14.5/com.anant.disciplinecore.app-merged_res-46:/mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "/Users/apple/.gradle/daemon/8.14.5/com.anant.disciplinecore.app-main-48:/mipmap-mdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/Users/apple/.gradle/daemon/8.14.5/com.anant.disciplinecore.app-merged_res-46:/anim_fade_in.xml.flat",
+        "source": "/Users/apple/.gradle/daemon/8.14.5/com.anant.disciplinecore.app-main-48:/anim/fade_in.xml"
+    },
+    {
+        "merged": "com.anant.disciplinecore.app-merged_res-46:/layout_fragment_settings.xml.flat",
+        "source": "com.anant.disciplinecore.app-main-48:/layout/fragment_settings.xml"
     },
     {
         "merged": "/Users/apple/.gradle/daemon/8.14.5/com.anant.disciplinecore.app-merged_res-46:/layout_dialog_add_habit.xml.flat",
@@ -48,10 +68,6 @@
         "source": "/Users/apple/.gradle/daemon/8.14.5/com.anant.disciplinecore.app-main-48:/layout/fragment_home.xml"
     },
     {
-        "merged": "/Users/apple/.gradle/daemon/8.14.5/com.anant.disciplinecore.app-merged_res-46:/layout_fragment_focus.xml.flat",
-        "source": "/Users/apple/.gradle/daemon/8.14.5/com.anant.disciplinecore.app-main-48:/layout/fragment_focus.xml"
-    },
-    {
         "merged": "/Users/apple/.gradle/daemon/8.14.5/com.anant.disciplinecore.app-merged_res-46:/layout_activity_main.xml.flat",
         "source": "/Users/apple/.gradle/daemon/8.14.5/com.anant.disciplinecore.app-main-48:/layout/activity_main.xml"
     },
@@ -64,20 +80,8 @@
         "source": "/Users/apple/.gradle/daemon/8.14.5/com.anant.disciplinecore.app-main-48:/layout/activity_splash.xml"
     },
     {
-        "merged": "/Users/apple/.gradle/daemon/8.14.5/com.anant.disciplinecore.app-merged_res-46:/menu_bottom_nav_menu.xml.flat",
-        "source": "/Users/apple/.gradle/daemon/8.14.5/com.anant.disciplinecore.app-main-48:/menu/bottom_nav_menu.xml"
-    },
-    {
         "merged": "/Users/apple/.gradle/daemon/8.14.5/com.anant.disciplinecore.app-merged_res-46:/mipmap-xxhdpi_ic_launcher_round.png.flat",
         "source": "/Users/apple/.gradle/daemon/8.14.5/com.anant.disciplinecore.app-main-48:/mipmap-xxhdpi/ic_launcher_round.png"
-    },
-    {
-        "merged": "/Users/apple/.gradle/daemon/8.14.5/com.anant.disciplinecore.app-merged_res-46:/mipmap-mdpi_ic_launcher_round.png.flat",
-        "source": "/Users/apple/.gradle/daemon/8.14.5/com.anant.disciplinecore.app-main-48:/mipmap-mdpi/ic_launcher_round.png"
-    },
-    {
-        "merged": "/Users/apple/.gradle/daemon/8.14.5/com.anant.disciplinecore.app-merged_res-46:/mipmap-hdpi_ic_launcher.png.flat",
-        "source": "/Users/apple/.gradle/daemon/8.14.5/com.anant.disciplinecore.app-main-48:/mipmap-hdpi/ic_launcher.png"
     },
     {
         "merged": "/Users/apple/.gradle/daemon/8.14.5/com.anant.disciplinecore.app-merged_res-46:/layout_fragment_reflection.xml.flat",

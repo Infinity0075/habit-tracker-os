@@ -81,8 +81,11 @@ class HomeFragment : Fragment() {
 
         viewModel.allHabits.observe(viewLifecycleOwner) { habits ->
 
-            adapter.submitList(habits)
+            val sortedHabits = habits.sortedBy {
+                it.isCompletedToday
+            }
 
+            adapter.submitList(sortedHabits)
             updateScoreCard(habits)
 
             binding.emptyState.visibility =

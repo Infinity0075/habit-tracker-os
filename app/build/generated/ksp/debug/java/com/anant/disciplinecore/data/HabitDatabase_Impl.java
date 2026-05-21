@@ -28,23 +28,27 @@ import javax.annotation.processing.Generated;
 public final class HabitDatabase_Impl extends HabitDatabase {
   private volatile HabitDao _habitDao;
 
+  private volatile HabitLogDao _habitLogDao;
+
   private volatile DailyWinDao _dailyWinDao;
 
   @Override
   @NonNull
   protected SupportSQLiteOpenHelper createOpenHelper(@NonNull final DatabaseConfiguration config) {
-    final SupportSQLiteOpenHelper.Callback _openCallback = new RoomOpenHelper(config, new RoomOpenHelper.Delegate(2) {
+    final SupportSQLiteOpenHelper.Callback _openCallback = new RoomOpenHelper(config, new RoomOpenHelper.Delegate(3) {
       @Override
       public void createAllTables(@NonNull final SupportSQLiteDatabase db) {
         db.execSQL("CREATE TABLE IF NOT EXISTS `habits` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `name` TEXT NOT NULL, `emoji` TEXT NOT NULL, `streak` INTEGER NOT NULL, `longestStreak` INTEGER NOT NULL, `totalCompletions` INTEGER NOT NULL, `lastCompletedDate` TEXT NOT NULL, `isCompletedToday` INTEGER NOT NULL, `createdAt` INTEGER NOT NULL)");
+        db.execSQL("CREATE TABLE IF NOT EXISTS `habit_logs` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `habitId` INTEGER NOT NULL, `date` TEXT NOT NULL, `completed` INTEGER NOT NULL)");
         db.execSQL("CREATE TABLE IF NOT EXISTS `daily_wins` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `text` TEXT NOT NULL, `timestamp` INTEGER NOT NULL)");
         db.execSQL("CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)");
-        db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '959f81baa9d00d3ceacf90796721d0f4')");
+        db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'db1eb1e49b4c192f94b78dce864300f0')");
       }
 
       @Override
       public void dropAllTables(@NonNull final SupportSQLiteDatabase db) {
         db.execSQL("DROP TABLE IF EXISTS `habits`");
+        db.execSQL("DROP TABLE IF EXISTS `habit_logs`");
         db.execSQL("DROP TABLE IF EXISTS `daily_wins`");
         final List<? extends RoomDatabase.Callback> _callbacks = mCallbacks;
         if (_callbacks != null) {
@@ -108,6 +112,20 @@ public final class HabitDatabase_Impl extends HabitDatabase {
                   + " Expected:\n" + _infoHabits + "\n"
                   + " Found:\n" + _existingHabits);
         }
+        final HashMap<String, TableInfo.Column> _columnsHabitLogs = new HashMap<String, TableInfo.Column>(4);
+        _columnsHabitLogs.put("id", new TableInfo.Column("id", "INTEGER", true, 1, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsHabitLogs.put("habitId", new TableInfo.Column("habitId", "INTEGER", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsHabitLogs.put("date", new TableInfo.Column("date", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsHabitLogs.put("completed", new TableInfo.Column("completed", "INTEGER", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        final HashSet<TableInfo.ForeignKey> _foreignKeysHabitLogs = new HashSet<TableInfo.ForeignKey>(0);
+        final HashSet<TableInfo.Index> _indicesHabitLogs = new HashSet<TableInfo.Index>(0);
+        final TableInfo _infoHabitLogs = new TableInfo("habit_logs", _columnsHabitLogs, _foreignKeysHabitLogs, _indicesHabitLogs);
+        final TableInfo _existingHabitLogs = TableInfo.read(db, "habit_logs");
+        if (!_infoHabitLogs.equals(_existingHabitLogs)) {
+          return new RoomOpenHelper.ValidationResult(false, "habit_logs(com.anant.disciplinecore.data.HabitLog).\n"
+                  + " Expected:\n" + _infoHabitLogs + "\n"
+                  + " Found:\n" + _existingHabitLogs);
+        }
         final HashMap<String, TableInfo.Column> _columnsDailyWins = new HashMap<String, TableInfo.Column>(3);
         _columnsDailyWins.put("id", new TableInfo.Column("id", "INTEGER", true, 1, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsDailyWins.put("text", new TableInfo.Column("text", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
@@ -123,7 +141,7 @@ public final class HabitDatabase_Impl extends HabitDatabase {
         }
         return new RoomOpenHelper.ValidationResult(true, null);
       }
-    }, "959f81baa9d00d3ceacf90796721d0f4", "3e5e1e78380d5e72f4184f14fa16b498");
+    }, "db1eb1e49b4c192f94b78dce864300f0", "2fa8657d5eca331e8e48b63fd478e9bb");
     final SupportSQLiteOpenHelper.Configuration _sqliteConfig = SupportSQLiteOpenHelper.Configuration.builder(config.context).name(config.name).callback(_openCallback).build();
     final SupportSQLiteOpenHelper _helper = config.sqliteOpenHelperFactory.create(_sqliteConfig);
     return _helper;
@@ -134,7 +152,7 @@ public final class HabitDatabase_Impl extends HabitDatabase {
   protected InvalidationTracker createInvalidationTracker() {
     final HashMap<String, String> _shadowTablesMap = new HashMap<String, String>(0);
     final HashMap<String, Set<String>> _viewTables = new HashMap<String, Set<String>>(0);
-    return new InvalidationTracker(this, _shadowTablesMap, _viewTables, "habits","daily_wins");
+    return new InvalidationTracker(this, _shadowTablesMap, _viewTables, "habits","habit_logs","daily_wins");
   }
 
   @Override
@@ -144,6 +162,7 @@ public final class HabitDatabase_Impl extends HabitDatabase {
     try {
       super.beginTransaction();
       _db.execSQL("DELETE FROM `habits`");
+      _db.execSQL("DELETE FROM `habit_logs`");
       _db.execSQL("DELETE FROM `daily_wins`");
       super.setTransactionSuccessful();
     } finally {
@@ -160,6 +179,7 @@ public final class HabitDatabase_Impl extends HabitDatabase {
   protected Map<Class<?>, List<Class<?>>> getRequiredTypeConverters() {
     final HashMap<Class<?>, List<Class<?>>> _typeConvertersMap = new HashMap<Class<?>, List<Class<?>>>();
     _typeConvertersMap.put(HabitDao.class, HabitDao_Impl.getRequiredConverters());
+    _typeConvertersMap.put(HabitLogDao.class, HabitLogDao_Impl.getRequiredConverters());
     _typeConvertersMap.put(DailyWinDao.class, DailyWinDao_Impl.getRequiredConverters());
     return _typeConvertersMap;
   }
@@ -189,6 +209,20 @@ public final class HabitDatabase_Impl extends HabitDatabase {
           _habitDao = new HabitDao_Impl(this);
         }
         return _habitDao;
+      }
+    }
+  }
+
+  @Override
+  public HabitLogDao habitLogDao() {
+    if (_habitLogDao != null) {
+      return _habitLogDao;
+    } else {
+      synchronized(this) {
+        if(_habitLogDao == null) {
+          _habitLogDao = new HabitLogDao_Impl(this);
+        }
+        return _habitLogDao;
       }
     }
   }

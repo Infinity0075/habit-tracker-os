@@ -4,25 +4,117 @@ package com.anant.disciplinecore.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.ScrollView;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
+import androidx.viewbinding.ViewBindings;
 import com.anant.disciplinecore.R;
+import com.google.android.material.switchmaterial.SwitchMaterial;
+import com.google.android.material.textfield.TextInputEditText;
 import java.lang.NullPointerException;
 import java.lang.Override;
+import java.lang.String;
 
 public final class FragmentSettingsBinding implements ViewBinding {
   @NonNull
-  private final LinearLayout rootView;
+  private final ScrollView rootView;
 
-  private FragmentSettingsBinding(@NonNull LinearLayout rootView) {
+  @NonNull
+  public final Button btnFocusMinus;
+
+  @NonNull
+  public final Button btnFocusPlus;
+
+  @NonNull
+  public final Button btnLongBreakMinus;
+
+  @NonNull
+  public final Button btnLongBreakPlus;
+
+  @NonNull
+  public final Button btnPickTime;
+
+  @NonNull
+  public final Button btnResetData;
+
+  @NonNull
+  public final Button btnSaveName;
+
+  @NonNull
+  public final Button btnShortBreakMinus;
+
+  @NonNull
+  public final Button btnShortBreakPlus;
+
+  @NonNull
+  public final TextInputEditText etUserName;
+
+  @NonNull
+  public final LinearLayout layoutReminderTime;
+
+  @NonNull
+  public final SwitchMaterial switchDailyReminder;
+
+  @NonNull
+  public final SwitchMaterial switchMidnightReset;
+
+  @NonNull
+  public final TextView tvFocusDuration;
+
+  @NonNull
+  public final TextView tvFocusMin;
+
+  @NonNull
+  public final TextView tvLongBreakDuration;
+
+  @NonNull
+  public final TextView tvLongBreakMin;
+
+  @NonNull
+  public final TextView tvShortBreakDuration;
+
+  @NonNull
+  public final TextView tvShortBreakMin;
+
+  private FragmentSettingsBinding(@NonNull ScrollView rootView, @NonNull Button btnFocusMinus,
+      @NonNull Button btnFocusPlus, @NonNull Button btnLongBreakMinus,
+      @NonNull Button btnLongBreakPlus, @NonNull Button btnPickTime, @NonNull Button btnResetData,
+      @NonNull Button btnSaveName, @NonNull Button btnShortBreakMinus,
+      @NonNull Button btnShortBreakPlus, @NonNull TextInputEditText etUserName,
+      @NonNull LinearLayout layoutReminderTime, @NonNull SwitchMaterial switchDailyReminder,
+      @NonNull SwitchMaterial switchMidnightReset, @NonNull TextView tvFocusDuration,
+      @NonNull TextView tvFocusMin, @NonNull TextView tvLongBreakDuration,
+      @NonNull TextView tvLongBreakMin, @NonNull TextView tvShortBreakDuration,
+      @NonNull TextView tvShortBreakMin) {
     this.rootView = rootView;
+    this.btnFocusMinus = btnFocusMinus;
+    this.btnFocusPlus = btnFocusPlus;
+    this.btnLongBreakMinus = btnLongBreakMinus;
+    this.btnLongBreakPlus = btnLongBreakPlus;
+    this.btnPickTime = btnPickTime;
+    this.btnResetData = btnResetData;
+    this.btnSaveName = btnSaveName;
+    this.btnShortBreakMinus = btnShortBreakMinus;
+    this.btnShortBreakPlus = btnShortBreakPlus;
+    this.etUserName = etUserName;
+    this.layoutReminderTime = layoutReminderTime;
+    this.switchDailyReminder = switchDailyReminder;
+    this.switchMidnightReset = switchMidnightReset;
+    this.tvFocusDuration = tvFocusDuration;
+    this.tvFocusMin = tvFocusMin;
+    this.tvLongBreakDuration = tvLongBreakDuration;
+    this.tvLongBreakMin = tvLongBreakMin;
+    this.tvShortBreakDuration = tvShortBreakDuration;
+    this.tvShortBreakMin = tvShortBreakMin;
   }
 
   @Override
   @NonNull
-  public LinearLayout getRoot() {
+  public ScrollView getRoot() {
     return rootView;
   }
 
@@ -43,10 +135,131 @@ public final class FragmentSettingsBinding implements ViewBinding {
 
   @NonNull
   public static FragmentSettingsBinding bind(@NonNull View rootView) {
-    if (rootView == null) {
-      throw new NullPointerException("rootView");
-    }
+    // The body of this method is generated in a way you would not otherwise write.
+    // This is done to optimize the compiled bytecode for size and performance.
+    int id;
+    missingId: {
+      id = R.id.btnFocusMinus;
+      Button btnFocusMinus = ViewBindings.findChildViewById(rootView, id);
+      if (btnFocusMinus == null) {
+        break missingId;
+      }
 
-    return new FragmentSettingsBinding((LinearLayout) rootView);
+      id = R.id.btnFocusPlus;
+      Button btnFocusPlus = ViewBindings.findChildViewById(rootView, id);
+      if (btnFocusPlus == null) {
+        break missingId;
+      }
+
+      id = R.id.btnLongBreakMinus;
+      Button btnLongBreakMinus = ViewBindings.findChildViewById(rootView, id);
+      if (btnLongBreakMinus == null) {
+        break missingId;
+      }
+
+      id = R.id.btnLongBreakPlus;
+      Button btnLongBreakPlus = ViewBindings.findChildViewById(rootView, id);
+      if (btnLongBreakPlus == null) {
+        break missingId;
+      }
+
+      id = R.id.btnPickTime;
+      Button btnPickTime = ViewBindings.findChildViewById(rootView, id);
+      if (btnPickTime == null) {
+        break missingId;
+      }
+
+      id = R.id.btnResetData;
+      Button btnResetData = ViewBindings.findChildViewById(rootView, id);
+      if (btnResetData == null) {
+        break missingId;
+      }
+
+      id = R.id.btnSaveName;
+      Button btnSaveName = ViewBindings.findChildViewById(rootView, id);
+      if (btnSaveName == null) {
+        break missingId;
+      }
+
+      id = R.id.btnShortBreakMinus;
+      Button btnShortBreakMinus = ViewBindings.findChildViewById(rootView, id);
+      if (btnShortBreakMinus == null) {
+        break missingId;
+      }
+
+      id = R.id.btnShortBreakPlus;
+      Button btnShortBreakPlus = ViewBindings.findChildViewById(rootView, id);
+      if (btnShortBreakPlus == null) {
+        break missingId;
+      }
+
+      id = R.id.etUserName;
+      TextInputEditText etUserName = ViewBindings.findChildViewById(rootView, id);
+      if (etUserName == null) {
+        break missingId;
+      }
+
+      id = R.id.layoutReminderTime;
+      LinearLayout layoutReminderTime = ViewBindings.findChildViewById(rootView, id);
+      if (layoutReminderTime == null) {
+        break missingId;
+      }
+
+      id = R.id.switchDailyReminder;
+      SwitchMaterial switchDailyReminder = ViewBindings.findChildViewById(rootView, id);
+      if (switchDailyReminder == null) {
+        break missingId;
+      }
+
+      id = R.id.switchMidnightReset;
+      SwitchMaterial switchMidnightReset = ViewBindings.findChildViewById(rootView, id);
+      if (switchMidnightReset == null) {
+        break missingId;
+      }
+
+      id = R.id.tvFocusDuration;
+      TextView tvFocusDuration = ViewBindings.findChildViewById(rootView, id);
+      if (tvFocusDuration == null) {
+        break missingId;
+      }
+
+      id = R.id.tvFocusMin;
+      TextView tvFocusMin = ViewBindings.findChildViewById(rootView, id);
+      if (tvFocusMin == null) {
+        break missingId;
+      }
+
+      id = R.id.tvLongBreakDuration;
+      TextView tvLongBreakDuration = ViewBindings.findChildViewById(rootView, id);
+      if (tvLongBreakDuration == null) {
+        break missingId;
+      }
+
+      id = R.id.tvLongBreakMin;
+      TextView tvLongBreakMin = ViewBindings.findChildViewById(rootView, id);
+      if (tvLongBreakMin == null) {
+        break missingId;
+      }
+
+      id = R.id.tvShortBreakDuration;
+      TextView tvShortBreakDuration = ViewBindings.findChildViewById(rootView, id);
+      if (tvShortBreakDuration == null) {
+        break missingId;
+      }
+
+      id = R.id.tvShortBreakMin;
+      TextView tvShortBreakMin = ViewBindings.findChildViewById(rootView, id);
+      if (tvShortBreakMin == null) {
+        break missingId;
+      }
+
+      return new FragmentSettingsBinding((ScrollView) rootView, btnFocusMinus, btnFocusPlus,
+          btnLongBreakMinus, btnLongBreakPlus, btnPickTime, btnResetData, btnSaveName,
+          btnShortBreakMinus, btnShortBreakPlus, etUserName, layoutReminderTime,
+          switchDailyReminder, switchMidnightReset, tvFocusDuration, tvFocusMin,
+          tvLongBreakDuration, tvLongBreakMin, tvShortBreakDuration, tvShortBreakMin);
+    }
+    String missingId = rootView.getResources().getResourceName(id);
+    throw new NullPointerException("Missing required view with ID: ".concat(missingId));
   }
 }
