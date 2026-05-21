@@ -1,27 +1,15 @@
 [
     {
-        "merged": "/Users/apple/.gradle/daemon/8.14.5/com.anant.disciplinecore.app-mergeDebugResources-45:/layout/fragment_home.xml",
-        "source": "/Users/apple/.gradle/daemon/8.14.5/com.anant.disciplinecore.app-main-48:/layout/fragment_home.xml"
-    },
-    {
         "merged": "/Users/apple/.gradle/daemon/8.14.5/com.anant.disciplinecore.app-mergeDebugResources-45:/layout/fragment_settings.xml",
         "source": "/Users/apple/.gradle/daemon/8.14.5/com.anant.disciplinecore.app-main-48:/layout/fragment_settings.xml"
     },
     {
-        "merged": "/Users/apple/.gradle/daemon/8.14.5/com.anant.disciplinecore.app-mergeDebugResources-45:/layout/fragment_reflection.xml",
-        "source": "/Users/apple/.gradle/daemon/8.14.5/com.anant.disciplinecore.app-main-48:/layout/fragment_reflection.xml"
-    },
-    {
-        "merged": "/Users/apple/.gradle/daemon/8.14.5/com.anant.disciplinecore.app-mergeDebugResources-45:/layout/activity_splash.xml",
-        "source": "/Users/apple/.gradle/daemon/8.14.5/com.anant.disciplinecore.app-main-48:/layout/activity_splash.xml"
-    },
-    {
-        "merged": "/Users/apple/.gradle/daemon/8.14.5/com.anant.disciplinecore.app-mergeDebugResources-45:/layout/dialog_add_habit.xml",
-        "source": "/Users/apple/.gradle/daemon/8.14.5/com.anant.disciplinecore.app-main-48:/layout/dialog_add_habit.xml"
-    },
-    {
         "merged": "/Users/apple/.gradle/daemon/8.14.5/com.anant.disciplinecore.app-mergeDebugResources-45:/layout/item_habit.xml",
         "source": "/Users/apple/.gradle/daemon/8.14.5/com.anant.disciplinecore.app-main-48:/layout/item_habit.xml"
+    },
+    {
+        "merged": "com.anant.disciplinecore.app-mergeDebugResources-45:/layout/item_habit.xml",
+        "source": "com.anant.disciplinecore.app-main-48:/layout/item_habit.xml"
     },
     {
         "merged": "/Users/apple/.gradle/daemon/8.14.5/com.anant.disciplinecore.app-mergeDebugResources-45:/layout/fragment_focus.xml",
@@ -36,8 +24,24 @@
         "source": "/Users/apple/.gradle/daemon/8.14.5/com.anant.disciplinecore.app-main-48:/layout/fragment_stats.xml"
     },
     {
-        "merged": "com.anant.disciplinecore.app-mergeDebugResources-45:/layout/fragment_settings.xml",
-        "source": "com.anant.disciplinecore.app-main-48:/layout/fragment_settings.xml"
+        "merged": "com.anant.disciplinecore.app-mergeDebugResources-45:/layout/dialog_add_habit.xml",
+        "source": "com.anant.disciplinecore.app-main-48:/layout/dialog_add_habit.xml"
+    },
+    {
+        "merged": "/Users/apple/.gradle/daemon/8.14.5/com.anant.disciplinecore.app-mergeDebugResources-45:/layout/fragment_home.xml",
+        "source": "/Users/apple/.gradle/daemon/8.14.5/com.anant.disciplinecore.app-main-48:/layout/fragment_home.xml"
+    },
+    {
+        "merged": "/Users/apple/.gradle/daemon/8.14.5/com.anant.disciplinecore.app-mergeDebugResources-45:/layout/fragment_reflection.xml",
+        "source": "/Users/apple/.gradle/daemon/8.14.5/com.anant.disciplinecore.app-main-48:/layout/fragment_reflection.xml"
+    },
+    {
+        "merged": "/Users/apple/.gradle/daemon/8.14.5/com.anant.disciplinecore.app-mergeDebugResources-45:/layout/activity_splash.xml",
+        "source": "/Users/apple/.gradle/daemon/8.14.5/com.anant.disciplinecore.app-main-48:/layout/activity_splash.xml"
+    },
+    {
+        "merged": "/Users/apple/.gradle/daemon/8.14.5/com.anant.disciplinecore.app-mergeDebugResources-45:/layout/dialog_add_habit.xml",
+        "source": "/Users/apple/.gradle/daemon/8.14.5/com.anant.disciplinecore.app-main-48:/layout/dialog_add_habit.xml"
     },
     {
         "merged": "/Users/apple/.gradle/daemon/8.14.5/com.anant.disciplinecore.app-mergeDebugResources-45:/layout/activity_main.xml",

@@ -24,6 +24,15 @@ class HabitRepository(
         ).format(cal.time)
     }
 
+    // ── Date X days ago ───────────────────────────────────────────
+    fun daysAgo(days: Int): String {
+        val cal = Calendar.getInstance().apply {
+            add(Calendar.DAY_OF_YEAR, -days)
+        }
+        return SimpleDateFormat("yyyy-MM-dd", Locale.getDefault())
+            .format(cal.time)
+    }
+
     suspend fun insert(habit: Habit) =
         dao.insertHabit(habit)
 
@@ -98,10 +107,23 @@ class HabitRepository(
     suspend fun getCompletedTodayCount() =
         dao.getCompletedTodayCount()
 
-    // ── Added for reset all data ──────────────────────────────────
+    // ── Real 30-day heatmap data ──────────────────────────────────
+    suspend fun getLast30DaysData(): Map<String, Int> {
+        val startDate = daysAgo(29)
+        val counts    = logDao.getDailyCompletionCounts(startDate)
+        return counts.associate { it.date to it.count }
+    }
+
+    // ── Real 7-day weekly data ────────────────────────────────────
+    suspend fun getLast7DaysData(): Map<String, Int> {
+        val startDate = daysAgo(6)
+        val counts    = logDao.getDailyCompletionCounts(startDate)
+        return counts.associate { it.date to it.count }
+    }
+
+    // ── Delete all data ───────────────────────────────────────────
     suspend fun deleteAllHabits() {
         dao.deleteAllHabits()
-        // Also clear all logs
         logDao.deleteAllLogs()
     }
 }

@@ -50,7 +50,7 @@ public final class HabitDao_Impl implements HabitDao {
       @Override
       @NonNull
       protected String createQuery() {
-        return "INSERT OR REPLACE INTO `habits` (`id`,`name`,`emoji`,`streak`,`longestStreak`,`totalCompletions`,`lastCompletedDate`,`isCompletedToday`,`createdAt`) VALUES (nullif(?, 0),?,?,?,?,?,?,?,?)";
+        return "INSERT OR REPLACE INTO `habits` (`id`,`name`,`emoji`,`category`,`streak`,`longestStreak`,`totalCompletions`,`lastCompletedDate`,`isCompletedToday`,`createdAt`) VALUES (nullif(?, 0),?,?,?,?,?,?,?,?,?)";
       }
 
       @Override
@@ -59,13 +59,14 @@ public final class HabitDao_Impl implements HabitDao {
         statement.bindLong(1, entity.getId());
         statement.bindString(2, entity.getName());
         statement.bindString(3, entity.getEmoji());
-        statement.bindLong(4, entity.getStreak());
-        statement.bindLong(5, entity.getLongestStreak());
-        statement.bindLong(6, entity.getTotalCompletions());
-        statement.bindString(7, entity.getLastCompletedDate());
+        statement.bindString(4, entity.getCategory());
+        statement.bindLong(5, entity.getStreak());
+        statement.bindLong(6, entity.getLongestStreak());
+        statement.bindLong(7, entity.getTotalCompletions());
+        statement.bindString(8, entity.getLastCompletedDate());
         final int _tmp = entity.isCompletedToday() ? 1 : 0;
-        statement.bindLong(8, _tmp);
-        statement.bindLong(9, entity.getCreatedAt());
+        statement.bindLong(9, _tmp);
+        statement.bindLong(10, entity.getCreatedAt());
       }
     };
     this.__deletionAdapterOfHabit = new EntityDeletionOrUpdateAdapter<Habit>(__db) {
@@ -85,7 +86,7 @@ public final class HabitDao_Impl implements HabitDao {
       @Override
       @NonNull
       protected String createQuery() {
-        return "UPDATE OR ABORT `habits` SET `id` = ?,`name` = ?,`emoji` = ?,`streak` = ?,`longestStreak` = ?,`totalCompletions` = ?,`lastCompletedDate` = ?,`isCompletedToday` = ?,`createdAt` = ? WHERE `id` = ?";
+        return "UPDATE OR ABORT `habits` SET `id` = ?,`name` = ?,`emoji` = ?,`category` = ?,`streak` = ?,`longestStreak` = ?,`totalCompletions` = ?,`lastCompletedDate` = ?,`isCompletedToday` = ?,`createdAt` = ? WHERE `id` = ?";
       }
 
       @Override
@@ -94,14 +95,15 @@ public final class HabitDao_Impl implements HabitDao {
         statement.bindLong(1, entity.getId());
         statement.bindString(2, entity.getName());
         statement.bindString(3, entity.getEmoji());
-        statement.bindLong(4, entity.getStreak());
-        statement.bindLong(5, entity.getLongestStreak());
-        statement.bindLong(6, entity.getTotalCompletions());
-        statement.bindString(7, entity.getLastCompletedDate());
+        statement.bindString(4, entity.getCategory());
+        statement.bindLong(5, entity.getStreak());
+        statement.bindLong(6, entity.getLongestStreak());
+        statement.bindLong(7, entity.getTotalCompletions());
+        statement.bindString(8, entity.getLastCompletedDate());
         final int _tmp = entity.isCompletedToday() ? 1 : 0;
-        statement.bindLong(8, _tmp);
-        statement.bindLong(9, entity.getCreatedAt());
-        statement.bindLong(10, entity.getId());
+        statement.bindLong(9, _tmp);
+        statement.bindLong(10, entity.getCreatedAt());
+        statement.bindLong(11, entity.getId());
       }
     };
     this.__preparedStmtOfResetStaleCompletions = new SharedSQLiteStatement(__db) {
@@ -238,6 +240,7 @@ public final class HabitDao_Impl implements HabitDao {
           final int _cursorIndexOfId = CursorUtil.getColumnIndexOrThrow(_cursor, "id");
           final int _cursorIndexOfName = CursorUtil.getColumnIndexOrThrow(_cursor, "name");
           final int _cursorIndexOfEmoji = CursorUtil.getColumnIndexOrThrow(_cursor, "emoji");
+          final int _cursorIndexOfCategory = CursorUtil.getColumnIndexOrThrow(_cursor, "category");
           final int _cursorIndexOfStreak = CursorUtil.getColumnIndexOrThrow(_cursor, "streak");
           final int _cursorIndexOfLongestStreak = CursorUtil.getColumnIndexOrThrow(_cursor, "longestStreak");
           final int _cursorIndexOfTotalCompletions = CursorUtil.getColumnIndexOrThrow(_cursor, "totalCompletions");
@@ -253,6 +256,8 @@ public final class HabitDao_Impl implements HabitDao {
             _tmpName = _cursor.getString(_cursorIndexOfName);
             final String _tmpEmoji;
             _tmpEmoji = _cursor.getString(_cursorIndexOfEmoji);
+            final String _tmpCategory;
+            _tmpCategory = _cursor.getString(_cursorIndexOfCategory);
             final int _tmpStreak;
             _tmpStreak = _cursor.getInt(_cursorIndexOfStreak);
             final int _tmpLongestStreak;
@@ -267,7 +272,7 @@ public final class HabitDao_Impl implements HabitDao {
             _tmpIsCompletedToday = _tmp != 0;
             final long _tmpCreatedAt;
             _tmpCreatedAt = _cursor.getLong(_cursorIndexOfCreatedAt);
-            _item = new Habit(_tmpId,_tmpName,_tmpEmoji,_tmpStreak,_tmpLongestStreak,_tmpTotalCompletions,_tmpLastCompletedDate,_tmpIsCompletedToday,_tmpCreatedAt);
+            _item = new Habit(_tmpId,_tmpName,_tmpEmoji,_tmpCategory,_tmpStreak,_tmpLongestStreak,_tmpTotalCompletions,_tmpLastCompletedDate,_tmpIsCompletedToday,_tmpCreatedAt);
             _result.add(_item);
           }
           return _result;

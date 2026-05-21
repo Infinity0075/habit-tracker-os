@@ -33,14 +33,18 @@ public final class DialogAddHabitBinding implements ViewBinding {
   @NonNull
   public final TextInputEditText etHabitName;
 
+  @NonNull
+  public final LinearLayout layoutCategories;
+
   private DialogAddHabitBinding(@NonNull LinearLayout rootView, @NonNull Button btnAdd,
       @NonNull Button btnCancel, @NonNull GridLayout emojiGrid,
-      @NonNull TextInputEditText etHabitName) {
+      @NonNull TextInputEditText etHabitName, @NonNull LinearLayout layoutCategories) {
     this.rootView = rootView;
     this.btnAdd = btnAdd;
     this.btnCancel = btnCancel;
     this.emojiGrid = emojiGrid;
     this.etHabitName = etHabitName;
+    this.layoutCategories = layoutCategories;
   }
 
   @Override
@@ -94,8 +98,14 @@ public final class DialogAddHabitBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.layoutCategories;
+      LinearLayout layoutCategories = ViewBindings.findChildViewById(rootView, id);
+      if (layoutCategories == null) {
+        break missingId;
+      }
+
       return new DialogAddHabitBinding((LinearLayout) rootView, btnAdd, btnCancel, emojiGrid,
-          etHabitName);
+          etHabitName, layoutCategories);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

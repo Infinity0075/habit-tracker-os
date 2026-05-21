@@ -24,6 +24,9 @@ public final class ItemHabitBinding implements ViewBinding {
   public final CheckBox cbDone;
 
   @NonNull
+  public final TextView tvCategory;
+
+  @NonNull
   public final TextView tvEmoji;
 
   @NonNull
@@ -36,10 +39,11 @@ public final class ItemHabitBinding implements ViewBinding {
   public final TextView tvTotal;
 
   private ItemHabitBinding(@NonNull CardView rootView, @NonNull CheckBox cbDone,
-      @NonNull TextView tvEmoji, @NonNull TextView tvHabitName, @NonNull TextView tvStreak,
-      @NonNull TextView tvTotal) {
+      @NonNull TextView tvCategory, @NonNull TextView tvEmoji, @NonNull TextView tvHabitName,
+      @NonNull TextView tvStreak, @NonNull TextView tvTotal) {
     this.rootView = rootView;
     this.cbDone = cbDone;
+    this.tvCategory = tvCategory;
     this.tvEmoji = tvEmoji;
     this.tvHabitName = tvHabitName;
     this.tvStreak = tvStreak;
@@ -79,6 +83,12 @@ public final class ItemHabitBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.tvCategory;
+      TextView tvCategory = ViewBindings.findChildViewById(rootView, id);
+      if (tvCategory == null) {
+        break missingId;
+      }
+
       id = R.id.tvEmoji;
       TextView tvEmoji = ViewBindings.findChildViewById(rootView, id);
       if (tvEmoji == null) {
@@ -103,8 +113,8 @@ public final class ItemHabitBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ItemHabitBinding((CardView) rootView, cbDone, tvEmoji, tvHabitName, tvStreak,
-          tvTotal);
+      return new ItemHabitBinding((CardView) rootView, cbDone, tvCategory, tvEmoji, tvHabitName,
+          tvStreak, tvTotal);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

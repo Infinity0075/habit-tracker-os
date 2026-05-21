@@ -27,7 +27,7 @@
             android:textSize="22sp"
             tools:text="💪" />
 
-        <!-- Name + Stats -->
+        <!-- Name + Stats + Category -->
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -45,6 +45,7 @@
                 android:fontFamily="sans-serif-medium"
                 tools:text="Morning run" />
 
+            <!-- Streak + Total row -->
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -78,6 +79,20 @@
                     tools:text="12x done" />
 
             </LinearLayout>
+
+            <!-- Category badge -->
+            <TextView
+                android:id="@+id/tvCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="2dp"
+                android:text="General"
+                android:textColor="#F59E0B"
+                android:textSize="10sp"
+                android:background="@drawable/bg_category_badge"
+                tools:text="Fitness" />
 
         </LinearLayout>
 

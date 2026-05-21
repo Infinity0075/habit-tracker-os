@@ -3010,6 +3010,7 @@ int drawable abc_textfield_search_material 0x7f080075
 int drawable abc_vector_test 0x7f080076
 int drawable avd_hide_password 0x7f080077
 int drawable avd_show_password 0x7f080078
+int drawable bg_category_badge 0x7f0800e4
 int drawable btn_checkbox_checked_mtrl 0x7f080079
 int drawable btn_checkbox_checked_to_unchecked_mtrl_animation 0x7f08007a
 int drawable btn_checkbox_unchecked_mtrl 0x7f08007b
@@ -3379,6 +3380,7 @@ int id jumpToEnd 0x7f0a00ee
 int id jumpToStart 0x7f0a00ef
 int id labeled 0x7f0a00f0
 int id layout 0x7f0a00f1
+int id layoutCategories 0x7f0a0249
 int id layoutCustomTime 0x7f0a021a
 int id layoutHeatmap 0x7f0a021b
 int id layoutMood 0x7f0a022f
@@ -3653,6 +3655,7 @@ int id triangle 0x7f0a01ed
 int id tvBestHabit 0x7f0a0223
 int id tvBestHabitStreak 0x7f0a0224
 int id tvBestStreak 0x7f0a0210
+int id tvCategory 0x7f0a024a
 int id tvCompletedHabits 0x7f0a0211
 int id tvDate 0x7f0a01ee
 int id tvDisciplineScore 0x7f0a0212

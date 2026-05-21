@@ -191,6 +191,95 @@ public final class HabitLogDao_Impl implements HabitLogDao {
     }, $completion);
   }
 
+  @Override
+  public Object getLogsFrom(final String startDate,
+      final Continuation<? super List<HabitLog>> $completion) {
+    final String _sql = "\n"
+            + "        SELECT * FROM habit_logs\n"
+            + "        WHERE date >= ?\n"
+            + "        ORDER BY date ASC\n"
+            + "    ";
+    final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 1);
+    int _argIndex = 1;
+    _statement.bindString(_argIndex, startDate);
+    final CancellationSignal _cancellationSignal = DBUtil.createCancellationSignal();
+    return CoroutinesRoom.execute(__db, false, _cancellationSignal, new Callable<List<HabitLog>>() {
+      @Override
+      @NonNull
+      public List<HabitLog> call() throws Exception {
+        final Cursor _cursor = DBUtil.query(__db, _statement, false, null);
+        try {
+          final int _cursorIndexOfId = CursorUtil.getColumnIndexOrThrow(_cursor, "id");
+          final int _cursorIndexOfHabitId = CursorUtil.getColumnIndexOrThrow(_cursor, "habitId");
+          final int _cursorIndexOfDate = CursorUtil.getColumnIndexOrThrow(_cursor, "date");
+          final int _cursorIndexOfCompleted = CursorUtil.getColumnIndexOrThrow(_cursor, "completed");
+          final List<HabitLog> _result = new ArrayList<HabitLog>(_cursor.getCount());
+          while (_cursor.moveToNext()) {
+            final HabitLog _item;
+            final int _tmpId;
+            _tmpId = _cursor.getInt(_cursorIndexOfId);
+            final int _tmpHabitId;
+            _tmpHabitId = _cursor.getInt(_cursorIndexOfHabitId);
+            final String _tmpDate;
+            _tmpDate = _cursor.getString(_cursorIndexOfDate);
+            final boolean _tmpCompleted;
+            final int _tmp;
+            _tmp = _cursor.getInt(_cursorIndexOfCompleted);
+            _tmpCompleted = _tmp != 0;
+            _item = new HabitLog(_tmpId,_tmpHabitId,_tmpDate,_tmpCompleted);
+            _result.add(_item);
+          }
+          return _result;
+        } finally {
+          _cursor.close();
+          _statement.release();
+        }
+      }
+    }, $completion);
+  }
+
+  @Override
+  public Object getDailyCompletionCounts(final String startDate,
+      final Continuation<? super List<DailyCount>> $completion) {
+    final String _sql = "\n"
+            + "        SELECT date, COUNT(*) as count\n"
+            + "        FROM habit_logs\n"
+            + "        WHERE date >= ?\n"
+            + "        AND completed = 1\n"
+            + "        GROUP BY date\n"
+            + "        ORDER BY date ASC\n"
+            + "    ";
+    final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 1);
+    int _argIndex = 1;
+    _statement.bindString(_argIndex, startDate);
+    final CancellationSignal _cancellationSignal = DBUtil.createCancellationSignal();
+    return CoroutinesRoom.execute(__db, false, _cancellationSignal, new Callable<List<DailyCount>>() {
+      @Override
+      @NonNull
+      public List<DailyCount> call() throws Exception {
+        final Cursor _cursor = DBUtil.query(__db, _statement, false, null);
+        try {
+          final int _cursorIndexOfDate = 0;
+          final int _cursorIndexOfCount = 1;
+          final List<DailyCount> _result = new ArrayList<DailyCount>(_cursor.getCount());
+          while (_cursor.moveToNext()) {
+            final DailyCount _item;
+            final String _tmpDate;
+            _tmpDate = _cursor.getString(_cursorIndexOfDate);
+            final int _tmpCount;
+            _tmpCount = _cursor.getInt(_cursorIndexOfCount);
+            _item = new DailyCount(_tmpDate,_tmpCount);
+            _result.add(_item);
+          }
+          return _result;
+        } finally {
+          _cursor.close();
+          _statement.release();
+        }
+      }
+    }, $completion);
+  }
+
   @NonNull
   public static List<Class<?>> getRequiredConverters() {
     return Collections.emptyList();

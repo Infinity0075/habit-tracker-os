@@ -11,15 +11,13 @@ import androidx.room.RoomDatabase
         HabitLog::class,
         DailyWin::class
     ],
-    version = 3,
+    version = 4,           // ← bumped from 3 to 4
     exportSchema = false
 )
-
 abstract class HabitDatabase : RoomDatabase() {
 
     abstract fun habitDao(): HabitDao
     abstract fun habitLogDao(): HabitLogDao
-
     abstract fun dailyWinDao(): DailyWinDao
 
     companion object {
@@ -28,9 +26,7 @@ abstract class HabitDatabase : RoomDatabase() {
         private var INSTANCE: HabitDatabase? = null
 
         fun getDatabase(context: Context): HabitDatabase {
-
             return INSTANCE ?: synchronized(this) {
-
                 val instance = Room.databaseBuilder(
                     context.applicationContext,
                     HabitDatabase::class.java,
@@ -40,7 +36,6 @@ abstract class HabitDatabase : RoomDatabase() {
                     .build()
 
                 INSTANCE = instance
-
                 instance
             }
         }

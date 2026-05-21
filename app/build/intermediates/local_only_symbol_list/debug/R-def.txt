@@ -22,6 +22,7 @@ color text_dim
 color text_primary
 color text_secondary
 color white
+drawable bg_category_badge
 font playfair_display_bold
 id bottomNav
 id btnAdd
@@ -50,6 +51,7 @@ id etUserName
 id etWin
 id fab
 id fragmentContainer
+id layoutCategories
 id layoutCustomTime
 id layoutHeatmap
 id layoutMood
@@ -79,6 +81,7 @@ id timerProgress
 id tvBestHabit
 id tvBestHabitStreak
 id tvBestStreak
+id tvCategory
 id tvCompletedHabits
 id tvDate
 id tvDisciplineScore
