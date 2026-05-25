@@ -11,13 +11,23 @@ import androidx.room.RoomDatabase
         HabitLog::class,
         DailyWin::class
     ],
-    version = 4,           // ← bumped from 3 to 4
+
+    // IMPORTANT:
+    // Increased because Habit entity changed
+    version = 5,
+
     exportSchema = false
 )
 abstract class HabitDatabase : RoomDatabase() {
 
+    // ------------------------------------------------
+    // DAOS
+    // ------------------------------------------------
+
     abstract fun habitDao(): HabitDao
+
     abstract fun habitLogDao(): HabitLogDao
+
     abstract fun dailyWinDao(): DailyWinDao
 
     companion object {
@@ -25,17 +35,27 @@ abstract class HabitDatabase : RoomDatabase() {
         @Volatile
         private var INSTANCE: HabitDatabase? = null
 
-        fun getDatabase(context: Context): HabitDatabase {
+        fun getDatabase(
+            context: Context
+        ): HabitDatabase {
+
             return INSTANCE ?: synchronized(this) {
-                val instance = Room.databaseBuilder(
-                    context.applicationContext,
-                    HabitDatabase::class.java,
-                    "discipline_core_db"
-                )
-                    .fallbackToDestructiveMigration()
-                    .build()
+
+                val instance =
+                    Room.databaseBuilder(
+                        context.applicationContext,
+                        HabitDatabase::class.java,
+                        "discipline_core_db"
+                    )
+
+                        // TEMPORARY:
+                        // Safe during development
+                        .fallbackToDestructiveMigration()
+
+                        .build()
 
                 INSTANCE = instance
+
                 instance
             }
         }

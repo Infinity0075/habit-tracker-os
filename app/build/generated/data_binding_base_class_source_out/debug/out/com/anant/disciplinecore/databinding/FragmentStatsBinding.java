@@ -5,10 +5,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
-import android.widget.ScrollView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.core.widget.NestedScrollView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.anant.disciplinecore.R;
@@ -18,7 +18,7 @@ import java.lang.String;
 
 public final class FragmentStatsBinding implements ViewBinding {
   @NonNull
-  private final ScrollView rootView;
+  private final NestedScrollView rootView;
 
   @NonNull
   public final LinearLayout layoutHeatmap;
@@ -56,13 +56,13 @@ public final class FragmentStatsBinding implements ViewBinding {
   @NonNull
   public final TextView tvWorstHabitStreak;
 
-  private FragmentStatsBinding(@NonNull ScrollView rootView, @NonNull LinearLayout layoutHeatmap,
-      @NonNull LinearLayout layoutStreakHistory, @NonNull LinearLayout layoutWeekDayLabels,
-      @NonNull LinearLayout layoutWeeklyChart, @NonNull TextView tvBestHabit,
-      @NonNull TextView tvBestHabitStreak, @NonNull TextView tvBestStreak,
-      @NonNull TextView tvCompletedHabits, @NonNull TextView tvDisciplineScore,
-      @NonNull TextView tvTotalHabits, @NonNull TextView tvWorstHabit,
-      @NonNull TextView tvWorstHabitStreak) {
+  private FragmentStatsBinding(@NonNull NestedScrollView rootView,
+      @NonNull LinearLayout layoutHeatmap, @NonNull LinearLayout layoutStreakHistory,
+      @NonNull LinearLayout layoutWeekDayLabels, @NonNull LinearLayout layoutWeeklyChart,
+      @NonNull TextView tvBestHabit, @NonNull TextView tvBestHabitStreak,
+      @NonNull TextView tvBestStreak, @NonNull TextView tvCompletedHabits,
+      @NonNull TextView tvDisciplineScore, @NonNull TextView tvTotalHabits,
+      @NonNull TextView tvWorstHabit, @NonNull TextView tvWorstHabitStreak) {
     this.rootView = rootView;
     this.layoutHeatmap = layoutHeatmap;
     this.layoutStreakHistory = layoutStreakHistory;
@@ -80,7 +80,7 @@ public final class FragmentStatsBinding implements ViewBinding {
 
   @Override
   @NonNull
-  public ScrollView getRoot() {
+  public NestedScrollView getRoot() {
     return rootView;
   }
 
@@ -177,9 +177,10 @@ public final class FragmentStatsBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentStatsBinding((ScrollView) rootView, layoutHeatmap, layoutStreakHistory,
-          layoutWeekDayLabels, layoutWeeklyChart, tvBestHabit, tvBestHabitStreak, tvBestStreak,
-          tvCompletedHabits, tvDisciplineScore, tvTotalHabits, tvWorstHabit, tvWorstHabitStreak);
+      return new FragmentStatsBinding((NestedScrollView) rootView, layoutHeatmap,
+          layoutStreakHistory, layoutWeekDayLabels, layoutWeeklyChart, tvBestHabit,
+          tvBestHabitStreak, tvBestStreak, tvCompletedHabits, tvDisciplineScore, tvTotalHabits,
+          tvWorstHabit, tvWorstHabitStreak);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

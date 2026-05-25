@@ -5,39 +5,56 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#0F0F11">
+    android:background="@color/bg_primary">
 
-    <!-- Fragment Container -->
+    <!-- MAIN CONTENT -->
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragmentContainer"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="80dp" />
+        android:layout_marginBottom="95dp" />
 
-    <!-- Floating Action Button -->
+    <!-- FLOATING ACTION BUTTON -->
     <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
         android:id="@+id/fab"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="56dp"
         android:layout_gravity="bottom|end"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="100dp"
+        android:layout_marginEnd="22dp"
+        android:layout_marginBottom="108dp"
+        android:elevation="0dp"
+        android:paddingStart="18dp"
+        android:paddingEnd="20dp"
         android:text="Add Habit"
         android:textAllCaps="false"
-        android:textColor="#0F0F11"
-        app:backgroundTint="#F59E0B"
+        android:textColor="@color/bg_primary"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:backgroundTint="@color/accent_amber"
+        app:cornerRadius="28dp"
+        app:elevation="0dp"
         app:icon="@android:drawable/ic_input_add"
-        app:iconTint="#0F0F11" />
+        app:iconPadding="8dp"
+        app:iconTint="@color/bg_primary"
+        app:rippleColor="@color/accent_amber_glow" />
 
-    <!-- Bottom Navigation -->
+    <!-- PREMIUM BOTTOM NAV -->
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNav"
         android:layout_width="match_parent"
-        android:layout_height="70dp"
+        android:layout_height="82dp"
         android:layout_gravity="bottom"
-        android:background="#15151D"
-        app:itemIconTint="#FFB020"
-        app:itemTextColor="#F5F5F5"
+        android:background="@drawable/bg_bottom_nav"
+        android:paddingTop="10dp"
+        android:paddingBottom="8dp"
+        app:elevation="0dp"
+        app:itemActiveIndicatorStyle="@null"
+        app:itemIconSize="24dp"
+        app:itemIconTint="@color/bottom_nav_colors"
+        app:itemRippleColor="@color/accent_amber_glow"
+        app:itemTextAppearanceActive="@style/BottomNavText"
+        app:itemTextAppearanceInactive="@style/BottomNavText"
+        app:itemTextColor="@color/bottom_nav_colors"
         app:labelVisibilityMode="labeled"
         app:menu="@menu/bottom_nav_menu" />
 

@@ -50,7 +50,7 @@ public final class HabitDao_Impl implements HabitDao {
       @Override
       @NonNull
       protected String createQuery() {
-        return "INSERT OR REPLACE INTO `habits` (`id`,`name`,`emoji`,`category`,`streak`,`longestStreak`,`totalCompletions`,`lastCompletedDate`,`isCompletedToday`,`createdAt`) VALUES (nullif(?, 0),?,?,?,?,?,?,?,?,?)";
+        return "INSERT OR REPLACE INTO `habits` (`id`,`name`,`emoji`,`category`,`streak`,`longestStreak`,`totalCompletions`,`isCompletedToday`,`lastCompletedDate`,`daysTracked`,`consistencyScore`,`weeklyPattern`,`createdAt`,`accentColor`,`notes`) VALUES (nullif(?, 0),?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
       }
 
       @Override
@@ -63,10 +63,15 @@ public final class HabitDao_Impl implements HabitDao {
         statement.bindLong(5, entity.getStreak());
         statement.bindLong(6, entity.getLongestStreak());
         statement.bindLong(7, entity.getTotalCompletions());
-        statement.bindString(8, entity.getLastCompletedDate());
         final int _tmp = entity.isCompletedToday() ? 1 : 0;
-        statement.bindLong(9, _tmp);
-        statement.bindLong(10, entity.getCreatedAt());
+        statement.bindLong(8, _tmp);
+        statement.bindString(9, entity.getLastCompletedDate());
+        statement.bindLong(10, entity.getDaysTracked());
+        statement.bindLong(11, entity.getConsistencyScore());
+        statement.bindString(12, entity.getWeeklyPattern());
+        statement.bindLong(13, entity.getCreatedAt());
+        statement.bindString(14, entity.getAccentColor());
+        statement.bindString(15, entity.getNotes());
       }
     };
     this.__deletionAdapterOfHabit = new EntityDeletionOrUpdateAdapter<Habit>(__db) {
@@ -86,7 +91,7 @@ public final class HabitDao_Impl implements HabitDao {
       @Override
       @NonNull
       protected String createQuery() {
-        return "UPDATE OR ABORT `habits` SET `id` = ?,`name` = ?,`emoji` = ?,`category` = ?,`streak` = ?,`longestStreak` = ?,`totalCompletions` = ?,`lastCompletedDate` = ?,`isCompletedToday` = ?,`createdAt` = ? WHERE `id` = ?";
+        return "UPDATE OR ABORT `habits` SET `id` = ?,`name` = ?,`emoji` = ?,`category` = ?,`streak` = ?,`longestStreak` = ?,`totalCompletions` = ?,`isCompletedToday` = ?,`lastCompletedDate` = ?,`daysTracked` = ?,`consistencyScore` = ?,`weeklyPattern` = ?,`createdAt` = ?,`accentColor` = ?,`notes` = ? WHERE `id` = ?";
       }
 
       @Override
@@ -99,11 +104,16 @@ public final class HabitDao_Impl implements HabitDao {
         statement.bindLong(5, entity.getStreak());
         statement.bindLong(6, entity.getLongestStreak());
         statement.bindLong(7, entity.getTotalCompletions());
-        statement.bindString(8, entity.getLastCompletedDate());
         final int _tmp = entity.isCompletedToday() ? 1 : 0;
-        statement.bindLong(9, _tmp);
-        statement.bindLong(10, entity.getCreatedAt());
-        statement.bindLong(11, entity.getId());
+        statement.bindLong(8, _tmp);
+        statement.bindString(9, entity.getLastCompletedDate());
+        statement.bindLong(10, entity.getDaysTracked());
+        statement.bindLong(11, entity.getConsistencyScore());
+        statement.bindString(12, entity.getWeeklyPattern());
+        statement.bindLong(13, entity.getCreatedAt());
+        statement.bindString(14, entity.getAccentColor());
+        statement.bindString(15, entity.getNotes());
+        statement.bindLong(16, entity.getId());
       }
     };
     this.__preparedStmtOfResetStaleCompletions = new SharedSQLiteStatement(__db) {
@@ -244,9 +254,14 @@ public final class HabitDao_Impl implements HabitDao {
           final int _cursorIndexOfStreak = CursorUtil.getColumnIndexOrThrow(_cursor, "streak");
           final int _cursorIndexOfLongestStreak = CursorUtil.getColumnIndexOrThrow(_cursor, "longestStreak");
           final int _cursorIndexOfTotalCompletions = CursorUtil.getColumnIndexOrThrow(_cursor, "totalCompletions");
-          final int _cursorIndexOfLastCompletedDate = CursorUtil.getColumnIndexOrThrow(_cursor, "lastCompletedDate");
           final int _cursorIndexOfIsCompletedToday = CursorUtil.getColumnIndexOrThrow(_cursor, "isCompletedToday");
+          final int _cursorIndexOfLastCompletedDate = CursorUtil.getColumnIndexOrThrow(_cursor, "lastCompletedDate");
+          final int _cursorIndexOfDaysTracked = CursorUtil.getColumnIndexOrThrow(_cursor, "daysTracked");
+          final int _cursorIndexOfConsistencyScore = CursorUtil.getColumnIndexOrThrow(_cursor, "consistencyScore");
+          final int _cursorIndexOfWeeklyPattern = CursorUtil.getColumnIndexOrThrow(_cursor, "weeklyPattern");
           final int _cursorIndexOfCreatedAt = CursorUtil.getColumnIndexOrThrow(_cursor, "createdAt");
+          final int _cursorIndexOfAccentColor = CursorUtil.getColumnIndexOrThrow(_cursor, "accentColor");
+          final int _cursorIndexOfNotes = CursorUtil.getColumnIndexOrThrow(_cursor, "notes");
           final List<Habit> _result = new ArrayList<Habit>(_cursor.getCount());
           while (_cursor.moveToNext()) {
             final Habit _item;
@@ -264,15 +279,25 @@ public final class HabitDao_Impl implements HabitDao {
             _tmpLongestStreak = _cursor.getInt(_cursorIndexOfLongestStreak);
             final int _tmpTotalCompletions;
             _tmpTotalCompletions = _cursor.getInt(_cursorIndexOfTotalCompletions);
-            final String _tmpLastCompletedDate;
-            _tmpLastCompletedDate = _cursor.getString(_cursorIndexOfLastCompletedDate);
             final boolean _tmpIsCompletedToday;
             final int _tmp;
             _tmp = _cursor.getInt(_cursorIndexOfIsCompletedToday);
             _tmpIsCompletedToday = _tmp != 0;
+            final String _tmpLastCompletedDate;
+            _tmpLastCompletedDate = _cursor.getString(_cursorIndexOfLastCompletedDate);
+            final int _tmpDaysTracked;
+            _tmpDaysTracked = _cursor.getInt(_cursorIndexOfDaysTracked);
+            final int _tmpConsistencyScore;
+            _tmpConsistencyScore = _cursor.getInt(_cursorIndexOfConsistencyScore);
+            final String _tmpWeeklyPattern;
+            _tmpWeeklyPattern = _cursor.getString(_cursorIndexOfWeeklyPattern);
             final long _tmpCreatedAt;
             _tmpCreatedAt = _cursor.getLong(_cursorIndexOfCreatedAt);
-            _item = new Habit(_tmpId,_tmpName,_tmpEmoji,_tmpCategory,_tmpStreak,_tmpLongestStreak,_tmpTotalCompletions,_tmpLastCompletedDate,_tmpIsCompletedToday,_tmpCreatedAt);
+            final String _tmpAccentColor;
+            _tmpAccentColor = _cursor.getString(_cursorIndexOfAccentColor);
+            final String _tmpNotes;
+            _tmpNotes = _cursor.getString(_cursorIndexOfNotes);
+            _item = new Habit(_tmpId,_tmpName,_tmpEmoji,_tmpCategory,_tmpStreak,_tmpLongestStreak,_tmpTotalCompletions,_tmpIsCompletedToday,_tmpLastCompletedDate,_tmpDaysTracked,_tmpConsistencyScore,_tmpWeeklyPattern,_tmpCreatedAt,_tmpAccentColor,_tmpNotes);
             _result.add(_item);
           }
           return _result;

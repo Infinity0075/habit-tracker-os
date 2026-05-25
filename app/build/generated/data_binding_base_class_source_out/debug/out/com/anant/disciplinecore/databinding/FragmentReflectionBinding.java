@@ -6,13 +6,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
-import android.widget.ScrollView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.core.widget.NestedScrollView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.anant.disciplinecore.R;
+import com.google.android.material.card.MaterialCardView;
 import com.google.android.material.textfield.TextInputEditText;
 import java.lang.NullPointerException;
 import java.lang.Override;
@@ -20,7 +21,7 @@ import java.lang.String;
 
 public final class FragmentReflectionBinding implements ViewBinding {
   @NonNull
-  private final ScrollView rootView;
+  private final NestedScrollView rootView;
 
   @NonNull
   public final Button btnSaveJournal;
@@ -32,10 +33,10 @@ public final class FragmentReflectionBinding implements ViewBinding {
   public final TextInputEditText etWin;
 
   @NonNull
-  public final LinearLayout layoutMood;
+  public final LinearLayout layoutPastEntries;
 
   @NonNull
-  public final LinearLayout layoutPastEntries;
+  public final MaterialCardView layoutStreak;
 
   @NonNull
   public final TextView mood1;
@@ -52,27 +53,45 @@ public final class FragmentReflectionBinding implements ViewBinding {
   @NonNull
   public final TextView mood5;
 
-  private FragmentReflectionBinding(@NonNull ScrollView rootView, @NonNull Button btnSaveJournal,
-      @NonNull TextInputEditText etReflection, @NonNull TextInputEditText etWin,
-      @NonNull LinearLayout layoutMood, @NonNull LinearLayout layoutPastEntries,
-      @NonNull TextView mood1, @NonNull TextView mood2, @NonNull TextView mood3,
-      @NonNull TextView mood4, @NonNull TextView mood5) {
+  @NonNull
+  public final TextView tvEntryCount;
+
+  @NonNull
+  public final TextView tvJournalDate;
+
+  @NonNull
+  public final TextView tvMoodLabel;
+
+  @NonNull
+  public final TextView tvStreakCount;
+
+  private FragmentReflectionBinding(@NonNull NestedScrollView rootView,
+      @NonNull Button btnSaveJournal, @NonNull TextInputEditText etReflection,
+      @NonNull TextInputEditText etWin, @NonNull LinearLayout layoutPastEntries,
+      @NonNull MaterialCardView layoutStreak, @NonNull TextView mood1, @NonNull TextView mood2,
+      @NonNull TextView mood3, @NonNull TextView mood4, @NonNull TextView mood5,
+      @NonNull TextView tvEntryCount, @NonNull TextView tvJournalDate,
+      @NonNull TextView tvMoodLabel, @NonNull TextView tvStreakCount) {
     this.rootView = rootView;
     this.btnSaveJournal = btnSaveJournal;
     this.etReflection = etReflection;
     this.etWin = etWin;
-    this.layoutMood = layoutMood;
     this.layoutPastEntries = layoutPastEntries;
+    this.layoutStreak = layoutStreak;
     this.mood1 = mood1;
     this.mood2 = mood2;
     this.mood3 = mood3;
     this.mood4 = mood4;
     this.mood5 = mood5;
+    this.tvEntryCount = tvEntryCount;
+    this.tvJournalDate = tvJournalDate;
+    this.tvMoodLabel = tvMoodLabel;
+    this.tvStreakCount = tvStreakCount;
   }
 
   @Override
   @NonNull
-  public ScrollView getRoot() {
+  public NestedScrollView getRoot() {
     return rootView;
   }
 
@@ -115,15 +134,15 @@ public final class FragmentReflectionBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.layoutMood;
-      LinearLayout layoutMood = ViewBindings.findChildViewById(rootView, id);
-      if (layoutMood == null) {
-        break missingId;
-      }
-
       id = R.id.layoutPastEntries;
       LinearLayout layoutPastEntries = ViewBindings.findChildViewById(rootView, id);
       if (layoutPastEntries == null) {
+        break missingId;
+      }
+
+      id = R.id.layoutStreak;
+      MaterialCardView layoutStreak = ViewBindings.findChildViewById(rootView, id);
+      if (layoutStreak == null) {
         break missingId;
       }
 
@@ -157,8 +176,33 @@ public final class FragmentReflectionBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentReflectionBinding((ScrollView) rootView, btnSaveJournal, etReflection,
-          etWin, layoutMood, layoutPastEntries, mood1, mood2, mood3, mood4, mood5);
+      id = R.id.tvEntryCount;
+      TextView tvEntryCount = ViewBindings.findChildViewById(rootView, id);
+      if (tvEntryCount == null) {
+        break missingId;
+      }
+
+      id = R.id.tvJournalDate;
+      TextView tvJournalDate = ViewBindings.findChildViewById(rootView, id);
+      if (tvJournalDate == null) {
+        break missingId;
+      }
+
+      id = R.id.tvMoodLabel;
+      TextView tvMoodLabel = ViewBindings.findChildViewById(rootView, id);
+      if (tvMoodLabel == null) {
+        break missingId;
+      }
+
+      id = R.id.tvStreakCount;
+      TextView tvStreakCount = ViewBindings.findChildViewById(rootView, id);
+      if (tvStreakCount == null) {
+        break missingId;
+      }
+
+      return new FragmentReflectionBinding((NestedScrollView) rootView, btnSaveJournal,
+          etReflection, etWin, layoutPastEntries, layoutStreak, mood1, mood2, mood3, mood4, mood5,
+          tvEntryCount, tvJournalDate, tvMoodLabel, tvStreakCount);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

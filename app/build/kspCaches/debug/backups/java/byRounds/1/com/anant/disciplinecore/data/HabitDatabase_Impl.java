@@ -35,14 +35,14 @@ public final class HabitDatabase_Impl extends HabitDatabase {
   @Override
   @NonNull
   protected SupportSQLiteOpenHelper createOpenHelper(@NonNull final DatabaseConfiguration config) {
-    final SupportSQLiteOpenHelper.Callback _openCallback = new RoomOpenHelper(config, new RoomOpenHelper.Delegate(4) {
+    final SupportSQLiteOpenHelper.Callback _openCallback = new RoomOpenHelper(config, new RoomOpenHelper.Delegate(5) {
       @Override
       public void createAllTables(@NonNull final SupportSQLiteDatabase db) {
-        db.execSQL("CREATE TABLE IF NOT EXISTS `habits` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `name` TEXT NOT NULL, `emoji` TEXT NOT NULL, `category` TEXT NOT NULL, `streak` INTEGER NOT NULL, `longestStreak` INTEGER NOT NULL, `totalCompletions` INTEGER NOT NULL, `lastCompletedDate` TEXT NOT NULL, `isCompletedToday` INTEGER NOT NULL, `createdAt` INTEGER NOT NULL)");
+        db.execSQL("CREATE TABLE IF NOT EXISTS `habits` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `name` TEXT NOT NULL, `emoji` TEXT NOT NULL, `category` TEXT NOT NULL, `streak` INTEGER NOT NULL, `longestStreak` INTEGER NOT NULL, `totalCompletions` INTEGER NOT NULL, `isCompletedToday` INTEGER NOT NULL, `lastCompletedDate` TEXT NOT NULL, `daysTracked` INTEGER NOT NULL, `consistencyScore` INTEGER NOT NULL, `weeklyPattern` TEXT NOT NULL, `createdAt` INTEGER NOT NULL, `accentColor` TEXT NOT NULL, `notes` TEXT NOT NULL)");
         db.execSQL("CREATE TABLE IF NOT EXISTS `habit_logs` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `habitId` INTEGER NOT NULL, `date` TEXT NOT NULL, `completed` INTEGER NOT NULL)");
         db.execSQL("CREATE TABLE IF NOT EXISTS `daily_wins` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `text` TEXT NOT NULL, `timestamp` INTEGER NOT NULL)");
         db.execSQL("CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)");
-        db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '2565e7be86b80c39fcfd344f6ccb6dfb')");
+        db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'e7d92d123ee8401bed92c675a7aac06c')");
       }
 
       @Override
@@ -93,7 +93,7 @@ public final class HabitDatabase_Impl extends HabitDatabase {
       @NonNull
       public RoomOpenHelper.ValidationResult onValidateSchema(
           @NonNull final SupportSQLiteDatabase db) {
-        final HashMap<String, TableInfo.Column> _columnsHabits = new HashMap<String, TableInfo.Column>(10);
+        final HashMap<String, TableInfo.Column> _columnsHabits = new HashMap<String, TableInfo.Column>(15);
         _columnsHabits.put("id", new TableInfo.Column("id", "INTEGER", true, 1, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsHabits.put("name", new TableInfo.Column("name", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsHabits.put("emoji", new TableInfo.Column("emoji", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
@@ -101,9 +101,14 @@ public final class HabitDatabase_Impl extends HabitDatabase {
         _columnsHabits.put("streak", new TableInfo.Column("streak", "INTEGER", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsHabits.put("longestStreak", new TableInfo.Column("longestStreak", "INTEGER", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsHabits.put("totalCompletions", new TableInfo.Column("totalCompletions", "INTEGER", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
-        _columnsHabits.put("lastCompletedDate", new TableInfo.Column("lastCompletedDate", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsHabits.put("isCompletedToday", new TableInfo.Column("isCompletedToday", "INTEGER", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsHabits.put("lastCompletedDate", new TableInfo.Column("lastCompletedDate", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsHabits.put("daysTracked", new TableInfo.Column("daysTracked", "INTEGER", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsHabits.put("consistencyScore", new TableInfo.Column("consistencyScore", "INTEGER", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsHabits.put("weeklyPattern", new TableInfo.Column("weeklyPattern", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsHabits.put("createdAt", new TableInfo.Column("createdAt", "INTEGER", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsHabits.put("accentColor", new TableInfo.Column("accentColor", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsHabits.put("notes", new TableInfo.Column("notes", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
         final HashSet<TableInfo.ForeignKey> _foreignKeysHabits = new HashSet<TableInfo.ForeignKey>(0);
         final HashSet<TableInfo.Index> _indicesHabits = new HashSet<TableInfo.Index>(0);
         final TableInfo _infoHabits = new TableInfo("habits", _columnsHabits, _foreignKeysHabits, _indicesHabits);
@@ -142,7 +147,7 @@ public final class HabitDatabase_Impl extends HabitDatabase {
         }
         return new RoomOpenHelper.ValidationResult(true, null);
       }
-    }, "2565e7be86b80c39fcfd344f6ccb6dfb", "a53d53ec18832b8dca1316d9b1e13d02");
+    }, "e7d92d123ee8401bed92c675a7aac06c", "bedcb522be5bbf42294780ededd9afbe");
     final SupportSQLiteOpenHelper.Configuration _sqliteConfig = SupportSQLiteOpenHelper.Configuration.builder(config.context).name(config.name).callback(_openCallback).build();
     final SupportSQLiteOpenHelper _helper = config.sqliteOpenHelperFactory.create(_sqliteConfig);
     return _helper;

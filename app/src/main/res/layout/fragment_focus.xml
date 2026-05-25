@@ -1,118 +1,137 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
+
+<androidx.core.widget.NestedScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#0F0F11"
+    android:background="@color/bg_primary"
+    android:clipToPadding="false"
     android:fillViewport="true">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:paddingHorizontal="20dp"
-        android:paddingTop="52dp"
-        android:paddingBottom="32dp">
+        android:paddingStart="20dp"
+        android:paddingTop="60dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="140dp">
 
-        <!-- Header -->
+        <!-- HEADER -->
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Focus Mode"
-            android:textColor="#F5F5F0"
-            android:textSize="26sp"
-            android:textStyle="bold" />
+            android:textColor="@color/text_primary"
+            android:textSize="34sp"
+            android:textStyle="bold"
+            android:letterSpacing="-0.03"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="2dp"
-            android:text="Lock in. No distractions."
-            android:textColor="#6B6B80"
-            android:textSize="13sp" />
+            android:layout_marginTop="6dp"
+            android:text="Lock in. Zero distractions."
+            android:textColor="@color/text_secondary"
+            android:textSize="14sp"/>
 
-        <!-- Motivational Quote Card -->
-        <androidx.cardview.widget.CardView
+        <!-- QUOTE CARD -->
+
+        <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            app:cardBackgroundColor="#1A1A1F"
-            app:cardCornerRadius="20dp"
-            app:cardElevation="0dp">
+            android:layout_marginTop="24dp"
+            app:cardBackgroundColor="@color/bg_card"
+            app:cardCornerRadius="28dp"
+            app:cardElevation="0dp"
+            app:strokeColor="@color/stroke_light"
+            app:strokeWidth="1dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:padding="20dp">
+                android:padding="22dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="DAILY FUEL"
-                    android:textColor="#4B4B5A"
-                    android:textSize="10sp" />
+                    android:textColor="@color/text_dim"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.12"/>
 
                 <TextView
                     android:id="@+id/tvQuote"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="14dp"
+                    android:lineSpacingExtra="5dp"
                     android:text="&quot;Discipline is choosing between what you want now and what you want most.&quot;"
-                    android:textColor="#F5F5F0"
-                    android:textSize="15sp"
-                    android:lineSpacingExtra="4dp" />
+                    android:textColor="@color/text_primary"
+                    android:textSize="17sp"
+                    android:textStyle="bold"/>
 
                 <TextView
                     android:id="@+id/tvQuoteAuthor"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="10dp"
                     android:text="— Abraham Lincoln"
-                    android:textColor="#F59E0B"
-                    android:textSize="12sp" />
+                    android:textColor="@color/accent_amber"
+                    android:textSize="13sp"/>
 
                 <Button
                     android:id="@+id/btnNewQuote"
                     android:layout_width="wrap_content"
-                    android:layout_height="36dp"
-                    android:layout_marginTop="12dp"
-                    android:backgroundTint="#2A2A35"
+                    android:layout_height="42dp"
+                    android:layout_marginTop="16dp"
+                    android:backgroundTint="@color/bg_input"
+                    android:paddingHorizontal="18dp"
                     android:text="New Quote"
-                    android:textColor="#F59E0B"
-                    android:textSize="12sp" />
+                    android:textAllCaps="false"
+                    android:textColor="@color/accent_amber"
+                    android:textSize="13sp"/>
 
             </LinearLayout>
-        </androidx.cardview.widget.CardView>
 
-        <!-- Timer Mode Selector -->
-        <androidx.cardview.widget.CardView
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- TIMER MODE -->
+
+        <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            app:cardBackgroundColor="#1A1A1F"
-            app:cardCornerRadius="20dp"
-            app:cardElevation="0dp">
+            android:layout_marginTop="18dp"
+            app:cardBackgroundColor="@color/bg_card"
+            app:cardCornerRadius="28dp"
+            app:cardElevation="0dp"
+            app:strokeColor="@color/stroke_light"
+            app:strokeWidth="1dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:padding="20dp">
+                android:padding="22dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="TIMER MODE"
-                    android:textColor="#4B4B5A"
-                    android:textSize="10sp" />
+                    android:textColor="@color/text_dim"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.12"/>
 
                 <RadioGroup
                     android:id="@+id/rgTimerMode"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
+                    android:layout_marginTop="18dp"
                     android:orientation="horizontal">
 
                     <RadioButton
@@ -120,173 +139,186 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:buttonTint="@color/accent_amber"
                         android:checked="true"
                         android:text="Pomodoro"
-                        android:textColor="#F5F5F0"
-                        android:buttonTint="#F59E0B" />
+                        android:textColor="@color/text_primary"
+                        android:textSize="15sp"/>
 
                     <RadioButton
                         android:id="@+id/rbCustom"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:buttonTint="@color/accent_amber"
                         android:text="Custom"
-                        android:textColor="#F5F5F0"
-                        android:buttonTint="#F59E0B" />
+                        android:textColor="@color/text_primary"
+                        android:textSize="15sp"/>
 
                 </RadioGroup>
 
-                <!-- Custom duration input (hidden by default) -->
+                <!-- CUSTOM INPUT -->
+
                 <LinearLayout
                     android:id="@+id/layoutCustomTime"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal"
+                    android:layout_marginTop="18dp"
                     android:visibility="gone">
 
                     <com.google.android.material.textfield.TextInputLayout
-                        android:layout_width="0dp"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                        android:hint="Minutes"
-                        app:boxStrokeColor="#F59E0B"
-                        app:hintTextColor="#6B6B80">
+                        android:hint="Custom minutes"
+                        app:boxBackgroundColor="@color/bg_input"
+                        app:boxCornerRadiusBottomEnd="18dp"
+                        app:boxCornerRadiusBottomStart="18dp"
+                        app:boxCornerRadiusTopEnd="18dp"
+                        app:boxCornerRadiusTopStart="18dp"
+                        app:boxStrokeColor="@color/accent_amber"
+                        app:hintTextColor="@color/text_secondary">
 
                         <com.google.android.material.textfield.TextInputEditText
                             android:id="@+id/etCustomMinutes"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:inputType="number"
-                            android:textColor="#F5F5F0"
-                            android:maxLength="3" />
+                            android:maxLength="3"
+                            android:textColor="@color/text_primary"
+                            android:textSize="16sp"/>
 
                     </com.google.android.material.textfield.TextInputLayout>
 
                 </LinearLayout>
 
             </LinearLayout>
-        </androidx.cardview.widget.CardView>
 
-        <!-- Timer Display Card -->
-        <androidx.cardview.widget.CardView
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- TIMER CARD -->
+
+        <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            app:cardBackgroundColor="#1A1A1F"
-            app:cardCornerRadius="20dp"
-            app:cardElevation="0dp">
+            android:layout_marginTop="18dp"
+            app:cardBackgroundColor="@color/bg_card"
+            app:cardCornerRadius="34dp"
+            app:cardElevation="0dp"
+            app:strokeColor="@color/stroke_light"
+            app:strokeWidth="1dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center"
+                android:gravity="center_horizontal"
                 android:orientation="vertical"
-                android:padding="32dp">
+                android:padding="28dp">
 
-                <!-- Session Label -->
                 <TextView
                     android:id="@+id/tvSessionLabel"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:letterSpacing="0.10"
                     android:text="FOCUS SESSION"
-                    android:textColor="#F59E0B"
-                    android:textSize="11sp" />
+                    android:textColor="@color/accent_amber"
+                    android:textSize="12sp"
+                    android:textStyle="bold"/>
 
-                <!-- Timer -->
                 <TextView
                     android:id="@+id/tvTimer"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="monospace"
                     android:text="25:00"
-                    android:textColor="#F5F5F0"
-                    android:textSize="72sp"
-                    android:textStyle="bold"
-                    android:fontFamily="monospace" />
+                    android:textColor="@color/text_primary"
+                    android:textSize="76sp"
+                    android:textStyle="bold"/>
 
-                <!-- Session counter -->
                 <TextView
                     android:id="@+id/tvSessionCount"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
+                    android:layout_marginTop="6dp"
                     android:text="Session 1 of 4"
-                    android:textColor="#6B6B80"
-                    android:textSize="13sp" />
+                    android:textColor="@color/text_secondary"
+                    android:textSize="14sp"/>
 
-                <!-- Progress bar -->
                 <ProgressBar
                     android:id="@+id/timerProgress"
                     style="?android:attr/progressBarStyleHorizontal"
                     android:layout_width="match_parent"
                     android:layout_height="6dp"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="24dp"
                     android:max="100"
                     android:progress="100"
-                    android:progressBackgroundTint="#2A2A35"
-                    android:progressTint="#F59E0B" />
+                    android:progressBackgroundTint="@color/divider"
+                    android:progressTint="@color/accent_amber"/>
 
-                <!-- Controls -->
+                <!-- CONTROLS -->
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="24dp"
+                    android:layout_marginTop="28dp"
                     android:gravity="center"
                     android:orientation="horizontal">
 
                     <Button
                         android:id="@+id/btnReset"
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
-                        android:backgroundTint="#2A2A35"
+                        android:layout_width="54dp"
+                        android:layout_height="54dp"
+                        android:backgroundTint="@color/bg_input"
                         android:text="↺"
-                        android:textColor="#F5F5F0"
-                        android:textSize="20sp"
-                        android:padding="0dp" />
+                        android:textColor="@color/text_primary"
+                        android:textSize="20sp"/>
 
                     <Button
                         android:id="@+id/btnStartPause"
-                        android:layout_width="140dp"
-                        android:layout_height="52dp"
-                        android:layout_marginHorizontal="16dp"
-                        android:backgroundTint="#F59E0B"
-                        android:text="▶  Start"
-                        android:textColor="#0F0F11"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
+                        android:layout_width="160dp"
+                        android:layout_height="56dp"
+                        android:layout_marginHorizontal="14dp"
+                        android:backgroundTint="@color/accent_amber"
+                        android:text="▶ Start"
+                        android:textAllCaps="false"
+                        android:textColor="@color/bg_primary"
+                        android:textSize="17sp"
+                        android:textStyle="bold"/>
 
                     <Button
                         android:id="@+id/btnSkip"
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
-                        android:backgroundTint="#2A2A35"
+                        android:layout_width="54dp"
+                        android:layout_height="54dp"
+                        android:backgroundTint="@color/bg_input"
                         android:text="⏭"
-                        android:textColor="#F5F5F0"
-                        android:textSize="16sp"
-                        android:padding="0dp" />
+                        android:textColor="@color/text_primary"
+                        android:textSize="18sp"/>
 
                 </LinearLayout>
 
             </LinearLayout>
-        </androidx.cardview.widget.CardView>
 
-        <!-- Pomodoro Info -->
-        <androidx.cardview.widget.CardView
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- POMODORO INFO -->
+
+        <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            app:cardBackgroundColor="#1A1A1F"
-            app:cardCornerRadius="20dp"
-            app:cardElevation="0dp">
+            android:layout_marginTop="18dp"
+            app:cardBackgroundColor="@color/bg_card"
+            app:cardCornerRadius="28dp"
+            app:cardElevation="0dp"
+            app:strokeColor="@color/stroke_light"
+            app:strokeWidth="1dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:padding="20dp">
+                android:padding="22dp">
+
+                <!-- FOCUS -->
 
                 <LinearLayout
                     android:layout_width="0dp"
@@ -299,25 +331,28 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="🍅"
-                        android:textSize="24sp" />
+                        android:textSize="28sp"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"
+                        android:layout_marginTop="8dp"
                         android:text="25 min"
-                        android:textColor="#F5F5F0"
-                        android:textSize="14sp"
-                        android:textStyle="bold" />
+                        android:textColor="@color/text_primary"
+                        android:textSize="15sp"
+                        android:textStyle="bold"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
                         android:text="Focus"
-                        android:textColor="#6B6B80"
-                        android:textSize="12sp" />
+                        android:textColor="@color/text_secondary"
+                        android:textSize="12sp"/>
 
                 </LinearLayout>
+
+                <!-- SHORT BREAK -->
 
                 <LinearLayout
                     android:layout_width="0dp"
@@ -330,25 +365,28 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="☕"
-                        android:textSize="24sp" />
+                        android:textSize="28sp"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"
+                        android:layout_marginTop="8dp"
                         android:text="5 min"
-                        android:textColor="#F5F5F0"
-                        android:textSize="14sp"
-                        android:textStyle="bold" />
+                        android:textColor="@color/text_primary"
+                        android:textSize="15sp"
+                        android:textStyle="bold"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
                         android:text="Short Break"
-                        android:textColor="#6B6B80"
-                        android:textSize="12sp" />
+                        android:textColor="@color/text_secondary"
+                        android:textSize="12sp"/>
 
                 </LinearLayout>
+
+                <!-- LONG BREAK -->
 
                 <LinearLayout
                     android:layout_width="0dp"
@@ -361,28 +399,31 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="🛋️"
-                        android:textSize="24sp" />
+                        android:textSize="28sp"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"
+                        android:layout_marginTop="8dp"
                         android:text="15 min"
-                        android:textColor="#F5F5F0"
-                        android:textSize="14sp"
-                        android:textStyle="bold" />
+                        android:textColor="@color/text_primary"
+                        android:textSize="15sp"
+                        android:textStyle="bold"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
                         android:text="Long Break"
-                        android:textColor="#6B6B80"
-                        android:textSize="12sp" />
+                        android:textColor="@color/text_secondary"
+                        android:textSize="12sp"/>
 
                 </LinearLayout>
 
             </LinearLayout>
-        </androidx.cardview.widget.CardView>
+
+        </com.google.android.material.card.MaterialCardView>
 
     </LinearLayout>
-</ScrollView>
+
+</androidx.core.widget.NestedScrollView>

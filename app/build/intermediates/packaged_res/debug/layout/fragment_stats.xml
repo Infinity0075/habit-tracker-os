@@ -1,74 +1,89 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
+
+<androidx.core.widget.NestedScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#0F0F11">
+    android:background="@color/bg_primary"
+    android:clipToPadding="false"
+    android:fillViewport="true">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:paddingHorizontal="20dp"
-        android:paddingTop="52dp"
-        android:paddingBottom="32dp">
+        android:paddingStart="20dp"
+        android:paddingTop="60dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="140dp">
 
-        <!-- Header -->
+        <!-- HEADER -->
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Your Stats"
-            android:textColor="#F5F5F0"
-            android:textSize="26sp"
-            android:textStyle="bold" />
+            android:textColor="@color/text_primary"
+            android:textSize="34sp"
+            android:textStyle="bold"
+            android:letterSpacing="-0.03"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="2dp"
-            android:text="Track your consistency and progress"
-            android:textColor="#6B6B80"
-            android:textSize="13sp" />
+            android:layout_marginTop="6dp"
+            android:text="Track your consistency and momentum."
+            android:textColor="@color/text_secondary"
+            android:textSize="14sp"/>
 
-        <!-- Top Score + Stats Row -->
-        <androidx.cardview.widget.CardView
+        <!-- SCORE CARD -->
+
+        <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            app:cardBackgroundColor="#1A1A1F"
-            app:cardCornerRadius="20dp"
-            app:cardElevation="0dp">
+            android:layout_marginTop="24dp"
+            app:cardBackgroundColor="@color/bg_card"
+            app:cardCornerRadius="32dp"
+            app:cardElevation="0dp"
+            app:strokeColor="@color/stroke_light"
+            app:strokeWidth="1dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center"
+                android:gravity="center_horizontal"
                 android:orientation="vertical"
-                android:padding="24dp">
+                android:padding="26dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:letterSpacing="0.12"
                     android:text="DISCIPLINE SCORE"
-                    android:textColor="#4B4B5A"
-                    android:textSize="10sp" />
+                    android:textColor="@color/text_dim"
+                    android:textSize="11sp"
+                    android:textStyle="bold"/>
 
                 <TextView
                     android:id="@+id/tvDisciplineScore"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="12dp"
                     android:text="0%"
-                    android:textColor="#F59E0B"
-                    android:textSize="52sp"
-                    android:textStyle="bold" />
+                    android:textColor="@color/accent_amber"
+                    android:textSize="64sp"
+                    android:textStyle="bold"/>
+
+                <!-- STATS -->
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginTop="22dp"
                     android:orientation="horizontal">
+
+                    <!-- TOTAL -->
 
                     <LinearLayout
                         android:layout_width="0dp"
@@ -82,23 +97,26 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="0"
-                            android:textColor="#F5F5F0"
-                            android:textSize="28sp"
-                            android:textStyle="bold" />
+                            android:textColor="@color/text_primary"
+                            android:textSize="30sp"
+                            android:textStyle="bold"/>
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Total Habits"
-                            android:textColor="#6B6B80"
-                            android:textSize="12sp" />
+                            android:layout_marginTop="2dp"
+                            android:text="Habits"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="12sp"/>
 
                     </LinearLayout>
 
                     <View
                         android:layout_width="1dp"
-                        android:layout_height="40dp"
-                        android:background="#2A2A35" />
+                        android:layout_height="42dp"
+                        android:background="@color/divider"/>
+
+                    <!-- COMPLETED -->
 
                     <LinearLayout
                         android:layout_width="0dp"
@@ -112,23 +130,26 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="0"
-                            android:textColor="#22C55E"
-                            android:textSize="28sp"
-                            android:textStyle="bold" />
+                            android:textColor="@color/green"
+                            android:textSize="30sp"
+                            android:textStyle="bold"/>
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Completed Today"
-                            android:textColor="#6B6B80"
-                            android:textSize="12sp" />
+                            android:layout_marginTop="2dp"
+                            android:text="Completed"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="12sp"/>
 
                     </LinearLayout>
 
                     <View
                         android:layout_width="1dp"
-                        android:layout_height="40dp"
-                        android:background="#2A2A35" />
+                        android:layout_height="42dp"
+                        android:background="@color/divider"/>
+
+                    <!-- STREAK -->
 
                     <LinearLayout
                         android:layout_width="0dp"
@@ -142,169 +163,143 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="0"
-                            android:textColor="#F59E0B"
-                            android:textSize="28sp"
-                            android:textStyle="bold" />
+                            android:textColor="@color/accent_amber"
+                            android:textSize="30sp"
+                            android:textStyle="bold"/>
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Best Streak 🔥"
-                            android:textColor="#6B6B80"
-                            android:textSize="12sp" />
+                            android:layout_marginTop="2dp"
+                            android:text="Best Streak"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="12sp"/>
 
                     </LinearLayout>
 
                 </LinearLayout>
 
             </LinearLayout>
-        </androidx.cardview.widget.CardView>
 
-        <!-- Weekly Chart Card -->
-        <androidx.cardview.widget.CardView
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- WEEKLY CHART -->
+
+        <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            app:cardBackgroundColor="#1A1A1F"
-            app:cardCornerRadius="20dp"
-            app:cardElevation="0dp">
+            android:layout_marginTop="18dp"
+            app:cardBackgroundColor="@color/bg_card"
+            app:cardCornerRadius="28dp"
+            app:cardElevation="0dp"
+            app:strokeColor="@color/stroke_light"
+            app:strokeWidth="1dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:padding="20dp">
+                android:padding="22dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="THIS WEEK"
-                    android:textColor="#4B4B5A"
-                    android:textSize="10sp" />
+                    android:textColor="@color/text_dim"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.12"/>
 
-                <!-- Bar chart: 7 days -->
                 <LinearLayout
                     android:id="@+id/layoutWeeklyChart"
                     android:layout_width="match_parent"
-                    android:layout_height="120dp"
-                    android:layout_marginTop="16dp"
-                    android:orientation="horizontal"
-                    android:gravity="bottom" />
+                    android:layout_height="160dp"
+                    android:layout_marginTop="22dp"
+                    android:gravity="bottom"
+                    android:orientation="horizontal"/>
 
-                <!-- Day labels -->
                 <LinearLayout
                     android:id="@+id/layoutWeekDayLabels"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="6dp"
-                    android:orientation="horizontal" />
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal"/>
 
             </LinearLayout>
-        </androidx.cardview.widget.CardView>
 
-        <!-- Calendar Heatmap Card -->
-        <androidx.cardview.widget.CardView
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- HEATMAP -->
+
+        <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            app:cardBackgroundColor="#1A1A1F"
-            app:cardCornerRadius="20dp"
-            app:cardElevation="0dp">
+            android:layout_marginTop="18dp"
+            app:cardBackgroundColor="@color/bg_card"
+            app:cardCornerRadius="28dp"
+            app:cardElevation="0dp"
+            app:strokeColor="@color/stroke_light"
+            app:strokeWidth="1dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:padding="20dp">
+                android:padding="22dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="30-DAY HEATMAP"
-                    android:textColor="#4B4B5A"
-                    android:textSize="10sp" />
+                    android:text="30 DAY HEATMAP"
+                    android:textColor="@color/text_dim"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.12"/>
 
-                <!-- Grid built programmatically -->
                 <LinearLayout
                     android:id="@+id/layoutHeatmap"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="14dp"
-                    android:orientation="vertical" />
-
-                <!-- Legend -->
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Less"
-                        android:textColor="#4B4B5A"
-                        android:textSize="11sp" />
-
-                    <View
-                        android:layout_width="14dp"
-                        android:layout_height="14dp"
-                        android:layout_marginStart="6dp"
-                        android:background="#2A2A35" />
-
-                    <View
-                        android:layout_width="14dp"
-                        android:layout_height="14dp"
-                        android:layout_marginStart="4dp"
-                        android:background="#6B3F00" />
-
-                    <View
-                        android:layout_width="14dp"
-                        android:layout_height="14dp"
-                        android:layout_marginStart="4dp"
-                        android:background="#F59E0B" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="6dp"
-                        android:text="More"
-                        android:textColor="#4B4B5A"
-                        android:textSize="11sp" />
-
-                </LinearLayout>
+                    android:layout_marginTop="18dp"
+                    android:orientation="vertical"/>
 
             </LinearLayout>
-        </androidx.cardview.widget.CardView>
 
-        <!-- Best / Worst Habits Card -->
-        <androidx.cardview.widget.CardView
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- HABIT BREAKDOWN -->
+
+        <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            app:cardBackgroundColor="#1A1A1F"
-            app:cardCornerRadius="20dp"
-            app:cardElevation="0dp">
+            android:layout_marginTop="18dp"
+            app:cardBackgroundColor="@color/bg_card"
+            app:cardCornerRadius="28dp"
+            app:cardElevation="0dp"
+            app:strokeColor="@color/stroke_light"
+            app:strokeWidth="1dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:padding="20dp">
+                android:padding="22dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="HABIT BREAKDOWN"
-                    android:textColor="#4B4B5A"
-                    android:textSize="10sp" />
+                    android:textColor="@color/text_dim"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.12"/>
 
-                <!-- Best habit -->
+                <!-- BEST -->
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="14dp"
+                    android:layout_marginTop="18dp"
                     android:gravity="center_vertical"
                     android:orientation="horizontal">
 
@@ -312,12 +307,12 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="🏆"
-                        android:textSize="20sp" />
+                        android:textSize="26sp"/>
 
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="12dp"
+                        android:layout_marginStart="14dp"
                         android:layout_weight="1"
                         android:orientation="vertical">
 
@@ -325,18 +320,18 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="BEST HABIT"
-                            android:textColor="#4B4B5A"
-                            android:textSize="10sp" />
+                            android:textColor="@color/text_dim"
+                            android:textSize="10sp"/>
 
                         <TextView
                             android:id="@+id/tvBestHabit"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="2dp"
+                            android:layout_marginTop="4dp"
                             android:text="—"
-                            android:textColor="#22C55E"
-                            android:textSize="16sp"
-                            android:textStyle="bold" />
+                            android:textColor="@color/green"
+                            android:textSize="18sp"
+                            android:textStyle="bold"/>
 
                     </LinearLayout>
 
@@ -344,19 +339,19 @@
                         android:id="@+id/tvBestHabitStreak"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text=""
-                        android:textColor="#22C55E"
-                        android:textSize="13sp" />
+                        android:textColor="@color/green"
+                        android:textSize="13sp"/>
 
                 </LinearLayout>
 
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:layout_marginVertical="14dp"
-                    android:background="#2A2A35" />
+                    android:layout_marginVertical="18dp"
+                    android:background="@color/divider"/>
 
-                <!-- Worst habit -->
+                <!-- WORST -->
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -366,13 +361,13 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="💪"
-                        android:textSize="20sp" />
+                        android:text="📉"
+                        android:textSize="26sp"/>
 
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="12dp"
+                        android:layout_marginStart="14dp"
                         android:layout_weight="1"
                         android:orientation="vertical">
 
@@ -380,18 +375,18 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="NEEDS WORK"
-                            android:textColor="#4B4B5A"
-                            android:textSize="10sp" />
+                            android:textColor="@color/text_dim"
+                            android:textSize="10sp"/>
 
                         <TextView
                             android:id="@+id/tvWorstHabit"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="2dp"
+                            android:layout_marginTop="4dp"
                             android:text="—"
-                            android:textColor="#F59E0B"
-                            android:textSize="16sp"
-                            android:textStyle="bold" />
+                            android:textColor="@color/accent_amber"
+                            android:textSize="18sp"
+                            android:textStyle="bold"/>
 
                     </LinearLayout>
 
@@ -399,46 +394,53 @@
                         android:id="@+id/tvWorstHabitStreak"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text=""
-                        android:textColor="#F59E0B"
-                        android:textSize="13sp" />
+                        android:textColor="@color/accent_amber"
+                        android:textSize="13sp"/>
 
                 </LinearLayout>
 
             </LinearLayout>
-        </androidx.cardview.widget.CardView>
 
-        <!-- Streak History Card -->
-        <androidx.cardview.widget.CardView
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- STREAK HISTORY -->
+
+        <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            app:cardBackgroundColor="#1A1A1F"
-            app:cardCornerRadius="20dp"
-            app:cardElevation="0dp">
+            android:layout_marginTop="18dp"
+            app:cardBackgroundColor="@color/bg_card"
+            app:cardCornerRadius="28dp"
+            app:cardElevation="0dp"
+            app:strokeColor="@color/stroke_light"
+            app:strokeWidth="1dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:padding="20dp">
+                android:padding="22dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="STREAK HISTORY"
-                    android:textColor="#4B4B5A"
-                    android:textSize="10sp" />
+                    android:textColor="@color/text_dim"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.12"/>
 
                 <LinearLayout
                     android:id="@+id/layoutStreakHistory"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="14dp"
-                    android:orientation="vertical" />
+                    android:layout_marginTop="18dp"
+                    android:orientation="vertical"/>
 
             </LinearLayout>
-        </androidx.cardview.widget.CardView>
+
+        </com.google.android.material.card.MaterialCardView>
 
     </LinearLayout>
-</ScrollView>
+
+</androidx.core.widget.NestedScrollView>

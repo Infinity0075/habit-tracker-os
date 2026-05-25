@@ -9,10 +9,10 @@ import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.ScrollView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.core.widget.NestedScrollView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.anant.disciplinecore.R;
@@ -23,7 +23,7 @@ import java.lang.String;
 
 public final class FragmentFocusBinding implements ViewBinding {
   @NonNull
-  private final ScrollView rootView;
+  private final NestedScrollView rootView;
 
   @NonNull
   public final Button btnNewQuote;
@@ -70,7 +70,7 @@ public final class FragmentFocusBinding implements ViewBinding {
   @NonNull
   public final TextView tvTimer;
 
-  private FragmentFocusBinding(@NonNull ScrollView rootView, @NonNull Button btnNewQuote,
+  private FragmentFocusBinding(@NonNull NestedScrollView rootView, @NonNull Button btnNewQuote,
       @NonNull Button btnReset, @NonNull Button btnSkip, @NonNull Button btnStartPause,
       @NonNull TextInputEditText etCustomMinutes, @NonNull LinearLayout layoutCustomTime,
       @NonNull RadioButton rbCustom, @NonNull RadioButton rbPomodoro,
@@ -97,7 +97,7 @@ public final class FragmentFocusBinding implements ViewBinding {
 
   @Override
   @NonNull
-  public ScrollView getRoot() {
+  public NestedScrollView getRoot() {
     return rootView;
   }
 
@@ -212,7 +212,7 @@ public final class FragmentFocusBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentFocusBinding((ScrollView) rootView, btnNewQuote, btnReset, btnSkip,
+      return new FragmentFocusBinding((NestedScrollView) rootView, btnNewQuote, btnReset, btnSkip,
           btnStartPause, etCustomMinutes, layoutCustomTime, rbCustom, rbPomodoro, rgTimerMode,
           timerProgress, tvQuote, tvQuoteAuthor, tvSessionCount, tvSessionLabel, tvTimer);
     }

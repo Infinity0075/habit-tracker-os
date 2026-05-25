@@ -8,17 +8,20 @@ import android.widget.CheckBox;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.cardview.widget.CardView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.anant.disciplinecore.R;
+import com.google.android.material.card.MaterialCardView;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
 
 public final class ItemHabitBinding implements ViewBinding {
   @NonNull
-  private final CardView rootView;
+  private final MaterialCardView rootView;
+
+  @NonNull
+  public final MaterialCardView cardHabit;
 
   @NonNull
   public final CheckBox cbDone;
@@ -38,10 +41,11 @@ public final class ItemHabitBinding implements ViewBinding {
   @NonNull
   public final TextView tvTotal;
 
-  private ItemHabitBinding(@NonNull CardView rootView, @NonNull CheckBox cbDone,
-      @NonNull TextView tvCategory, @NonNull TextView tvEmoji, @NonNull TextView tvHabitName,
-      @NonNull TextView tvStreak, @NonNull TextView tvTotal) {
+  private ItemHabitBinding(@NonNull MaterialCardView rootView, @NonNull MaterialCardView cardHabit,
+      @NonNull CheckBox cbDone, @NonNull TextView tvCategory, @NonNull TextView tvEmoji,
+      @NonNull TextView tvHabitName, @NonNull TextView tvStreak, @NonNull TextView tvTotal) {
     this.rootView = rootView;
+    this.cardHabit = cardHabit;
     this.cbDone = cbDone;
     this.tvCategory = tvCategory;
     this.tvEmoji = tvEmoji;
@@ -52,7 +56,7 @@ public final class ItemHabitBinding implements ViewBinding {
 
   @Override
   @NonNull
-  public CardView getRoot() {
+  public MaterialCardView getRoot() {
     return rootView;
   }
 
@@ -77,6 +81,8 @@ public final class ItemHabitBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      MaterialCardView cardHabit = (MaterialCardView) rootView;
+
       id = R.id.cbDone;
       CheckBox cbDone = ViewBindings.findChildViewById(rootView, id);
       if (cbDone == null) {
@@ -113,8 +119,8 @@ public final class ItemHabitBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ItemHabitBinding((CardView) rootView, cbDone, tvCategory, tvEmoji, tvHabitName,
-          tvStreak, tvTotal);
+      return new ItemHabitBinding((MaterialCardView) rootView, cardHabit, cbDone, tvCategory,
+          tvEmoji, tvHabitName, tvStreak, tvTotal);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

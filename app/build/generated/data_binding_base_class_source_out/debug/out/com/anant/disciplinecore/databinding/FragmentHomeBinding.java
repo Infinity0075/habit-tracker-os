@@ -9,6 +9,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.core.widget.NestedScrollView;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
@@ -19,7 +20,7 @@ import java.lang.String;
 
 public final class FragmentHomeBinding implements ViewBinding {
   @NonNull
-  private final LinearLayout rootView;
+  private final NestedScrollView rootView;
 
   @NonNull
   public final LinearLayout emptyState;
@@ -37,6 +38,12 @@ public final class FragmentHomeBinding implements ViewBinding {
   public final TextView tvGreeting;
 
   @NonNull
+  public final TextView tvHabitCount;
+
+  @NonNull
+  public final TextView tvInsight;
+
+  @NonNull
   public final TextView tvPct;
 
   @NonNull
@@ -45,24 +52,31 @@ public final class FragmentHomeBinding implements ViewBinding {
   @NonNull
   public final TextView tvScoreLabel;
 
-  private FragmentHomeBinding(@NonNull LinearLayout rootView, @NonNull LinearLayout emptyState,
+  @NonNull
+  public final TextView tvTier;
+
+  private FragmentHomeBinding(@NonNull NestedScrollView rootView, @NonNull LinearLayout emptyState,
       @NonNull ProgressBar progressBar, @NonNull RecyclerView rvHabits, @NonNull TextView tvDate,
-      @NonNull TextView tvGreeting, @NonNull TextView tvPct, @NonNull TextView tvScore,
-      @NonNull TextView tvScoreLabel) {
+      @NonNull TextView tvGreeting, @NonNull TextView tvHabitCount, @NonNull TextView tvInsight,
+      @NonNull TextView tvPct, @NonNull TextView tvScore, @NonNull TextView tvScoreLabel,
+      @NonNull TextView tvTier) {
     this.rootView = rootView;
     this.emptyState = emptyState;
     this.progressBar = progressBar;
     this.rvHabits = rvHabits;
     this.tvDate = tvDate;
     this.tvGreeting = tvGreeting;
+    this.tvHabitCount = tvHabitCount;
+    this.tvInsight = tvInsight;
     this.tvPct = tvPct;
     this.tvScore = tvScore;
     this.tvScoreLabel = tvScoreLabel;
+    this.tvTier = tvTier;
   }
 
   @Override
   @NonNull
-  public LinearLayout getRoot() {
+  public NestedScrollView getRoot() {
     return rootView;
   }
 
@@ -117,6 +131,18 @@ public final class FragmentHomeBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.tvHabitCount;
+      TextView tvHabitCount = ViewBindings.findChildViewById(rootView, id);
+      if (tvHabitCount == null) {
+        break missingId;
+      }
+
+      id = R.id.tvInsight;
+      TextView tvInsight = ViewBindings.findChildViewById(rootView, id);
+      if (tvInsight == null) {
+        break missingId;
+      }
+
       id = R.id.tvPct;
       TextView tvPct = ViewBindings.findChildViewById(rootView, id);
       if (tvPct == null) {
@@ -135,8 +161,14 @@ public final class FragmentHomeBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentHomeBinding((LinearLayout) rootView, emptyState, progressBar, rvHabits,
-          tvDate, tvGreeting, tvPct, tvScore, tvScoreLabel);
+      id = R.id.tvTier;
+      TextView tvTier = ViewBindings.findChildViewById(rootView, id);
+      if (tvTier == null) {
+        break missingId;
+      }
+
+      return new FragmentHomeBinding((NestedScrollView) rootView, emptyState, progressBar, rvHabits,
+          tvDate, tvGreeting, tvHabitCount, tvInsight, tvPct, tvScore, tvScoreLabel, tvTier);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

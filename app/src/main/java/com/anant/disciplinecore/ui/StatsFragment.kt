@@ -1,6 +1,6 @@
 package com.anant.disciplinecore.ui
 
-import android.graphics.Color
+import android.graphics.drawable.GradientDrawable
 import android.os.Bundle
 import android.view.Gravity
 import android.view.LayoutInflater
@@ -8,8 +8,10 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.TextView
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import com.anant.disciplinecore.R
 import com.anant.disciplinecore.databinding.FragmentStatsBinding
 import com.anant.disciplinecore.viewmodel.HabitViewModel
 import java.text.SimpleDateFormat
@@ -19,291 +21,525 @@ class StatsFragment : Fragment() {
 
     private var _binding: FragmentStatsBinding? = null
     private val binding get() = _binding!!
+
     private val viewModel: HabitViewModel by viewModels()
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+
         _binding = FragmentStatsBinding.inflate(inflater, container, false)
+
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
         observeStats()
         observeCharts()
+
         viewModel.loadChartData()
     }
 
-    // ── Basic stats from habits ───────────────────────────────────
+    // ------------------------------------------------
+    // STATS
+    // ------------------------------------------------
+
     private fun observeStats() {
+
         viewModel.allHabits.observe(viewLifecycleOwner) { habits ->
 
-            val total      = habits.size
-            val completed  = habits.count { it.isCompletedToday }
-            val score      = if (total > 0) (completed * 100) / total else 0
-            val bestStreak = habits.maxOfOrNull { it.streak } ?: 0
+            val total = habits.size
+
+            val completed =
+                habits.count { it.isCompletedToday }
+
+            val score =
+                if (total > 0)
+                    (completed * 100) / total
+                else
+                    0
+
+            val bestStreak =
+                habits.maxOfOrNull { it.streak } ?: 0
 
             binding.tvDisciplineScore.text = "$score%"
-            binding.tvTotalHabits.text     = total.toString()
+            binding.tvTotalHabits.text = total.toString()
             binding.tvCompletedHabits.text = completed.toString()
-            binding.tvBestStreak.text      = bestStreak.toString()
+            binding.tvBestStreak.text = bestStreak.toString()
 
-            // Best / worst habits
-            val sorted = habits.sortedByDescending { it.streak }
-            val best   = sorted.firstOrNull()
-            val worst  = sorted.lastOrNull()
+            val sorted =
+                habits.sortedByDescending { it.streak }
+
+            val best = sorted.firstOrNull()
+            val worst = sorted.lastOrNull()
 
             binding.tvBestHabit.text =
                 best?.name ?: "—"
+
             binding.tvBestHabitStreak.text =
-                if (best != null) "🔥 ${best.streak} day streak" else ""
+                if (best != null)
+                    "🔥 ${best.streak} days"
+                else
+                    ""
 
             binding.tvWorstHabit.text =
-                if (worst != null && worst != best) worst.name else "Keep it up!"
-            binding.tvWorstHabitStreak.text =
-                if (worst != null && worst != best) "🔥 ${worst.streak} days" else ""
+                if (worst != null && worst != best)
+                    worst.name
+                else
+                    "Keep pushing"
 
-            // Streak history
-            buildStreakHistory(habits.map { Pair(it.name, it.streak) })
+            binding.tvWorstHabitStreak.text =
+                if (worst != null && worst != best)
+                    "🔥 ${worst.streak} days"
+                else
+                    ""
+
+            buildStreakHistory(
+                habits.map { Pair(it.name, it.streak) }
+            )
         }
     }
 
-    // ── Real chart data from logs ─────────────────────────────────
+    // ------------------------------------------------
+    // CHARTS
+    // ------------------------------------------------
+
     private fun observeCharts() {
 
-        // Weekly bar chart — real data
         viewModel.last7Days.observe(viewLifecycleOwner) { data ->
             buildWeeklyChart(data)
         }
 
-        // 30-day heatmap — real data
         viewModel.last30Days.observe(viewLifecycleOwner) { data ->
             buildHeatmap(data)
         }
     }
 
-    // ── Weekly Bar Chart (real data) ──────────────────────────────
+    // ------------------------------------------------
+    // WEEKLY CHART
+    // ------------------------------------------------
+
     private fun buildWeeklyChart(data: Map<String, Int>) {
-        val chartLayout  = binding.layoutWeeklyChart
+
+        val chartLayout = binding.layoutWeeklyChart
         val labelsLayout = binding.layoutWeekDayLabels
+
         chartLayout.removeAllViews()
         labelsLayout.removeAllViews()
 
-        val sdf     = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault())
-        val dayFmt  = SimpleDateFormat("EEE", Locale.getDefault())
-        val density = resources.displayMetrics.density
-        val maxBarH = 100
+        val sdf =
+            SimpleDateFormat("yyyy-MM-dd", Locale.getDefault())
 
-        // Build last 7 days list
+        val dayFormat =
+            SimpleDateFormat("EEE", Locale.getDefault())
+
+        val density = resources.displayMetrics.density
+
+        val maxHeight = (120 * density).toInt()
+
         val days = (6 downTo 0).map { offset ->
-            val cal = Calendar.getInstance().apply {
-                add(Calendar.DAY_OF_YEAR, -offset)
-            }
-            val dateStr = sdf.format(cal.time)
-            val label   = dayFmt.format(cal.time) // Mon, Tue...
-            val count   = data[dateStr] ?: 0
-            val isToday = offset == 0
-            Triple(dateStr, label, Pair(count, isToday))
+
+            val calendar = Calendar.getInstance()
+
+            calendar.add(Calendar.DAY_OF_YEAR, -offset)
+
+            val dateString = sdf.format(calendar.time)
+
+            val label = dayFormat.format(calendar.time)
+
+            val count = data[dateString] ?: 0
+
+            Triple(label, count, offset == 0)
         }
 
-        val maxCount = days.maxOfOrNull { it.third.first } ?: 1
+        val maxCount =
+            days.maxOfOrNull { it.second }?.coerceAtLeast(1)
+                ?: 1
 
-        days.forEach { (_, label, info) ->
-            val (count, isToday) = info
-            val pct = if (maxCount > 0) (count * 100) / maxCount else 0
+        days.forEach { (label, count, isToday) ->
 
-            val barColor = when {
-                count == 0 -> Color.parseColor("#2A2A35")
-                pct >= 80  -> Color.parseColor("#22C55E")
-                pct >= 40  -> Color.parseColor("#F59E0B")
-                else       -> Color.parseColor("#3A3A45")
-            }
+            val column = LinearLayout(requireContext()).apply {
 
-            // Column
-            val col = LinearLayout(requireContext()).apply {
-                layoutParams = LinearLayout.LayoutParams(
-                    0, LinearLayout.LayoutParams.MATCH_PARENT, 1f)
                 orientation = LinearLayout.VERTICAL
-                gravity     = Gravity.BOTTOM or Gravity.CENTER_HORIZONTAL
+
+                gravity =
+                    Gravity.BOTTOM or Gravity.CENTER_HORIZONTAL
+
+                layoutParams =
+                    LinearLayout.LayoutParams(
+                        0,
+                        LinearLayout.LayoutParams.MATCH_PARENT,
+                        1f
+                    )
             }
 
-            // Count label
-            val countLabel = TextView(requireContext()).apply {
-                text     = if (count > 0) "$count" else ""
-                textSize = 8f
-                setTextColor(
-                    if (isToday) Color.parseColor("#F59E0B")
-                    else Color.parseColor("#6B6B80"))
-                gravity  = Gravity.CENTER_HORIZONTAL
-                layoutParams = LinearLayout.LayoutParams(
-                    LinearLayout.LayoutParams.MATCH_PARENT,
-                    LinearLayout.LayoutParams.WRAP_CONTENT)
-            }
+            // VALUE
 
-            // Bar
-            val barH = ((pct.coerceAtLeast(5) / 100f) * maxBarH * density).toInt()
-            val bar  = View(requireContext()).apply {
-                layoutParams = LinearLayout.LayoutParams(
-                    (24 * density).toInt(), barH).also {
-                    it.gravity = Gravity.CENTER_HORIZONTAL
-                }
-                setBackgroundColor(
-                    if (isToday) Color.parseColor("#F59E0B") else barColor)
-            }
+            val valueText = TextView(requireContext()).apply {
 
-            col.addView(countLabel)
-            col.addView(bar)
-            chartLayout.addView(col)
+                text =
+                    if (count > 0) count.toString() else ""
 
-            // Day label
-            val dayLabel = TextView(requireContext()).apply {
-                text     = label
                 textSize = 10f
-                gravity  = Gravity.CENTER
+
+                gravity = Gravity.CENTER
+
                 setTextColor(
-                    if (isToday) Color.parseColor("#F59E0B")
-                    else Color.parseColor("#6B6B80"))
-                layoutParams = LinearLayout.LayoutParams(
-                    0, LinearLayout.LayoutParams.WRAP_CONTENT, 1f)
+                    ContextCompat.getColor(
+                        requireContext(),
+                        if (isToday)
+                            R.color.accent_amber
+                        else
+                            R.color.text_secondary
+                    )
+                )
             }
-            labelsLayout.addView(dayLabel)
+
+            // BAR
+
+            val ratio =
+                count.toFloat() / maxCount.toFloat()
+
+            val barHeight =
+                (ratio * maxHeight).toInt().coerceAtLeast(
+                    (10 * density).toInt()
+                )
+
+            val bar = View(requireContext()).apply {
+
+                layoutParams =
+                    LinearLayout.LayoutParams(
+                        (28 * density).toInt(),
+                        barHeight
+                    ).also {
+                        it.topMargin = (8 * density).toInt()
+                    }
+
+                background = GradientDrawable().apply {
+
+                    cornerRadius = 24f
+
+                    setColor(
+                        ContextCompat.getColor(
+                            requireContext(),
+                            when {
+                                isToday ->
+                                    R.color.accent_amber
+
+                                ratio >= 0.75f ->
+                                    R.color.green
+
+                                ratio >= 0.35f ->
+                                    R.color.accent_amber
+
+                                else ->
+                                    R.color.divider
+                            }
+                        )
+                    )
+                }
+            }
+
+            column.addView(valueText)
+            column.addView(bar)
+
+            chartLayout.addView(column)
+
+            // DAY LABEL
+
+            val dayText = TextView(requireContext()).apply {
+
+                text = label
+
+                textSize = 11f
+
+                gravity = Gravity.CENTER
+
+                setTextColor(
+                    ContextCompat.getColor(
+                        requireContext(),
+                        if (isToday)
+                            R.color.accent_amber
+                        else
+                            R.color.text_secondary
+                    )
+                )
+
+                layoutParams =
+                    LinearLayout.LayoutParams(
+                        0,
+                        LinearLayout.LayoutParams.WRAP_CONTENT,
+                        1f
+                    )
+            }
+
+            labelsLayout.addView(dayText)
         }
     }
 
-    // ── 30-Day Heatmap (real data) ────────────────────────────────
+    // ------------------------------------------------
+    // HEATMAP
+    // ------------------------------------------------
+
     private fun buildHeatmap(data: Map<String, Int>) {
+
         val container = binding.layoutHeatmap
+
         container.removeAllViews()
 
-        val density  = resources.displayMetrics.density
-        val cellSize = (14 * density).toInt()
-        val cellGap  = (4  * density).toInt()
-        val cols     = 10 // 10 cols × 3 rows = 30 days
-        val sdf      = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault())
+        val density = resources.displayMetrics.density
 
-        // Build last 30 dates
+        val cell = (18 * density).toInt()
+
+        val gap = (5 * density).toInt()
+
+        val sdf =
+            SimpleDateFormat("yyyy-MM-dd", Locale.getDefault())
+
         val dates = (29 downTo 0).map { offset ->
-            val cal = Calendar.getInstance().apply {
-                add(Calendar.DAY_OF_YEAR, -offset)
-            }
-            sdf.format(cal.time)
+
+            val calendar = Calendar.getInstance()
+
+            calendar.add(Calendar.DAY_OF_YEAR, -offset)
+
+            sdf.format(calendar.time)
         }
 
-        val maxCount = data.values.maxOrNull()?.coerceAtLeast(1) ?: 1
+        val maxCount =
+            data.values.maxOrNull()?.coerceAtLeast(1) ?: 1
 
         repeat(3) { row ->
+
             val rowLayout = LinearLayout(requireContext()).apply {
-                orientation  = LinearLayout.HORIZONTAL
-                layoutParams = LinearLayout.LayoutParams(
-                    LinearLayout.LayoutParams.MATCH_PARENT,
-                    LinearLayout.LayoutParams.WRAP_CONTENT).also {
-                    it.bottomMargin = cellGap
-                }
+
+                orientation = LinearLayout.HORIZONTAL
+
+                layoutParams =
+                    LinearLayout.LayoutParams(
+                        LinearLayout.LayoutParams.MATCH_PARENT,
+                        LinearLayout.LayoutParams.WRAP_CONTENT
+                    ).also {
+                        it.bottomMargin = gap
+                    }
             }
 
-            repeat(cols) { col ->
-                val dateStr = dates.getOrNull(row * cols + col) ?: ""
-                val count   = data[dateStr] ?: 0
-                val ratio   = count.toFloat() / maxCount
+            repeat(10) { col ->
+
+                val date =
+                    dates.getOrNull(row * 10 + col) ?: ""
+
+                val count = data[date] ?: 0
+
+                val ratio =
+                    count.toFloat() / maxCount.toFloat()
 
                 val color = when {
-                    count == 0   -> Color.parseColor("#2A2A35")
-                    ratio < 0.4f -> Color.parseColor("#6B3F00")
-                    ratio < 0.8f -> Color.parseColor("#D97706")
-                    else         -> Color.parseColor("#F59E0B")
+
+                    count == 0 ->
+                        R.color.divider
+
+                    ratio < 0.4f ->
+                        R.color.accent_amber_dark
+
+                    ratio < 0.8f ->
+                        R.color.accent_amber
+
+                    else ->
+                        R.color.green
                 }
 
-                val cell = View(requireContext()).apply {
-                    layoutParams = LinearLayout.LayoutParams(
-                        cellSize, cellSize).also {
-                        it.marginEnd = cellGap
+                val square = View(requireContext()).apply {
+
+                    layoutParams =
+                        LinearLayout.LayoutParams(
+                            cell,
+                            cell
+                        ).also {
+                            it.marginEnd = gap
+                        }
+
+                    background = GradientDrawable().apply {
+
+                        cornerRadius = 8f
+
+                        setColor(
+                            ContextCompat.getColor(
+                                requireContext(),
+                                color
+                            )
+                        )
                     }
-                    setBackgroundColor(color)
                 }
-                rowLayout.addView(cell)
+
+                rowLayout.addView(square)
             }
+
             container.addView(rowLayout)
         }
     }
 
-    // ── Streak History ────────────────────────────────────────────
-    private fun buildStreakHistory(habits: List<Pair<String, Int>>) {
+    // ------------------------------------------------
+    // STREAK HISTORY
+    // ------------------------------------------------
+
+    private fun buildStreakHistory(
+        habits: List<Pair<String, Int>>
+    ) {
+
         val container = binding.layoutStreakHistory
+
         container.removeAllViews()
+
         val density = resources.displayMetrics.density
 
         if (habits.isEmpty()) {
+
             val empty = TextView(requireContext()).apply {
-                text     = "No habits yet. Add some!"
-                textSize = 13f
-                setTextColor(Color.parseColor("#6B6B80"))
+
+                text = "No habits yet."
+
+                textSize = 14f
+
+                setTextColor(
+                    ContextCompat.getColor(
+                        requireContext(),
+                        R.color.text_secondary
+                    )
+                )
             }
+
             container.addView(empty)
+
             return
         }
 
-        habits.sortedByDescending { it.second }.forEach { (name, streak) ->
-            val row = LinearLayout(requireContext()).apply {
-                orientation  = LinearLayout.HORIZONTAL
-                gravity      = Gravity.CENTER_VERTICAL
-                layoutParams = LinearLayout.LayoutParams(
-                    LinearLayout.LayoutParams.MATCH_PARENT,
-                    LinearLayout.LayoutParams.WRAP_CONTENT).also {
-                    it.bottomMargin = (10 * density).toInt()
+        val max =
+            habits.maxOfOrNull { it.second }
+                ?.coerceAtLeast(1) ?: 1
+
+        habits.sortedByDescending { it.second }
+            .forEach { (name, streak) ->
+
+                val wrapper =
+                    LinearLayout(requireContext()).apply {
+
+                        orientation = LinearLayout.VERTICAL
+
+                        layoutParams =
+                            LinearLayout.LayoutParams(
+                                LinearLayout.LayoutParams.MATCH_PARENT,
+                                LinearLayout.LayoutParams.WRAP_CONTENT
+                            ).also {
+                                it.bottomMargin =
+                                    (18 * density).toInt()
+                            }
+                    }
+
+                val top =
+                    LinearLayout(requireContext()).apply {
+
+                        orientation = LinearLayout.HORIZONTAL
+
+                        gravity = Gravity.CENTER_VERTICAL
+                    }
+
+                val nameText = TextView(requireContext()).apply {
+
+                    text = name
+
+                    textSize = 15f
+
+                    setTextColor(
+                        ContextCompat.getColor(
+                            requireContext(),
+                            R.color.text_primary
+                        )
+                    )
+
+                    layoutParams =
+                        LinearLayout.LayoutParams(
+                            0,
+                            LinearLayout.LayoutParams.WRAP_CONTENT,
+                            1f
+                        )
                 }
-            }
 
-            val col = LinearLayout(requireContext()).apply {
-                orientation  = LinearLayout.VERTICAL
-                layoutParams = LinearLayout.LayoutParams(
-                    0, LinearLayout.LayoutParams.WRAP_CONTENT, 1f)
-            }
+                val streakText = TextView(requireContext()).apply {
 
-            val nameView = TextView(requireContext()).apply {
-                text     = name
-                textSize = 14f
-                setTextColor(Color.parseColor("#F5F5F0"))
-            }
+                    text = "🔥 $streak"
 
-            // Mini progress bar
-            val maxStreak = (habits.maxOfOrNull { it.second } ?: 1).coerceAtLeast(1)
-            val barWidth  = ((streak.toFloat() / maxStreak) *
-                    resources.displayMetrics.widthPixels * 0.55f).toInt()
+                    textSize = 13f
 
-            val barBg = View(requireContext()).apply {
-                setBackgroundColor(Color.parseColor("#2A2A35"))
-                layoutParams = LinearLayout.LayoutParams(
-                    LinearLayout.LayoutParams.MATCH_PARENT,
-                    (4 * density).toInt()).also {
-                    it.topMargin = (4 * density).toInt()
+                    setTextColor(
+                        ContextCompat.getColor(
+                            requireContext(),
+                            R.color.accent_amber
+                        )
+                    )
                 }
-            }
 
-            val barFill = View(requireContext()).apply {
-                setBackgroundColor(Color.parseColor("#F59E0B"))
-                layoutParams = LinearLayout.LayoutParams(
-                    barWidth, (4 * density).toInt()).also {
-                    it.topMargin = (4 * density).toInt()
+                top.addView(nameText)
+                top.addView(streakText)
+
+                // PROGRESS
+
+                val progressBg = LinearLayout(requireContext()).apply {
+
+                    layoutParams =
+                        LinearLayout.LayoutParams(
+                            LinearLayout.LayoutParams.MATCH_PARENT,
+                            (8 * density).toInt()
+                        ).also {
+                            it.topMargin = (8 * density).toInt()
+                        }
+
+                    background = GradientDrawable().apply {
+
+                        cornerRadius = 20f
+
+                        setColor(
+                            ContextCompat.getColor(
+                                requireContext(),
+                                R.color.divider
+                            )
+                        )
+                    }
                 }
+
+                val progress =
+                    View(requireContext()).apply {
+
+                        layoutParams =
+                            LinearLayout.LayoutParams(
+                                ((streak.toFloat() / max.toFloat()) *
+                                        resources.displayMetrics.widthPixels * 0.65f).toInt(),
+                                (8 * density).toInt()
+                            )
+
+                        background = GradientDrawable().apply {
+
+                            cornerRadius = 20f
+
+                            setColor(
+                                ContextCompat.getColor(
+                                    requireContext(),
+                                    R.color.accent_amber
+                                )
+                            )
+                        }
+                    }
+
+                progressBg.addView(progress)
+
+                wrapper.addView(top)
+                wrapper.addView(progressBg)
+
+                container.addView(wrapper)
             }
-
-            col.addView(nameView)
-            col.addView(barBg)
-            col.addView(barFill)
-
-            val streakView = TextView(requireContext()).apply {
-                text     = "🔥 $streak days"
-                textSize = 13f
-                setTextColor(Color.parseColor("#F59E0B"))
-                gravity  = Gravity.END
-            }
-
-            row.addView(col)
-            row.addView(streakView)
-            container.addView(row)
-        }
     }
 
     override fun onDestroyView() {
