@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <androidx.core.widget.NestedScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -7,24 +6,29 @@
     android:layout_height="match_parent"
     android:background="@color/bg_primary"
     android:clipToPadding="false"
-    android:fillViewport="true">
+    android:fillViewport="true"
+    android:overScrollMode="never"
+    android:scrollbars="none">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:paddingStart="20dp"
-        android:paddingTop="60dp"
-        android:paddingEnd="20dp"
         android:paddingBottom="140dp">
 
-        <!-- HEADER -->
+        <!-- ══════════════════════════════════════════════════ -->
+        <!--  HEADER: DATE + STREAK BADGE                       -->
+        <!-- ══════════════════════════════════════════════════ -->
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_vertical"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:paddingStart="24dp"
+            android:paddingTop="60dp"
+            android:paddingEnd="24dp"
+            android:paddingBottom="0dp">
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -35,11 +39,11 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:letterSpacing="-0.03"
+                    android:letterSpacing="-0.02"
                     android:text="Reflection"
                     android:textColor="@color/text_primary"
                     android:textSize="34sp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/tvJournalDate"
@@ -48,12 +52,11 @@
                     android:layout_marginTop="4dp"
                     android:text="Monday, 26 May"
                     android:textColor="@color/text_secondary"
-                    android:textSize="14sp"/>
+                    android:textSize="14sp" />
 
             </LinearLayout>
 
-            <!-- STREAK -->
-
+            <!-- Streak badge pill -->
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/layoutStreak"
                 android:layout_width="wrap_content"
@@ -73,20 +76,28 @@
                     android:paddingVertical="10dp">
 
                     <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🔥"
+                        android:textSize="14sp" />
+
+                    <TextView
                         android:id="@+id/tvStreakCount"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="0"
                         android:textColor="@color/accent_amber"
-                        android:textSize="24sp"
-                        android:textStyle="bold"/>
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="day streak"
+                        android:letterSpacing="0.06"
+                        android:text="DAY STREAK"
                         android:textColor="@color/text_dim"
-                        android:textSize="10sp"/>
+                        android:textSize="9sp"
+                        android:textStyle="bold" />
 
                 </LinearLayout>
 
@@ -94,12 +105,16 @@
 
         </LinearLayout>
 
-        <!-- TODAY WIN -->
+        <!-- ══════════════════════════════════════════════════ -->
+        <!--  MOOD CHECK CARD                                   -->
+        <!-- ══════════════════════════════════════════════════ -->
 
         <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
             android:layout_marginTop="26dp"
+            android:layout_marginEnd="16dp"
             app:cardBackgroundColor="@color/bg_card"
             app:cardCornerRadius="28dp"
             app:cardElevation="0dp"
@@ -112,129 +127,40 @@
                 android:orientation="vertical"
                 android:padding="22dp">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:letterSpacing="0.12"
-                    android:text="TODAY'S WIN"
-                    android:textColor="@color/accent_amber"
-                    android:textSize="11sp"
-                    android:textStyle="bold"/>
-
-                <com.google.android.material.textfield.TextInputLayout
+                <!-- Section label -->
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:hint="What went well today?"
-                    app:boxBackgroundColor="@color/bg_input"
-                    app:boxCornerRadiusBottomEnd="20dp"
-                    app:boxCornerRadiusBottomStart="20dp"
-                    app:boxCornerRadiusTopEnd="20dp"
-                    app:boxCornerRadiusTopStart="20dp"
-                    app:boxStrokeColor="@color/accent_amber"
-                    app:hintTextColor="@color/text_secondary">
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
 
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/etWin"
-                        android:layout_width="match_parent"
+                    <TextView
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:gravity="top"
-                        android:inputType="textMultiLine"
-                        android:maxLines="4"
-                        android:minLines="3"
-                        android:textColor="@color/text_primary"
-                        android:textSize="15sp"/>
+                        android:layout_weight="1"
+                        android:letterSpacing="0.12"
+                        android:text="MOOD CHECK"
+                        android:textColor="@color/mood_green"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
 
-                </com.google.android.material.textfield.TextInputLayout>
-
-            </LinearLayout>
-
-        </com.google.android.material.card.MaterialCardView>
-
-        <!-- REFLECTION -->
-
-        <com.google.android.material.card.MaterialCardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="18dp"
-            app:cardBackgroundColor="@color/bg_card"
-            app:cardCornerRadius="28dp"
-            app:cardElevation="0dp"
-            app:strokeColor="@color/stroke_light"
-            app:strokeWidth="1dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="22dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:letterSpacing="0.12"
-                    android:text="REFLECTION"
-                    android:textColor="@color/mood_purple"
-                    android:textSize="11sp"
-                    android:textStyle="bold"/>
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:hint="What could have been better?"
-                    app:boxBackgroundColor="@color/bg_input"
-                    app:boxCornerRadiusBottomEnd="20dp"
-                    app:boxCornerRadiusBottomStart="20dp"
-                    app:boxCornerRadiusTopEnd="20dp"
-                    app:boxCornerRadiusTopStart="20dp"
-                    app:boxStrokeColor="@color/mood_purple"
-                    app:hintTextColor="@color/text_secondary">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/etReflection"
-                        android:layout_width="match_parent"
+                    <TextView
+                        android:id="@+id/tvMoodLabel"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:gravity="top"
-                        android:inputType="textMultiLine"
-                        android:maxLines="6"
-                        android:minLines="4"
-                        android:textColor="@color/text_primary"
-                        android:textSize="15sp"/>
+                        android:background="@drawable/bg_settings_chip"
+                        android:paddingStart="10dp"
+                        android:paddingTop="4dp"
+                        android:paddingEnd="10dp"
+                        android:paddingBottom="4dp"
+                        android:text="Feeling okay"
+                        android:textColor="@color/accent_amber"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
 
-                </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
 
-            </LinearLayout>
-
-        </com.google.android.material.card.MaterialCardView>
-
-        <!-- MOOD -->
-
-        <com.google.android.material.card.MaterialCardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="18dp"
-            app:cardBackgroundColor="@color/bg_card"
-            app:cardCornerRadius="28dp"
-            app:cardElevation="0dp"
-            app:strokeColor="@color/stroke_light"
-            app:strokeWidth="1dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="22dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:letterSpacing="0.12"
-                    android:text="MOOD CHECK"
-                    android:textColor="@color/mood_green"
-                    android:textSize="11sp"
-                    android:textStyle="bold"/>
-
+                <!-- Mood emoji row -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -244,95 +170,302 @@
                     <TextView
                         android:id="@+id/mood1"
                         android:layout_width="0dp"
-                        android:layout_height="60dp"
-                        android:layout_marginEnd="6dp"
+                        android:layout_height="62dp"
+                        android:layout_marginEnd="7dp"
                         android:layout_weight="1"
                         android:background="@drawable/bg_mood_unselected"
                         android:gravity="center"
                         android:text="😞"
-                        android:textSize="28sp"/>
+                        android:textSize="26sp" />
 
                     <TextView
                         android:id="@+id/mood2"
                         android:layout_width="0dp"
-                        android:layout_height="60dp"
-                        android:layout_marginEnd="6dp"
+                        android:layout_height="62dp"
+                        android:layout_marginEnd="7dp"
                         android:layout_weight="1"
                         android:background="@drawable/bg_mood_unselected"
                         android:gravity="center"
                         android:text="😐"
-                        android:textSize="28sp"/>
+                        android:textSize="26sp" />
 
                     <TextView
                         android:id="@+id/mood3"
                         android:layout_width="0dp"
-                        android:layout_height="60dp"
-                        android:layout_marginEnd="6dp"
+                        android:layout_height="62dp"
+                        android:layout_marginEnd="7dp"
                         android:layout_weight="1"
                         android:background="@drawable/bg_mood_unselected"
                         android:gravity="center"
                         android:text="🙂"
-                        android:textSize="28sp"/>
+                        android:textSize="26sp" />
 
                     <TextView
                         android:id="@+id/mood4"
                         android:layout_width="0dp"
-                        android:layout_height="60dp"
-                        android:layout_marginEnd="6dp"
+                        android:layout_height="62dp"
+                        android:layout_marginEnd="7dp"
                         android:layout_weight="1"
                         android:background="@drawable/bg_mood_unselected"
                         android:gravity="center"
                         android:text="😄"
-                        android:textSize="28sp"/>
+                        android:textSize="26sp" />
 
                     <TextView
                         android:id="@+id/mood5"
                         android:layout_width="0dp"
-                        android:layout_height="60dp"
+                        android:layout_height="62dp"
                         android:layout_weight="1"
                         android:background="@drawable/bg_mood_unselected"
                         android:gravity="center"
                         android:text="🔥"
-                        android:textSize="28sp"/>
+                        android:textSize="26sp" />
 
                 </LinearLayout>
-
-                <TextView
-                    android:id="@+id/tvMoodLabel"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginTop="12dp"
-                    android:text="Feeling okay"
-                    android:textColor="@color/text_secondary"
-                    android:textSize="13sp"/>
 
             </LinearLayout>
 
         </com.google.android.material.card.MaterialCardView>
 
-        <!-- SAVE -->
+        <!-- ══════════════════════════════════════════════════ -->
+        <!--  TODAY'S WIN CARD                                  -->
+        <!-- ══════════════════════════════════════════════════ -->
 
-        <Button
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="16dp"
+            app:cardBackgroundColor="@color/bg_card"
+            app:cardCornerRadius="28dp"
+            app:cardElevation="0dp"
+            app:strokeColor="@color/stroke_light"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="22dp">
+
+                <!-- Label row with icon -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="16dp">
+
+                    <FrameLayout
+                        android:layout_width="34dp"
+                        android:layout_height="34dp"
+                        android:background="@drawable/bg_settings_inner">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="🏆"
+                            android:textSize="15sp" />
+
+                    </FrameLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:letterSpacing="0.10"
+                            android:text="TODAY'S WIN"
+                            android:textColor="@color/accent_amber"
+                            android:textSize="10sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="1dp"
+                            android:text="What went well today?"
+                            android:textColor="@color/text_dim"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Describe your win…"
+                    app:boxBackgroundColor="@color/bg_input"
+                    app:boxCornerRadiusBottomEnd="16dp"
+                    app:boxCornerRadiusBottomStart="16dp"
+                    app:boxCornerRadiusTopEnd="16dp"
+                    app:boxCornerRadiusTopStart="16dp"
+                    app:boxStrokeColor="@color/accent_amber"
+                    app:hintTextColor="@color/text_dim">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etWin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="top"
+                        android:inputType="textMultiLine|textCapSentences"
+                        android:maxLines="5"
+                        android:minLines="3"
+                        android:textColor="@color/text_primary"
+                        android:textSize="15sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- ══════════════════════════════════════════════════ -->
+        <!--  REFLECTION CARD                                   -->
+        <!-- ══════════════════════════════════════════════════ -->
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="16dp"
+            app:cardBackgroundColor="@color/bg_card"
+            app:cardCornerRadius="28dp"
+            app:cardElevation="0dp"
+            app:strokeColor="@color/stroke_light"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="22dp">
+
+                <!-- Label row with icon -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="16dp">
+
+                    <FrameLayout
+                        android:layout_width="34dp"
+                        android:layout_height="34dp"
+                        android:background="@drawable/bg_settings_inner">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="💭"
+                            android:textSize="15sp" />
+
+                    </FrameLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:letterSpacing="0.10"
+                            android:text="REFLECTION"
+                            android:textColor="@color/mood_purple"
+                            android:textSize="10sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="1dp"
+                            android:text="What could have been better?"
+                            android:textColor="@color/text_dim"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Your honest reflection…"
+                    app:boxBackgroundColor="@color/bg_input"
+                    app:boxCornerRadiusBottomEnd="16dp"
+                    app:boxCornerRadiusBottomStart="16dp"
+                    app:boxCornerRadiusTopEnd="16dp"
+                    app:boxCornerRadiusTopStart="16dp"
+                    app:boxStrokeColor="@color/mood_purple"
+                    app:hintTextColor="@color/text_dim">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etReflection"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="top"
+                        android:inputType="textMultiLine|textCapSentences"
+                        android:maxLines="7"
+                        android:minLines="4"
+                        android:textColor="@color/text_primary"
+                        android:textSize="15sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- ══════════════════════════════════════════════════ -->
+        <!--  SAVE BUTTON                                       -->
+        <!-- ══════════════════════════════════════════════════ -->
+
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btnSaveJournal"
             android:layout_width="match_parent"
-            android:layout_height="58dp"
-            android:layout_marginTop="24dp"
-            android:backgroundTint="@color/accent_amber"
+            android:layout_height="56dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="16dp"
+            android:letterSpacing="0.04"
             android:text="Save Today's Entry"
             android:textAllCaps="false"
             android:textColor="@color/bg_primary"
             android:textSize="16sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold"
+            app:backgroundTint="@color/accent_amber"
+            app:cornerRadius="16dp"
+            app:elevation="0dp"
+            app:rippleColor="#CC8A00" />
 
-        <!-- PAST ENTRIES -->
+        <!-- ══════════════════════════════════════════════════ -->
+        <!--  PAST ENTRIES HEADER                               -->
+        <!-- ══════════════════════════════════════════════════ -->
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
             android:gravity="center_vertical"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:paddingStart="24dp"
+            android:paddingTop="32dp"
+            android:paddingEnd="24dp"
+            android:paddingBottom="0dp">
 
             <TextView
                 android:layout_width="0dp"
@@ -340,26 +473,37 @@
                 android:layout_weight="1"
                 android:letterSpacing="0.12"
                 android:text="PAST ENTRIES"
-                android:textColor="@color/text_dim"
-                android:textSize="11sp"
-                android:textStyle="bold"/>
+                android:textColor="@color/accent_amber"
+                android:textSize="10sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/tvEntryCount"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@drawable/bg_settings_chip"
+                android:paddingStart="10dp"
+                android:paddingTop="4dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="4dp"
                 android:text="0 entries"
                 android:textColor="@color/text_secondary"
-                android:textSize="12sp"/>
+                android:textSize="11sp" />
 
         </LinearLayout>
+
+        <!-- ══════════════════════════════════════════════════ -->
+        <!--  PAST ENTRIES LIST (populated from Kotlin)         -->
+        <!-- ══════════════════════════════════════════════════ -->
 
         <LinearLayout
             android:id="@+id/layoutPastEntries"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="14dp"
-            android:orientation="vertical"/>
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="vertical" />
 
     </LinearLayout>
 

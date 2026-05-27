@@ -55,11 +55,14 @@ public final class FragmentHomeBinding implements ViewBinding {
   @NonNull
   public final TextView tvTier;
 
+  @NonNull
+  public final CardXpProgressBinding xpCard;
+
   private FragmentHomeBinding(@NonNull NestedScrollView rootView, @NonNull LinearLayout emptyState,
       @NonNull ProgressBar progressBar, @NonNull RecyclerView rvHabits, @NonNull TextView tvDate,
       @NonNull TextView tvGreeting, @NonNull TextView tvHabitCount, @NonNull TextView tvInsight,
       @NonNull TextView tvPct, @NonNull TextView tvScore, @NonNull TextView tvScoreLabel,
-      @NonNull TextView tvTier) {
+      @NonNull TextView tvTier, @NonNull CardXpProgressBinding xpCard) {
     this.rootView = rootView;
     this.emptyState = emptyState;
     this.progressBar = progressBar;
@@ -72,6 +75,7 @@ public final class FragmentHomeBinding implements ViewBinding {
     this.tvScore = tvScore;
     this.tvScoreLabel = tvScoreLabel;
     this.tvTier = tvTier;
+    this.xpCard = xpCard;
   }
 
   @Override
@@ -167,8 +171,16 @@ public final class FragmentHomeBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.xpCard;
+      View xpCard = ViewBindings.findChildViewById(rootView, id);
+      if (xpCard == null) {
+        break missingId;
+      }
+      CardXpProgressBinding binding_xpCard = CardXpProgressBinding.bind(xpCard);
+
       return new FragmentHomeBinding((NestedScrollView) rootView, emptyState, progressBar, rvHabits,
-          tvDate, tvGreeting, tvHabitCount, tvInsight, tvPct, tvScore, tvScoreLabel, tvTier);
+          tvDate, tvGreeting, tvHabitCount, tvInsight, tvPct, tvScore, tvScoreLabel, tvTier,
+          binding_xpCard);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

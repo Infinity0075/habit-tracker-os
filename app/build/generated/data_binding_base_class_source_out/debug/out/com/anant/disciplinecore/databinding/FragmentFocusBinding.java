@@ -6,7 +6,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
-import android.widget.ProgressBar;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
@@ -16,6 +15,8 @@ import androidx.core.widget.NestedScrollView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.anant.disciplinecore.R;
+import com.anant.disciplinecore.core.ui.components.FocusTimerView;
+import com.anant.disciplinecore.core.ui.components.GlowButton;
 import com.google.android.material.textfield.TextInputEditText;
 import java.lang.NullPointerException;
 import java.lang.Override;
@@ -35,10 +36,13 @@ public final class FragmentFocusBinding implements ViewBinding {
   public final Button btnSkip;
 
   @NonNull
-  public final Button btnStartPause;
+  public final GlowButton btnStartPause;
 
   @NonNull
   public final TextInputEditText etCustomMinutes;
+
+  @NonNull
+  public final FocusTimerView focusTimerView;
 
   @NonNull
   public final LinearLayout layoutCustomTime;
@@ -53,9 +57,6 @@ public final class FragmentFocusBinding implements ViewBinding {
   public final RadioGroup rgTimerMode;
 
   @NonNull
-  public final ProgressBar timerProgress;
-
-  @NonNull
   public final TextView tvQuote;
 
   @NonNull
@@ -67,32 +68,28 @@ public final class FragmentFocusBinding implements ViewBinding {
   @NonNull
   public final TextView tvSessionLabel;
 
-  @NonNull
-  public final TextView tvTimer;
-
   private FragmentFocusBinding(@NonNull NestedScrollView rootView, @NonNull Button btnNewQuote,
-      @NonNull Button btnReset, @NonNull Button btnSkip, @NonNull Button btnStartPause,
-      @NonNull TextInputEditText etCustomMinutes, @NonNull LinearLayout layoutCustomTime,
-      @NonNull RadioButton rbCustom, @NonNull RadioButton rbPomodoro,
-      @NonNull RadioGroup rgTimerMode, @NonNull ProgressBar timerProgress,
-      @NonNull TextView tvQuote, @NonNull TextView tvQuoteAuthor, @NonNull TextView tvSessionCount,
-      @NonNull TextView tvSessionLabel, @NonNull TextView tvTimer) {
+      @NonNull Button btnReset, @NonNull Button btnSkip, @NonNull GlowButton btnStartPause,
+      @NonNull TextInputEditText etCustomMinutes, @NonNull FocusTimerView focusTimerView,
+      @NonNull LinearLayout layoutCustomTime, @NonNull RadioButton rbCustom,
+      @NonNull RadioButton rbPomodoro, @NonNull RadioGroup rgTimerMode, @NonNull TextView tvQuote,
+      @NonNull TextView tvQuoteAuthor, @NonNull TextView tvSessionCount,
+      @NonNull TextView tvSessionLabel) {
     this.rootView = rootView;
     this.btnNewQuote = btnNewQuote;
     this.btnReset = btnReset;
     this.btnSkip = btnSkip;
     this.btnStartPause = btnStartPause;
     this.etCustomMinutes = etCustomMinutes;
+    this.focusTimerView = focusTimerView;
     this.layoutCustomTime = layoutCustomTime;
     this.rbCustom = rbCustom;
     this.rbPomodoro = rbPomodoro;
     this.rgTimerMode = rgTimerMode;
-    this.timerProgress = timerProgress;
     this.tvQuote = tvQuote;
     this.tvQuoteAuthor = tvQuoteAuthor;
     this.tvSessionCount = tvSessionCount;
     this.tvSessionLabel = tvSessionLabel;
-    this.tvTimer = tvTimer;
   }
 
   @Override
@@ -141,7 +138,7 @@ public final class FragmentFocusBinding implements ViewBinding {
       }
 
       id = R.id.btnStartPause;
-      Button btnStartPause = ViewBindings.findChildViewById(rootView, id);
+      GlowButton btnStartPause = ViewBindings.findChildViewById(rootView, id);
       if (btnStartPause == null) {
         break missingId;
       }
@@ -149,6 +146,12 @@ public final class FragmentFocusBinding implements ViewBinding {
       id = R.id.etCustomMinutes;
       TextInputEditText etCustomMinutes = ViewBindings.findChildViewById(rootView, id);
       if (etCustomMinutes == null) {
+        break missingId;
+      }
+
+      id = R.id.focusTimerView;
+      FocusTimerView focusTimerView = ViewBindings.findChildViewById(rootView, id);
+      if (focusTimerView == null) {
         break missingId;
       }
 
@@ -176,12 +179,6 @@ public final class FragmentFocusBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.timerProgress;
-      ProgressBar timerProgress = ViewBindings.findChildViewById(rootView, id);
-      if (timerProgress == null) {
-        break missingId;
-      }
-
       id = R.id.tvQuote;
       TextView tvQuote = ViewBindings.findChildViewById(rootView, id);
       if (tvQuote == null) {
@@ -206,15 +203,9 @@ public final class FragmentFocusBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.tvTimer;
-      TextView tvTimer = ViewBindings.findChildViewById(rootView, id);
-      if (tvTimer == null) {
-        break missingId;
-      }
-
       return new FragmentFocusBinding((NestedScrollView) rootView, btnNewQuote, btnReset, btnSkip,
-          btnStartPause, etCustomMinutes, layoutCustomTime, rbCustom, rbPomodoro, rgTimerMode,
-          timerProgress, tvQuote, tvQuoteAuthor, tvSessionCount, tvSessionLabel, tvTimer);
+          btnStartPause, etCustomMinutes, focusTimerView, layoutCustomTime, rbCustom, rbPomodoro,
+          rgTimerMode, tvQuote, tvQuoteAuthor, tvSessionCount, tvSessionLabel);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

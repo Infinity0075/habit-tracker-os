@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <resources>
 
     <!-- ================================================= -->
@@ -7,9 +8,15 @@
 
     <color name="bg_primary">#09090B</color>
 
-    <color name="bg_card">#14141B</color>
+    <color name="bg_card">#0D0D10</color>
 
     <color name="bg_input">#1C1C26</color>
+
+    <!-- ================================================= -->
+    <!-- SURFACE -->
+    <!-- ================================================= -->
+
+    <color name="surface_card">#121218</color>
 
     <!-- ================================================= -->
     <!-- PREMIUM AMBER SYSTEM -->
@@ -22,6 +29,14 @@
     <color name="accent_amber_glow">#33FFB020</color>
 
     <color name="soft_gold">#F6C453</color>
+
+    <!-- ================================================= -->
+    <!-- ACCENTS -->
+    <!-- ================================================= -->
+
+    <color name="accent_primary">#FFB020</color>
+
+    <color name="accent_secondary">#F6C453</color>
 
     <!-- ================================================= -->
     <!-- TEXT -->
@@ -37,7 +52,11 @@
     <!-- STROKES / DIVIDERS -->
     <!-- ================================================= -->
 
+    <color name="bg_divider">#12FFFFFF</color>
+
     <color name="divider">#242430</color>
+
+    <color name="divider_color">#242430</color>
 
     <color name="stroke_light">#2D2D3A</color>
 

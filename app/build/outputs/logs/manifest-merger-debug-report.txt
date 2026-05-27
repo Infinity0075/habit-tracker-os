@@ -110,14 +110,14 @@ MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/apple/.gradle/caches
 		ADDED from /Users/apple/Downloads/DisciplineCore/app/src/main/AndroidManifest.xml:6:9-35
 	android:theme
 		ADDED from /Users/apple/Downloads/DisciplineCore/app/src/main/AndroidManifest.xml:12:9-52
-activity#com.anant.disciplinecore.ui.SplashActivity
+activity#com.anant.disciplinecore.SplashActivity
 ADDED from /Users/apple/Downloads/DisciplineCore/app/src/main/AndroidManifest.xml:15:9-26:20
 	android:exported
 		ADDED from /Users/apple/Downloads/DisciplineCore/app/src/main/AndroidManifest.xml:17:13-36
 	android:theme
 		ADDED from /Users/apple/Downloads/DisciplineCore/app/src/main/AndroidManifest.xml:18:13-56
 	android:name
-		ADDED from /Users/apple/Downloads/DisciplineCore/app/src/main/AndroidManifest.xml:16:13-46
+		ADDED from /Users/apple/Downloads/DisciplineCore/app/src/main/AndroidManifest.xml:16:13-43
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
 ADDED from /Users/apple/Downloads/DisciplineCore/app/src/main/AndroidManifest.xml:20:13-24:29
 action#android.intent.action.MAIN
@@ -128,14 +128,14 @@ category#android.intent.category.LAUNCHER
 ADDED from /Users/apple/Downloads/DisciplineCore/app/src/main/AndroidManifest.xml:23:17-77
 	android:name
 		ADDED from /Users/apple/Downloads/DisciplineCore/app/src/main/AndroidManifest.xml:23:27-74
-activity#com.anant.disciplinecore.ui.MainActivity
+activity#com.anant.disciplinecore.MainActivity
 ADDED from /Users/apple/Downloads/DisciplineCore/app/src/main/AndroidManifest.xml:29:9-32:58
 	android:windowSoftInputMode
 		ADDED from /Users/apple/Downloads/DisciplineCore/app/src/main/AndroidManifest.xml:32:13-55
 	android:exported
 		ADDED from /Users/apple/Downloads/DisciplineCore/app/src/main/AndroidManifest.xml:31:13-37
 	android:name
-		ADDED from /Users/apple/Downloads/DisciplineCore/app/src/main/AndroidManifest.xml:30:13-44
+		ADDED from /Users/apple/Downloads/DisciplineCore/app/src/main/AndroidManifest.xml:30:13-41
 receiver#com.anant.disciplinecore.worker.MidnightResetReceiver
 ADDED from /Users/apple/Downloads/DisciplineCore/app/src/main/AndroidManifest.xml:35:9-37:40
 	android:exported

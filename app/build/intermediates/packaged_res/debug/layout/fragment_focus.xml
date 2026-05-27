@@ -224,75 +224,57 @@
                     android:textSize="12sp"
                     android:textStyle="bold"/>
 
-                <TextView
-                    android:id="@+id/tvTimer"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:fontFamily="monospace"
-                    android:text="25:00"
-                    android:textColor="@color/text_primary"
-                    android:textSize="76sp"
-                    android:textStyle="bold"/>
+                <com.anant.disciplinecore.core.ui.components.FocusTimerView
+                    android:id="@+id/focusTimerView"
+                    android:layout_width="280dp"
+                    android:layout_height="280dp"
+                    android:layout_marginTop="18dp" />
 
                 <TextView
                     android:id="@+id/tvSessionCount"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="6dp"
+                    android:layout_marginTop="20dp"
                     android:text="Session 1 of 4"
                     android:textColor="@color/text_secondary"
                     android:textSize="14sp"/>
-
-                <ProgressBar
-                    android:id="@+id/timerProgress"
-                    style="?android:attr/progressBarStyleHorizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="6dp"
-                    android:layout_marginTop="24dp"
-                    android:max="100"
-                    android:progress="100"
-                    android:progressBackgroundTint="@color/divider"
-                    android:progressTint="@color/accent_amber"/>
 
                 <!-- CONTROLS -->
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="28dp"
+                    android:layout_marginTop="30dp"
                     android:gravity="center"
                     android:orientation="horizontal">
 
                     <Button
                         android:id="@+id/btnReset"
-                        android:layout_width="54dp"
-                        android:layout_height="54dp"
+                        android:layout_width="58dp"
+                        android:layout_height="58dp"
                         android:backgroundTint="@color/bg_input"
                         android:text="↺"
                         android:textColor="@color/text_primary"
-                        android:textSize="20sp"/>
+                        android:textSize="20sp" />
 
-                    <Button
+                    <com.anant.disciplinecore.core.ui.components.GlowButton
                         android:id="@+id/btnStartPause"
-                        android:layout_width="160dp"
-                        android:layout_height="56dp"
-                        android:layout_marginHorizontal="14dp"
-                        android:backgroundTint="@color/accent_amber"
+                        android:layout_width="170dp"
+                        android:layout_height="58dp"
+                        android:layout_marginHorizontal="16dp"
                         android:text="▶ Start"
-                        android:textAllCaps="false"
                         android:textColor="@color/bg_primary"
                         android:textSize="17sp"
-                        android:textStyle="bold"/>
+                        android:textStyle="bold" />
 
                     <Button
                         android:id="@+id/btnSkip"
-                        android:layout_width="54dp"
-                        android:layout_height="54dp"
+                        android:layout_width="58dp"
+                        android:layout_height="58dp"
                         android:backgroundTint="@color/bg_input"
                         android:text="⏭"
                         android:textColor="@color/text_primary"
-                        android:textSize="18sp"/>
+                        android:textSize="18sp" />
 
                 </LinearLayout>
 

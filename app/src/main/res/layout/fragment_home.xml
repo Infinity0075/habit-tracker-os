@@ -50,6 +50,16 @@
         </LinearLayout>
 
         <!-- ================================================= -->
+        <!-- XP CARD -->
+        <!-- ================================================= -->
+
+        <include
+            android:id="@+id/xpCard"
+            layout="@layout/card_xp_progress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <!-- ================================================= -->
         <!-- DISCIPLINE SCORE -->
         <!-- ================================================= -->
 
@@ -116,7 +126,7 @@
 
                     </LinearLayout>
 
-                    <!-- RIGHT SIDE -->
+                    <!-- RIGHT -->
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -214,8 +224,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
-            android:paddingHorizontal="22dp"
-            android:gravity="center_vertical">
+            android:gravity="center_vertical"
+            android:paddingHorizontal="22dp">
 
             <TextView
                 android:layout_width="0dp"

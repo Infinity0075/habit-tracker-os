@@ -8,24 +8,32 @@
         "source": "/Users/apple/.gradle/daemon/8.14.5/com.anant.disciplinecore.app-main-48:/layout/fragment_settings.xml"
     },
     {
-        "merged": "/Users/apple/.gradle/daemon/8.14.5/com.anant.disciplinecore.app-mergeDebugResources-45:/layout/item_habit.xml",
-        "source": "/Users/apple/.gradle/daemon/8.14.5/com.anant.disciplinecore.app-main-48:/layout/item_habit.xml"
+        "merged": "/Users/apple/.gradle/daemon/8.14.5/com.anant.disciplinecore.app-mergeDebugResources-45:/layout/item_insight.xml",
+        "source": "/Users/apple/.gradle/daemon/8.14.5/com.anant.disciplinecore.app-main-48:/layout/item_insight.xml"
     },
     {
-        "merged": "/Users/apple/.gradle/daemon/8.14.5/com.anant.disciplinecore.app-mergeDebugResources-45:/layout/fragment_focus.xml",
-        "source": "/Users/apple/.gradle/daemon/8.14.5/com.anant.disciplinecore.app-main-48:/layout/fragment_focus.xml"
+        "merged": "/Users/apple/.gradle/daemon/8.14.5/com.anant.disciplinecore.app-mergeDebugResources-45:/layout/xp_progress_drawable.xml",
+        "source": "/Users/apple/.gradle/daemon/8.14.5/com.anant.disciplinecore.app-main-48:/layout/xp_progress_drawable.xml"
+    },
+    {
+        "merged": "/Users/apple/.gradle/daemon/8.14.5/com.anant.disciplinecore.app-mergeDebugResources-45:/layout/card_xp_progress.xml",
+        "source": "/Users/apple/.gradle/daemon/8.14.5/com.anant.disciplinecore.app-main-48:/layout/card_xp_progress.xml"
+    },
+    {
+        "merged": "/Users/apple/.gradle/daemon/8.14.5/com.anant.disciplinecore.app-mergeDebugResources-45:/layout/item_habit.xml",
+        "source": "/Users/apple/.gradle/daemon/8.14.5/com.anant.disciplinecore.app-main-48:/layout/item_habit.xml"
     },
     {
         "merged": "/Users/apple/.gradle/daemon/8.14.5/com.anant.disciplinecore.app-mergeDebugResources-45:/layout/item_win.xml",
         "source": "/Users/apple/.gradle/daemon/8.14.5/com.anant.disciplinecore.app-main-48:/layout/item_win.xml"
     },
     {
-        "merged": "/Users/apple/.gradle/daemon/8.14.5/com.anant.disciplinecore.app-mergeDebugResources-45:/layout/fragment_stats.xml",
-        "source": "/Users/apple/.gradle/daemon/8.14.5/com.anant.disciplinecore.app-main-48:/layout/fragment_stats.xml"
+        "merged": "/Users/apple/.gradle/daemon/8.14.5/com.anant.disciplinecore.app-mergeDebugResources-45:/layout/fragment_focus.xml",
+        "source": "/Users/apple/.gradle/daemon/8.14.5/com.anant.disciplinecore.app-main-48:/layout/fragment_focus.xml"
     },
     {
-        "merged": "com.anant.disciplinecore.app-mergeDebugResources-45:/layout/fragment_home.xml",
-        "source": "com.anant.disciplinecore.app-main-48:/layout/fragment_home.xml"
+        "merged": "/Users/apple/.gradle/daemon/8.14.5/com.anant.disciplinecore.app-mergeDebugResources-45:/layout/fragment_stats.xml",
+        "source": "/Users/apple/.gradle/daemon/8.14.5/com.anant.disciplinecore.app-main-48:/layout/fragment_stats.xml"
     },
     {
         "merged": "/Users/apple/.gradle/daemon/8.14.5/com.anant.disciplinecore.app-mergeDebugResources-45:/layout/fragment_home.xml",
@@ -40,8 +48,20 @@
         "source": "/Users/apple/.gradle/daemon/8.14.5/com.anant.disciplinecore.app-main-48:/layout/activity_splash.xml"
     },
     {
+        "merged": "/Users/apple/.gradle/daemon/8.14.5/com.anant.disciplinecore.app-mergeDebugResources-45:/layout/card_insights.xml",
+        "source": "/Users/apple/.gradle/daemon/8.14.5/com.anant.disciplinecore.app-main-48:/layout/card_insights.xml"
+    },
+    {
         "merged": "/Users/apple/.gradle/daemon/8.14.5/com.anant.disciplinecore.app-mergeDebugResources-45:/layout/dialog_add_habit.xml",
         "source": "/Users/apple/.gradle/daemon/8.14.5/com.anant.disciplinecore.app-main-48:/layout/dialog_add_habit.xml"
+    },
+    {
+        "merged": "com.anant.disciplinecore.app-mergeDebugResources-45:/layout/fragment_settings.xml",
+        "source": "com.anant.disciplinecore.app-main-48:/layout/fragment_settings.xml"
+    },
+    {
+        "merged": "/Users/apple/.gradle/daemon/8.14.5/com.anant.disciplinecore.app-mergeDebugResources-45:/layout/card_analytics.xml",
+        "source": "/Users/apple/.gradle/daemon/8.14.5/com.anant.disciplinecore.app-main-48:/layout/card_analytics.xml"
     },
     {
         "merged": "/Users/apple/.gradle/daemon/8.14.5/com.anant.disciplinecore.app-mergeDebugResources-45:/layout/activity_main.xml",

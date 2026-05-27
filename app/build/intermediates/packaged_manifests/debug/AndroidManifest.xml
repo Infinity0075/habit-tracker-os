@@ -34,7 +34,7 @@
 
         <!-- Splash Screen -->
         <activity
-            android:name="com.anant.disciplinecore.ui.SplashActivity"
+            android:name="com.anant.disciplinecore.SplashActivity"
             android:exported="true"
             android:theme="@style/Theme.DisciplineCore" >
             <intent-filter>
@@ -46,7 +46,7 @@
 
         <!-- Main Activity -->
         <activity
-            android:name="com.anant.disciplinecore.ui.MainActivity"
+            android:name="com.anant.disciplinecore.MainActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
 

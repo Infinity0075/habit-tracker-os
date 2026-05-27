@@ -57,8 +57,8 @@
 35        <!-- Splash Screen -->
 36        <activity
 36-->/Users/apple/Downloads/DisciplineCore/app/src/main/AndroidManifest.xml:15:9-26:20
-37            android:name="com.anant.disciplinecore.ui.SplashActivity"
-37-->/Users/apple/Downloads/DisciplineCore/app/src/main/AndroidManifest.xml:16:13-46
+37            android:name="com.anant.disciplinecore.SplashActivity"
+37-->/Users/apple/Downloads/DisciplineCore/app/src/main/AndroidManifest.xml:16:13-43
 38            android:exported="true"
 38-->/Users/apple/Downloads/DisciplineCore/app/src/main/AndroidManifest.xml:17:13-36
 39            android:theme="@style/Theme.DisciplineCore" >
@@ -78,8 +78,8 @@
 47        <!-- Main Activity -->
 48        <activity
 48-->/Users/apple/Downloads/DisciplineCore/app/src/main/AndroidManifest.xml:29:9-32:58
-49            android:name="com.anant.disciplinecore.ui.MainActivity"
-49-->/Users/apple/Downloads/DisciplineCore/app/src/main/AndroidManifest.xml:30:13-44
+49            android:name="com.anant.disciplinecore.MainActivity"
+49-->/Users/apple/Downloads/DisciplineCore/app/src/main/AndroidManifest.xml:30:13-41
 50            android:exported="false"
 50-->/Users/apple/Downloads/DisciplineCore/app/src/main/AndroidManifest.xml:31:13-37
 51            android:windowSoftInputMode="adjustResize" />

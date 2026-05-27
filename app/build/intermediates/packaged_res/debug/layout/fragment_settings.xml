@@ -1,43 +1,336 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#0F0F11">
+    android:background="@color/bg_primary"
+    android:fillViewport="true"
+    android:overScrollMode="never"
+    android:scrollbars="none">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:paddingHorizontal="20dp"
-        android:paddingTop="52dp"
-        android:paddingBottom="32dp">
+        android:paddingTop="54dp"
+        android:paddingBottom="120dp">
 
-        <!-- Header -->
-        <TextView
-            android:layout_width="wrap_content"
+        <!-- ══════════════════════════════════════════════════ -->
+        <!--  PAGE HEADER                                       -->
+        <!-- ══════════════════════════════════════════════════ -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Settings"
-            android:textColor="#F5F5F0"
-            android:textSize="26sp"
-            android:textStyle="bold" />
+            android:orientation="vertical"
+            android:paddingHorizontal="24dp">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="2dp"
-            android:text="Customize your experience"
-            android:textColor="#6B6B80"
-            android:textSize="13sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Settings"
+                android:textColor="@color/text_primary"
+                android:textSize="30sp"
+                android:textStyle="bold" />
 
-        <!-- Profile Card -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Control your discipline system"
+                android:textColor="@color/text_secondary"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <!-- ══════════════════════════════════════════════════ -->
+        <!--  HERO IDENTITY CARD                                -->
+        <!-- ══════════════════════════════════════════════════ -->
+
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
             android:layout_marginTop="24dp"
-            app:cardBackgroundColor="#1A1A1F"
-            app:cardCornerRadius="20dp"
+            android:layout_marginEnd="16dp"
+            app:cardBackgroundColor="@color/bg_card"
+            app:cardCornerRadius="28dp"
+            app:cardElevation="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="22dp">
+
+                <!-- Avatar row -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <!-- Avatar with amber ring -->
+                    <FrameLayout
+                        android:layout_width="68dp"
+                        android:layout_height="68dp">
+
+                        <View
+                            android:layout_width="68dp"
+                            android:layout_height="68dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/bg_avatar_ring" />
+
+                        <LinearLayout
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/bg_habit_emoji"
+                            android:gravity="center">
+
+                            <TextView
+                                android:id="@+id/tvProfileInitial"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="A"
+                                android:textColor="@color/accent_amber"
+                                android:textSize="26sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+                    </FrameLayout>
+
+                    <!-- Name + subtitle -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvHeroName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Discipline Builder"
+                            android:textColor="@color/text_primary"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="Building consistency every day."
+                            android:textColor="@color/text_secondary"
+                            android:textSize="13sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- Hairline divider -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="18dp"
+                    android:background="@color/bg_divider" />
+
+                <!-- ══════════════════════════════════════════════════ -->
+                <!-- LIVE STATS STRIP -->
+                <!-- ══════════════════════════════════════════════════ -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <!-- ================================================= -->
+                    <!-- STREAK -->
+                    <!-- ================================================= -->
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_settings_chip"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:paddingTop="18dp"
+                        android:paddingBottom="18dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="🔥"
+                            android:textSize="20sp"/>
+
+                        <TextView
+                            android:id="@+id/tvSettingsStreak"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="0"
+                            android:textColor="@color/accent_amber"
+                            android:textSize="30sp"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Current Streak"
+                            android:textColor="@color/text_primary"
+                            android:textSize="12sp"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:text="Keep showing up"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="10sp"/>
+
+                    </LinearLayout>
+
+                    <!-- SPACING -->
+
+                    <Space
+                        android:layout_width="10dp"
+                        android:layout_height="wrap_content"/>
+
+                    <!-- ================================================= -->
+                    <!-- FOCUS -->
+                    <!-- ================================================= -->
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_settings_chip"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:paddingTop="18dp"
+                        android:paddingBottom="18dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="🧠"
+                            android:textSize="20sp"/>
+
+                        <TextView
+                            android:id="@+id/tvSettingsFocus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="0h"
+                            android:textColor="@color/text_primary"
+                            android:textSize="28sp"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Deep Work"
+                            android:textColor="@color/text_primary"
+                            android:textSize="12sp"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:text="Peak focus"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="10sp"/>
+
+                    </LinearLayout>
+
+                    <!-- SPACING -->
+
+                    <Space
+                        android:layout_width="10dp"
+                        android:layout_height="wrap_content"/>
+
+                    <!-- ================================================= -->
+                    <!-- SCORE -->
+                    <!-- ================================================= -->
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_settings_chip"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:paddingTop="18dp"
+                        android:paddingBottom="18dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="⚡"
+                            android:textSize="20sp"/>
+
+                        <TextView
+                            android:id="@+id/tvSettingsScore"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="0%"
+                            android:textColor="@color/text_primary"
+                            android:textSize="28sp"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Elite Tier"
+                            android:textColor="@color/text_primary"
+                            android:textSize="12sp"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:text="Consistency"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="10sp"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- ══════════════════════════════════════════════════ -->
+        <!--  SECTION: PROFILE                                  -->
+        <!-- ══════════════════════════════════════════════════ -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="10dp"
+            android:letterSpacing="0.12"
+            android:text="PROFILE"
+            android:textColor="@color/accent_amber"
+            android:textSize="10sp"
+            android:textStyle="bold" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            app:cardBackgroundColor="@color/bg_card"
+            app:cardCornerRadius="24dp"
             app:cardElevation="0dp">
 
             <LinearLayout
@@ -46,77 +339,105 @@
                 android:orientation="vertical"
                 android:padding="20dp">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="PROFILE"
-                    android:textColor="#4B4B5A"
-                    android:textSize="10sp" />
-
                 <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:hint="Your name"
-                    app:boxStrokeColor="#F59E0B"
-                    app:hintTextColor="#6B6B80">
+                    app:boxBackgroundColor="@color/bg_input"
+                    app:boxCornerRadiusBottomEnd="14dp"
+                    app:boxCornerRadiusBottomStart="14dp"
+                    app:boxCornerRadiusTopEnd="14dp"
+                    app:boxCornerRadiusTopStart="14dp"
+                    app:boxStrokeColor="@color/accent_amber"
+                    app:hintTextColor="@color/text_dim">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/etUserName"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textColor="#F5F5F0"
-                        android:inputType="textPersonName" />
+                        android:inputType="textPersonName|textCapWords"
+                        android:textColor="@color/text_primary" />
 
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <Button
                     android:id="@+id/btnSaveName"
-                    android:layout_width="wrap_content"
-                    android:layout_height="40dp"
-                    android:layout_marginTop="10dp"
-                    android:backgroundTint="#F59E0B"
-                    android:text="Save Name"
-                    android:textColor="#0F0F11"
-                    android:textSize="13sp" />
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="14dp"
+                    android:background="@drawable/bg_primary_button"
+                    android:letterSpacing="0.04"
+                    android:text="Save Identity"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
 
             </LinearLayout>
+
         </androidx.cardview.widget.CardView>
 
-        <!-- Notifications Card -->
+        <!-- ══════════════════════════════════════════════════ -->
+        <!--  SECTION: NOTIFICATIONS                            -->
+        <!-- ══════════════════════════════════════════════════ -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="10dp"
+            android:letterSpacing="0.12"
+            android:text="NOTIFICATIONS"
+            android:textColor="@color/accent_amber"
+            android:textSize="10sp"
+            android:textStyle="bold" />
+
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            app:cardBackgroundColor="#1A1A1F"
-            app:cardCornerRadius="20dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            app:cardBackgroundColor="@color/bg_card"
+            app:cardCornerRadius="24dp"
             app:cardElevation="0dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="20dp">
+                android:orientation="vertical">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="NOTIFICATIONS"
-                    android:textColor="#4B4B5A"
-                    android:textSize="10sp" />
-
-                <!-- Daily reminder toggle -->
+                <!-- Daily Reminder row -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
                     android:gravity="center_vertical"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:paddingStart="20dp"
+                    android:paddingTop="18dp"
+                    android:paddingEnd="20dp"
+                    android:paddingBottom="18dp">
+
+                    <!-- Icon pill -->
+                    <FrameLayout
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/bg_settings_inner">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="🔔"
+                            android:textSize="17sp" />
+
+                    </FrameLayout>
 
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
+                        android:layout_marginStart="14dp"
                         android:layout_weight="1"
                         android:orientation="vertical">
 
@@ -124,14 +445,16 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Daily Reminder"
-                            android:textColor="#F5F5F0"
-                            android:textSize="15sp" />
+                            android:textColor="@color/text_primary"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Get reminded to check your habits"
-                            android:textColor="#6B6B80"
+                            android:layout_marginTop="2dp"
+                            android:text="Stay aligned with your goals"
+                            android:textColor="@color/text_secondary"
                             android:textSize="12sp" />
 
                     </LinearLayout>
@@ -140,51 +463,110 @@
                         android:id="@+id/switchDailyReminder"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:checked="true"
-                        app:thumbTint="#F59E0B"
-                        app:trackTint="#6B3F00" />
+                        app:trackTint="@drawable/bg_premium_switch"
+                        android:thumb="@drawable/bg_premium_switch_thumb" />
 
                 </LinearLayout>
 
-                <!-- Reminder time picker -->
+                <!-- Hairline -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@color/bg_divider" />
+
+                <!-- Reminder time row — hidden until switch is ON -->
                 <LinearLayout
                     android:id="@+id/layoutReminderTime"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="14dp"
                     android:gravity="center_vertical"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:paddingStart="20dp"
+                    android:paddingTop="16dp"
+                    android:paddingEnd="20dp"
+                    android:paddingBottom="16dp"
+                    android:visibility="gone">
+
+                    <!-- Icon pill -->
+                    <FrameLayout
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/bg_settings_inner">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="⏰"
+                            android:textSize="17sp" />
+
+                    </FrameLayout>
 
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
+                        android:layout_marginStart="14dp"
                         android:layout_weight="1"
                         android:text="Reminder Time"
-                        android:textColor="#F5F5F0"
-                        android:textSize="15sp" />
+                        android:textColor="@color/text_primary"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
 
                     <Button
                         android:id="@+id/btnPickTime"
                         android:layout_width="wrap_content"
-                        android:layout_height="36dp"
-                        android:backgroundTint="#2A2A35"
+                        android:layout_height="40dp"
+                        android:background="@drawable/bg_primary_button"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
                         android:text="08:00 AM"
-                        android:textColor="#F59E0B"
-                        android:textSize="13sp" />
+                        android:textAllCaps="false"
+                        android:textColor="@android:color/white"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
 
                 </LinearLayout>
 
-                <!-- Midnight reset toggle -->
+                <!-- Hairline (always visible) -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@color/bg_divider" />
+
+                <!-- Midnight Reset row -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="14dp"
                     android:gravity="center_vertical"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:paddingStart="20dp"
+                    android:paddingTop="18dp"
+                    android:paddingEnd="20dp"
+                    android:paddingBottom="18dp">
+
+                    <!-- Icon pill -->
+                    <FrameLayout
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/bg_settings_inner">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="🌙"
+                            android:textSize="17sp" />
+
+                    </FrameLayout>
 
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
+                        android:layout_marginStart="14dp"
                         android:layout_weight="1"
                         android:orientation="vertical">
 
@@ -192,14 +574,16 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Midnight Reset"
-                            android:textColor="#F5F5F0"
-                            android:textSize="15sp" />
+                            android:textColor="@color/text_primary"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Auto-reset habits at midnight"
-                            android:textColor="#6B6B80"
+                            android:layout_marginTop="2dp"
+                            android:text="Auto-reset tasks at midnight"
+                            android:textColor="@color/text_secondary"
                             android:textSize="12sp" />
 
                     </LinearLayout>
@@ -208,119 +592,177 @@
                         android:id="@+id/switchMidnightReset"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:checked="true"
-                        app:thumbTint="#F59E0B"
-                        app:trackTint="#6B3F00" />
+                        app:trackTint="@drawable/bg_premium_switch"
+                        android:thumb="@drawable/bg_premium_switch_thumb" />
 
                 </LinearLayout>
 
             </LinearLayout>
+
         </androidx.cardview.widget.CardView>
 
-        <!-- Pomodoro Settings Card -->
+        <!-- ══════════════════════════════════════════════════ -->
+        <!--  SECTION: FOCUS SYSTEM                             -->
+        <!-- ══════════════════════════════════════════════════ -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="10dp"
+            android:letterSpacing="0.12"
+            android:text="FOCUS SYSTEM"
+            android:textColor="@color/accent_amber"
+            android:textSize="10sp"
+            android:textStyle="bold" />
+
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            app:cardBackgroundColor="#1A1A1F"
-            app:cardCornerRadius="20dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            app:cardBackgroundColor="@color/bg_card"
+            app:cardCornerRadius="24dp"
             app:cardElevation="0dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:padding="20dp">
+                android:paddingStart="20dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="8dp">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="POMODORO TIMER"
-                    android:textColor="#4B4B5A"
-                    android:textSize="10sp" />
+                <!-- ─── Focus Session ─────────────────────── -->
 
-                <!-- Focus duration -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
                     android:gravity="center_vertical"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:paddingTop="14dp"
+                    android:paddingBottom="14dp">
+
+                    <FrameLayout
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/bg_settings_inner">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="🎯"
+                            android:textSize="17sp" />
+
+                    </FrameLayout>
 
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
+                        android:layout_marginStart="14dp"
                         android:layout_weight="1"
                         android:orientation="vertical">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Focus Duration"
-                            android:textColor="#F5F5F0"
-                            android:textSize="15sp" />
+                            android:text="Focus Session"
+                            android:textColor="@color/text_primary"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
 
                         <TextView
                             android:id="@+id/tvFocusDuration"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
                             android:text="25 minutes"
-                            android:textColor="#6B6B80"
+                            android:textColor="@color/text_secondary"
                             android:textSize="12sp" />
 
                     </LinearLayout>
 
+                    <!-- Stepper -->
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:background="@drawable/bg_settings_inner"
                         android:gravity="center_vertical"
                         android:orientation="horizontal">
 
                         <Button
                             android:id="@+id/btnFocusMinus"
-                            android:layout_width="36dp"
-                            android:layout_height="36dp"
-                            android:backgroundTint="#2A2A35"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="@android:color/transparent"
                             android:text="−"
-                            android:textColor="#F5F5F0"
-                            android:textSize="18sp"
-                            android:padding="0dp" />
+                            android:textAllCaps="false"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
 
                         <TextView
                             android:id="@+id/tvFocusMin"
-                            android:layout_width="40dp"
+                            android:layout_width="44dp"
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:text="25"
-                            android:textColor="#F59E0B"
-                            android:textSize="16sp"
+                            android:textColor="@color/accent_amber"
+                            android:textSize="17sp"
                             android:textStyle="bold" />
 
                         <Button
                             android:id="@+id/btnFocusPlus"
-                            android:layout_width="36dp"
-                            android:layout_height="36dp"
-                            android:backgroundTint="#2A2A35"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="@android:color/transparent"
                             android:text="+"
-                            android:textColor="#F5F5F0"
-                            android:textSize="18sp"
-                            android:padding="0dp" />
+                            android:textAllCaps="false"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
 
                     </LinearLayout>
 
                 </LinearLayout>
 
-                <!-- Short break -->
+                <!-- Hairline -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/bg_divider" />
+
+                <!-- ─── Short Break ───────────────────────── -->
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="14dp"
                     android:gravity="center_vertical"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:paddingTop="14dp"
+                    android:paddingBottom="14dp">
+
+                    <FrameLayout
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/bg_settings_inner">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="☕"
+                            android:textSize="17sp" />
+
+                    </FrameLayout>
 
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
+                        android:layout_marginStart="14dp"
                         android:layout_weight="1"
                         android:orientation="vertical">
 
@@ -328,70 +770,99 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Short Break"
-                            android:textColor="#F5F5F0"
-                            android:textSize="15sp" />
+                            android:textColor="@color/text_primary"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
 
                         <TextView
                             android:id="@+id/tvShortBreakDuration"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
                             android:text="5 minutes"
-                            android:textColor="#6B6B80"
+                            android:textColor="@color/text_secondary"
                             android:textSize="12sp" />
 
                     </LinearLayout>
 
+                    <!-- Stepper -->
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:background="@drawable/bg_settings_inner"
                         android:gravity="center_vertical"
                         android:orientation="horizontal">
 
                         <Button
                             android:id="@+id/btnShortBreakMinus"
-                            android:layout_width="36dp"
-                            android:layout_height="36dp"
-                            android:backgroundTint="#2A2A35"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="@android:color/transparent"
                             android:text="−"
-                            android:textColor="#F5F5F0"
-                            android:textSize="18sp"
-                            android:padding="0dp" />
+                            android:textAllCaps="false"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
 
                         <TextView
                             android:id="@+id/tvShortBreakMin"
-                            android:layout_width="40dp"
+                            android:layout_width="44dp"
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:text="5"
-                            android:textColor="#F59E0B"
-                            android:textSize="16sp"
+                            android:textColor="@color/accent_amber"
+                            android:textSize="17sp"
                             android:textStyle="bold" />
 
                         <Button
                             android:id="@+id/btnShortBreakPlus"
-                            android:layout_width="36dp"
-                            android:layout_height="36dp"
-                            android:backgroundTint="#2A2A35"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="@android:color/transparent"
                             android:text="+"
-                            android:textColor="#F5F5F0"
-                            android:textSize="18sp"
-                            android:padding="0dp" />
+                            android:textAllCaps="false"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
 
                     </LinearLayout>
 
                 </LinearLayout>
 
-                <!-- Long break -->
+                <!-- Hairline -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/bg_divider" />
+
+                <!-- ─── Long Break ────────────────────────── -->
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="14dp"
                     android:gravity="center_vertical"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:paddingTop="14dp"
+                    android:paddingBottom="14dp">
+
+                    <FrameLayout
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/bg_settings_inner">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="🛋️"
+                            android:textSize="17sp" />
+
+                    </FrameLayout>
 
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
+                        android:layout_marginStart="14dp"
                         android:layout_weight="1"
                         android:orientation="vertical">
 
@@ -399,144 +870,191 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Long Break"
-                            android:textColor="#F5F5F0"
-                            android:textSize="15sp" />
+                            android:textColor="@color/text_primary"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
 
                         <TextView
                             android:id="@+id/tvLongBreakDuration"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
                             android:text="15 minutes"
-                            android:textColor="#6B6B80"
+                            android:textColor="@color/text_secondary"
                             android:textSize="12sp" />
 
                     </LinearLayout>
 
+                    <!-- Stepper -->
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:background="@drawable/bg_settings_inner"
                         android:gravity="center_vertical"
                         android:orientation="horizontal">
 
                         <Button
                             android:id="@+id/btnLongBreakMinus"
-                            android:layout_width="36dp"
-                            android:layout_height="36dp"
-                            android:backgroundTint="#2A2A35"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="@android:color/transparent"
                             android:text="−"
-                            android:textColor="#F5F5F0"
-                            android:textSize="18sp"
-                            android:padding="0dp" />
+                            android:textAllCaps="false"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
 
                         <TextView
                             android:id="@+id/tvLongBreakMin"
-                            android:layout_width="40dp"
+                            android:layout_width="44dp"
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:text="15"
-                            android:textColor="#F59E0B"
-                            android:textSize="16sp"
+                            android:textColor="@color/accent_amber"
+                            android:textSize="17sp"
                             android:textStyle="bold" />
 
                         <Button
                             android:id="@+id/btnLongBreakPlus"
-                            android:layout_width="36dp"
-                            android:layout_height="36dp"
-                            android:backgroundTint="#2A2A35"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="@android:color/transparent"
                             android:text="+"
-                            android:textColor="#F5F5F0"
-                            android:textSize="18sp"
-                            android:padding="0dp" />
+                            android:textAllCaps="false"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
 
                     </LinearLayout>
 
                 </LinearLayout>
 
             </LinearLayout>
+
         </androidx.cardview.widget.CardView>
 
-        <!-- App Info Card -->
+        <!-- ══════════════════════════════════════════════════ -->
+        <!--  SECTION: DANGER ZONE                              -->
+        <!-- ══════════════════════════════════════════════════ -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="10dp"
+            android:letterSpacing="0.12"
+            android:text="DANGER ZONE"
+            android:textColor="#EF4444"
+            android:textSize="10sp"
+            android:textStyle="bold" />
+
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            app:cardBackgroundColor="#1A1A1F"
-            app:cardCornerRadius="20dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            app:cardBackgroundColor="@color/bg_card"
+            app:cardCornerRadius="24dp"
             app:cardElevation="0dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="20dp">
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="20dp"
+                android:paddingTop="18dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="18dp">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="APP"
-                    android:textColor="#4B4B5A"
-                    android:textSize="10sp" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Version"
-                        android:textColor="#F5F5F0"
-                        android:textSize="15sp" />
+                <!-- Red icon pill -->
+                <FrameLayout
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/bg_reset_icon">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="1.0.0"
-                        android:textColor="#6B6B80"
-                        android:textSize="13sp" />
+                        android:layout_gravity="center"
+                        android:text="⚠️"
+                        android:textSize="17sp" />
 
-                </LinearLayout>
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_marginVertical="12dp"
-                    android:background="#2A2A35" />
+                </FrameLayout>
 
                 <LinearLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal">
+                    android:layout_marginStart="14dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
 
                     <TextView
-                        android:layout_width="0dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Built with ❤️ for discipline"
-                        android:textColor="#F5F5F0"
-                        android:textSize="15sp" />
+                        android:text="Reset Everything"
+                        android:textColor="#EF4444"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="Permanently deletes all data"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="12sp" />
 
                 </LinearLayout>
 
+                <Button
+                    android:id="@+id/btnResetData"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:backgroundTint="#1AEF4444"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:text="Erase"
+                    android:textAllCaps="false"
+                    android:textColor="#EF4444"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
             </LinearLayout>
+
         </androidx.cardview.widget.CardView>
 
-        <!-- Reset Data Button -->
-        <Button
-            android:id="@+id/btnResetData"
+        <!-- ══════════════════════════════════════════════════ -->
+        <!--  FOOTER                                            -->
+        <!-- ══════════════════════════════════════════════════ -->
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="56dp"
-            android:layout_marginTop="24dp"
-            android:backgroundTint="#2A2A35"
-            android:text="Reset All Data"
-            android:textColor="#FF4444"
-            android:textSize="15sp"
-            android:textStyle="bold" />
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingTop="32dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:letterSpacing="0.08"
+                android:text="DisciplineCore"
+                android:textColor="@color/text_dim"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="Build the life you deserve."
+                android:textColor="@color/text_dim"
+                android:textSize="11sp" />
+
+        </LinearLayout>
 
     </LinearLayout>
+
 </ScrollView>

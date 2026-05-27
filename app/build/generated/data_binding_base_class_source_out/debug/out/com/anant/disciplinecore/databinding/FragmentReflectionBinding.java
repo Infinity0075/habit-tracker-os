@@ -4,7 +4,6 @@ package com.anant.disciplinecore.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
@@ -13,6 +12,7 @@ import androidx.core.widget.NestedScrollView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.anant.disciplinecore.R;
+import com.google.android.material.button.MaterialButton;
 import com.google.android.material.card.MaterialCardView;
 import com.google.android.material.textfield.TextInputEditText;
 import java.lang.NullPointerException;
@@ -24,7 +24,7 @@ public final class FragmentReflectionBinding implements ViewBinding {
   private final NestedScrollView rootView;
 
   @NonNull
-  public final Button btnSaveJournal;
+  public final MaterialButton btnSaveJournal;
 
   @NonNull
   public final TextInputEditText etReflection;
@@ -66,7 +66,7 @@ public final class FragmentReflectionBinding implements ViewBinding {
   public final TextView tvStreakCount;
 
   private FragmentReflectionBinding(@NonNull NestedScrollView rootView,
-      @NonNull Button btnSaveJournal, @NonNull TextInputEditText etReflection,
+      @NonNull MaterialButton btnSaveJournal, @NonNull TextInputEditText etReflection,
       @NonNull TextInputEditText etWin, @NonNull LinearLayout layoutPastEntries,
       @NonNull MaterialCardView layoutStreak, @NonNull TextView mood1, @NonNull TextView mood2,
       @NonNull TextView mood3, @NonNull TextView mood4, @NonNull TextView mood5,
@@ -117,7 +117,7 @@ public final class FragmentReflectionBinding implements ViewBinding {
     int id;
     missingId: {
       id = R.id.btnSaveJournal;
-      Button btnSaveJournal = ViewBindings.findChildViewById(rootView, id);
+      MaterialButton btnSaveJournal = ViewBindings.findChildViewById(rootView, id);
       if (btnSaveJournal == null) {
         break missingId;
       }
